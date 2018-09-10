@@ -1,0 +1,1 @@
+The website that currently exists at DavidJVitale.com. Feel free to use any of the HTML/CSS/JS for any purpose, but please contact me if you would like to use the externally hosted images on flickr that this website links to.
