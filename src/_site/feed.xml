@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-15T21:23:56-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Prototyping the Concept—Gameplay</title><link href="http://localhost:4000/blog/bears-on-atvs/prototyping-the-concept-gameplay.html" rel="alternate" type="text/html" title="Prototyping the Concept—Gameplay" /><published>2019-03-12T00:00:00-07:00</published><updated>2019-03-12T00:00:00-07:00</updated><id>http://localhost:4000/blog/bears-on-atvs/prototyping-the-concept-gameplay</id><content type="html" xml:base="http://localhost:4000/blog/bears-on-atvs/prototyping-the-concept-gameplay.html">&lt;p&gt;&lt;font size=&quot;6&quot;&gt;I was hiking&lt;/font&gt; with friends in Alaska on a multi-use trail (we were on foot, but there were also people on off-road vehicles), when we suddenly encountered a black bear about 30 feet in front of us.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/black-bear.jpg&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;We followed the correct protocols and slowly backed away. While anxiously waiting for the bear to leave, I heard the faint sound of an ATV in the distance coming towards us on the trail. In that heightened emotional state, my immediate thought was &lt;b&gt;&quot;$#%@#, the bear commandeered an ATV and is coming for us&quot;&lt;/b&gt;. I became infatuated with that mental image of a 500 lb beast hurling towards me at 60 mph on a metal death machine.&lt;/p&gt;
+
+&lt;h2&gt;I Couldn't Bear It&lt;/h2&gt;
+
+&lt;p&gt;I have always wanted to create a release a complete video game, and the concept was right in front me. I am a professional software developer, so naturally I prioritize the programming and gameplay. What is the first step in materializing this concept? What is the simplest problem I can solve right away? It all starts with a wheel.&lt;br /&gt;
+
+&lt;div class=&quot;github-link&quot;&gt;&lt;h3&gt;v0.0.1-alpha: &lt;b&gt;&lt;a href=&quot;https://github.com/ludditegames/bears_on_atvs/releases/tag/v0.0.1-alpha&quot;&gt;Wheely &lt;img src=&quot;/assets/github_64_noborder.png&quot; /&gt;&lt;/a&gt;&lt;/b&gt;&lt;/h3&gt;&lt;/div&gt;
+
+&lt;img src=&quot;https://user-images.githubusercontent.com/18691334/39685328-74e52de2-5187-11e8-8a30-ef4bdbaf5f25.gif&quot; /&gt;
+&lt;br /&gt;
+&lt;p&gt;I am an avid Linux user who loves open-source software, which led me to choose &lt;a href=&quot;https://godotengine.org/&quot;&gt;Godot&lt;/a&gt; and &lt;a href=&quot;https://godotengine.org/article/introducing-csharp-godot&quot;&gt;C#&lt;/a&gt; to target a 2D sidescroller. I read through the docs, experimented a lot, and ultimately implemented my own &quot;Wheel&quot; mechanics against arbitrary polygons. It looks and feels like one wheel of an ATV&amp;mdash;one problem solved, one concept materialized. And once you have one wheel, &lt;a href=&quot;https://github.com/ludditegames/bears_on_atvs/releases/tag/v0.0.2-alpha&quot;&gt;why not two?&lt;/a&gt; Why not &lt;a href=&quot;https://github.com/ludditegames/bears_on_atvs/releases/tag/v0.0.3-alpha&quot;&gt;put a &quot;Bear&quot; on this &quot;ATV&quot;&lt;/a&gt;? Why not add a camera and checkpoints?&lt;/p&gt;
+
+&lt;div class=&quot;github-link&quot;&gt;&lt;h3&gt;&lt;code&gt;v0.0.4-alpha&lt;/code&gt;: &lt;a href=&quot;https://github.com/ludditegames/bears_on_atvs/releases/tag/v0.0.4-alpha&quot;&gt;&lt;b&gt;Checkpoints, Camera, Animation &lt;/b&gt;&lt;img src=&quot;/assets/github_64_noborder.png&quot; /&gt;&lt;/a&gt;&lt;/h3&gt;&lt;/div&gt;
+
+&lt;img src=&quot;https://user-images.githubusercontent.com/18691334/50744016-2277c100-11e4-11e9-98f9-4f7e797ff3e8.gif&quot; /&gt;
+&lt;br /&gt;
+
+&lt;h2&gt;&quot;Implying Video Games Are for Fun&quot;&lt;/h2&gt;
+
+&lt;p&gt;Mechanics aren't everything. What makes this concept of a bear on an ATV so infatuating? What makes good video games fun? Two of my favorite games come to mind: &lt;a href=&quot;https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_2&quot;&gt;Sonic the Hedgehog 2&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Katamari_Damacy&quot;&gt;Katamari Damacy&lt;/a&gt;. Sonic sprints through levels are high speeds, shoots off ramps, gets flung aprings and powerups. And Katamari? There's something satisfying about menacing a virtual society in such a silly way.&lt;/p&gt;
+
+&lt;div class=&quot;github-link&quot;&gt;&lt;h3&gt;v0.0.8-alpha: &lt;b&gt;&lt;a href=&quot;https://github.com/ludditegames/bears_on_atvs/releases/tag/v0.0.8-alpha&quot;&gt;Speedboosts, Food, Enemies &lt;img src=&quot;/assets/github_64_noborder.png&quot; /&gt;&lt;/a&gt;&lt;/b&gt;&lt;/h3&gt;&lt;/div&gt;
+
+&lt;img src=&quot;https://user-images.githubusercontent.com/18691334/54767981-4421fb00-4bcc-11e9-867a-dbb5ee87af64.gif&quot; /&gt;
+
+&lt;p&gt;Bears need a lot of calories a day. A lot. Why not have have food be the in-game point system? Why not run over enemies to kill them? Or swat at them with your big bear paws? Why not have speed boosts to &lt;i&gt;really&lt;/i&gt; shoot you off a ramp or loop? None of these concepts are perfect, and will probably get updated in this game's development cycle. But each iterative development starts to paint a more complete picture. I haven't made a single serious sprite or graphic yet, but I can &lt;i&gt;see&lt;/i&gt; these concepts in action. I can see what works, what is fun, what is ultimately possible.&lt;/p&gt;
+
+&lt;h2&gt;Just Getting Started&lt;/h2&gt;
+
+&lt;p&gt;I am brand new to game development, and I am having a lot of fun. But there is a &lt;i&gt;lot&lt;/i&gt; of work to do. I will continue to prototype out this concept iteratively, slowly materializing this concept.&lt;/p&gt;
+&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="Bears on ATVs" /><category term="Prototyping" /><category term="Gameplay" /><summary type="html">I was hiking with friends in Alaska on a multi-use trail (we were on foot, but there were also people on off-road vehicles), when we suddenly encountered a black bear about 30 feet in front of us. We followed the correct protocols and slowly backed away. While anxiously waiting for the bear to leave, I heard the faint sound of an ATV in the distance coming towards us on the trail. In that heightened emotional state, my immediate thought was &quot;$#%@#, the bear commandeered an ATV and is coming for us&quot;. I became infatuated with that mental image of a 500 lb beast hurling towards me at 60 mph on a metal death machine.</summary></entry></feed>
