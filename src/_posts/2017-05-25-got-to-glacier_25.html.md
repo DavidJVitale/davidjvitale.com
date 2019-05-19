@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Got to Glacier
+title: Glacier, MT (Part 1)
 date: '2017-05-25T13:12:00.002-07:00'
 author: David Vitale
 tags: 

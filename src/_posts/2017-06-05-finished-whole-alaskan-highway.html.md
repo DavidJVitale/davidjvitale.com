@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Finished the whole Alaskan Highway! '
+title: 'Alaskan Highway'
 date: '2017-06-05T16:27:00.000-07:00'
 author: David Vitale
 tags: 

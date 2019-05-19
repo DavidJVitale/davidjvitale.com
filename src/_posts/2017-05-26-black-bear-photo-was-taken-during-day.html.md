@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Last Post for a While
+title: Glacier, MT (Part 2)
 date: '2017-05-26T09:00:00.000-07:00'
 author: David Vitale
 tags: 

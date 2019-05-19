@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vancouver Island
+title: Vancouver Island, BC
 date: '2017-06-23T12:19:00.000-07:00'
 author: David Vitale
 tags: 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exit Glacier, Rest Days
+title: Exit Glacier, AK
 date: '2017-06-13T11:49:00.001-07:00'
 author: David Vitale
 tags: 

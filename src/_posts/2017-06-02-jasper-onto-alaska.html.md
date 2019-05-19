@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '"Jasper". Onto Alaska! '
+title: 'Mount Robson, BC'
 date: '2017-06-02T22:53:00.000-07:00'
 author: David Vitale
 tags: 

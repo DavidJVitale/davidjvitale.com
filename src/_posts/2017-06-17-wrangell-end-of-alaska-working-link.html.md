@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Wrangell, End Of Alaska (working link this time)
+title: Wrangell, AK
 date: '2017-06-17T16:07:00.000-07:00'
 author: David Vitale
 tags: 

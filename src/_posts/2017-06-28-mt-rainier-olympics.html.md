@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mt. Rainier, Olympics
+title: Mt. Rainier, Olympics, WA
 date: '2017-06-28T16:07:00.002-07:00'
 author: David Vitale
 tags: 

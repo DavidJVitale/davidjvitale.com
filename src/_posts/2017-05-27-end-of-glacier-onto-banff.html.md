@@ -1,6 +1,6 @@
 ---
 layout: post
-title: End of Glacier, onto Banff!
+title: Glacier, MT (Part 3)
 date: '2017-05-27T12:23:00.001-07:00'
 author: David Vitale
 tags: 

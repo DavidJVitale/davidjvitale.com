@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: Black Hills, SD
 date: '2017-05-24T09:29:00.002-07:00'
 author: David Vitale
 tags: 
@@ -10,9 +10,11 @@ blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-45128294410517618
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/05/today-is-travel-day-to-glacier.html
 ---
 
-Today is travel day to Glacier. We slept in Wyoming with great stars (Kevin got a good long exposure of the sky). Yesterday we did some stuff after Badlands in Black Hills, the National forest with Mt Rushmore.
+{% include travel-img.html src="/assets/personal/alaska-trip-2017/before-robson-1.jpg" %}
 
-{% include travel-img.html src="/assets/personal/alaska-trip-2017/travel-glacier-1.jpg" %}
+Today is travel day to Glacier. We slept in Wyoming with great stars (Kevin got a good long exposure of the sky, I got this moon photo). Yesterday we did some stuff after Badlands in Black Hills, the National forest with Mt Rushmore.
+
+{% include travel-img.html src="/assets/personal/alaska-trip-2017/travel-glacier-1.jpg" %} 
 
 We were at Mt Rushmore for the 15 seconds of a stoplight. Thank God for zoom lenses.
 

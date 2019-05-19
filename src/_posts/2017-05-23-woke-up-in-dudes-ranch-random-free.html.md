@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: Badlands, SD
 date: '2017-05-23T11:50:00.001-07:00'
 author: David Vitale
 tags: 
