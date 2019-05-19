@@ -1,0 +1,29 @@
+---
+layout: post
+title: Last Post for a While
+date: '2017-05-26T09:00:00.000-07:00'
+author: David Vitale
+tags: 
+modified_time: '2017-05-26T09:10:53.759-07:00'
+thumbnail: https://1.bp.blogspot.com/-p0urMGmiumk/WShDCSij91I/AAAAAAAAAp8/jjEQH4OE624zcxRVo9VqUPSiccgVl6HjQCLcB/s72-c/_20170526_085314_800x562.JPG
+blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-8974242154177444038
+blogger_orig_url: https://davidjvitale.blogspot.com/2017/05/black-bear-photo-was-taken-during-day.html
+---
+
+{% include travel-img.html src="/assets/personal/alaska-trip-2017/last-post-1.jpg" %}
+
+This black bear photo was taken during a day hike with a telephoto lense at around 100 yards away: don't worry, Mom, it was safe.
+
+We're about do a backcountry overnight in Glacier near the Canadian border. I'll be turning off my phone or leaving it on airplane mode since I won't have LTE in Canada. My next post will be whatever has WiFi.
+
+After the backcountry overnight, we'll be going to the connected park just over the border, Waterton National Park. Then we drive to Banff, spend 3 days there, then drive to Jasper, spend 3 days there. Then Joey leaves and Kevin, Isaac and I go to Alaska (30 hours drive).
+
+Glacier is amazing. Such fresh air, friendly people, incredible mountains, awesome lakes. Looking forward to enjoying the backcountry (any paranoid parties: we're going to be safe and not get eaten by a bear).
+
+Hope to post an update soon! Enjoy some more pics taken yesterday:
+
+{% include travel-img.html src="/assets/personal/alaska-trip-2017/last-post-2.jpg" %}
+
+{% include travel-img.html src="/assets/personal/alaska-trip-2017/last-post-3.jpg" %}
+
+{% include travel-img.html src="/assets/personal/alaska-trip-2017/last-post-4.jpg" %}
