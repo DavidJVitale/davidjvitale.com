@@ -22,7 +22,5 @@ Enjoy some more pictures from Glacier, taken yesterday.
 
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/end-glacier-3.jpg" %}
 
-{% include travel-img.html src="/assets/personal/alaska-trip-2017/end-glacier-4.jpg" %}
-
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/end-glacier-5.jpg" %}
 
