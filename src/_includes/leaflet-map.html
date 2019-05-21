@@ -1,0 +1,14 @@
+{%- assign map_div_id = include.map_div_id | default: "leaflet-map-default" -%}
+{%- assign center_coord_lat = include.center_coord_lat | default: 0 -%}
+{%- assign center_coord_long = include.center_coord_long | default: 0 -%}
+{%- assign zoom = include.zoom | default: 0 -%}
+{%- assign basemap_provider = include.basemap_provider | default: "OpenStreetMap.Mapnik" -%}
+
+<div id="{{map_div_id}}" class="leaflet-map-default"></div>
+
+<script>
+    var map = L.map("{{map_div_id}}").setView(
+        [{{center_coord_lat}}, {{center_coord_long}}],
+        {{zoom}});
+    L.tileLayer.provider("{{basemap_provider}}").addTo(map);
+</script>

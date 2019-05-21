@@ -1,6 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-19T10:48:22-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Yellowstone, WY</title><link href="http://localhost:4000/yellowstone.html" rel="alternate" type="text/html" title="Yellowstone, WY" /><published>2017-07-02T07:49:00-07:00</published><updated>2017-07-02T07:49:00-07:00</updated><id>http://localhost:4000/yellowstone</id><content type="html" xml:base="http://localhost:4000/yellowstone.html">&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: This post was written retroactively in 2019&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-21T12:28:56-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Yellowstone, WY</title><link href="http://localhost:4000/yellowstone.html" rel="alternate" type="text/html" title="Yellowstone, WY" /><published>2017-07-02T07:49:00-07:00</published><updated>2017-07-02T07:49:00-07:00</updated><id>http://localhost:4000/yellowstone</id><content type="html" xml:base="http://localhost:4000/yellowstone.html">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    var map = L.map(&quot;leaflet-map-default&quot;).setView(
+        [0, 0],
+        0);
+    L.tileLayer.provider(&quot;Esri.WorldTopoMap&quot;).addTo(map);
+&lt;/script&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: This post was written retroactively in 2019
+a&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a
+a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a
+a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
+
+&lt;p&gt;a&lt;/p&gt;
 
 &lt;p&gt;The final stop on our trip was the Tetons and Yellowstone national park in Wyoming. The trip was a mix of geysers, wildlife, and water falls. Above you see the valley near artist point.&lt;/p&gt;
 
@@ -16,7 +90,7 @@
 
 &lt;p&gt;We had potentially wanted to do a bit more on our trip, but after Yellowstone we decided to drive back to Maquoketa, IA to hang out with Isaac’s family at the Codfish Hollow Barnstormer. Yellowstone was our last stop, and I forgot to write my last blog post. This is the last group picture we took from our incredible trip.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-5.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><summary type="html">Note: This post was written retroactively in 2019</summary></entry><entry><title type="html">Eagle Creek, Ape Caves, Multnomah Falls, OR</title><link href="http://localhost:4000/eagle-creek-ape-caves-multnomah.html.html" rel="alternate" type="text/html" title="Eagle Creek, Ape Caves, Multnomah Falls, OR" /><published>2017-06-30T07:49:00-07:00</published><updated>2017-06-30T07:49:00-07:00</updated><id>http://localhost:4000/eagle-creek-ape-caves-multnomah.html</id><content type="html" xml:base="http://localhost:4000/eagle-creek-ape-caves-multnomah.html.html">&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-5.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><summary type="html"></summary></entry><entry><title type="html">Eagle Creek, Ape Caves, Multnomah Falls, OR</title><link href="http://localhost:4000/eagle-creek-ape-caves-multnomah.html.html" rel="alternate" type="text/html" title="Eagle Creek, Ape Caves, Multnomah Falls, OR" /><published>2017-06-30T07:49:00-07:00</published><updated>2017-06-30T07:49:00-07:00</updated><id>http://localhost:4000/eagle-creek-ape-caves-multnomah.html</id><content type="html" xml:base="http://localhost:4000/eagle-creek-ape-caves-multnomah.html.html">&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Our Oregon plans got changed due to a recommendation of some trail buddies we met in Olympic: thanks Jeff and Peter! It was definitely some awesome recommendations.&lt;/p&gt;
 

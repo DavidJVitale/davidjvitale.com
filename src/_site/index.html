@@ -11,16 +11,27 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="DavidJVitale.com" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"http://localhost:4000/","name":"DavidJVitale.com","headline":"DavidJVitale.com","@context":"https://schema.org"}</script>
+{"headline":"DavidJVitale.com","url":"http://localhost:4000/","name":"DavidJVitale.com","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DavidJVitale.com" /><!-- (I sell my soul to) Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136751914-1"></script>
     <script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'UA-136751914-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-136751914-1');
     </script>
+
+  <!-- Leaflet.js required imports -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+       crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+       integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+       crossorigin="">
+   </script>
+   <script src="/assets/js/leaflet-providers.js"></script>
+
 </head>
 <body>
 
