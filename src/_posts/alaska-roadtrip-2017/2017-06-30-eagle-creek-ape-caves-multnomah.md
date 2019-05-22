@@ -11,6 +11,12 @@ blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-79248236847638648
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/07/eagle-creek-ape-caves-multnomah.html
 ---
 
+{% include leaflet-map.html
+    geojson=page.location.geojson
+    esri_basemap="Topographic"
+    zoom=5
+%}
+
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/oregon-1.jpg" %}
 
 Our Oregon plans got changed due to a recommendation of some trail buddies we met in Olympic: thanks Jeff and Peter! It was definitely some awesome recommendations. 

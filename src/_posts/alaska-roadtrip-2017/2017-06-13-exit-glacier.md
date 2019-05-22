@@ -11,6 +11,12 @@ blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-71104409456194079
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/06/exit-glacier-rest-days.html
 ---
 
+{% include leaflet-map.html
+    geojson=page.location.geojson
+    esri_basemap="Topographic"
+    zoom=5
+%}
+
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/exit-1.jpg" %}
 
 After our intense Denali trip, we spent a few days with Isaac's uncle Luke and his girlfriend Jonni who live a bit outside of Homer, AK. They fed us so much food (I was eating something besides Granola!!), let us crash in their living room, and took us fishing (no luck, sadly). It was a great refuel stop that we definitely needed, their hospitality was greatly appreciated!

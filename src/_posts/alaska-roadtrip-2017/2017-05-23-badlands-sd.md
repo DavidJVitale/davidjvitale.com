@@ -7,7 +7,24 @@ categories: ["blog", "travel", "alaska-roadtrip"]
 tags: ["travel", "nature", "roadtrip"]
 modified_time: '2017-05-23T11:50:27.183-07:00'
 thumbnail: https://4.bp.blogspot.com/-wWxrlejaMLI/WSSAxyLWgTI/AAAAAAAAAoM/rfHds8xMRmwZ85ixRqn9UJjlZ_-SGPZEQCLcB/s72-c/IMG_20170523_065803.jpg
+location:       
+    geojson: '{
+        "type": "Feature",
+        "properties": {"popupContent": "Badlands National Park"},
+        "geometry": {
+            "type": "Point",
+            "coordinates":
+		[-102.339920, 43.854480]
+        }
+    }'
+
 ---
+
+{% include leaflet-map.html
+    geojson=page.location.geojson
+    esri_basemap="Topographic"
+    zoom=5
+%}
 
 Woke up in Dudes Ranch, random free camping US property in SD. about 3 hours out of badlands.
 

@@ -11,6 +11,12 @@ blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-55528450985833428
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/06/vancouver-island.html
 ---
 
+{% include leaflet-map.html
+    geojson=page.location.geojson
+    esri_basemap="Topographic"
+    zoom=5
+%}
+
 We spent 2 days in Vancouver Island. One day we spent completely on the beach, where we fell asleep and got a lot of sand in our hair.
 
 The next day we did a day hike in Strathcona Provincial Park. There was so much snow on the top of the mountain that we got lost, until a 70 year old hiking woman found us and led us to the top of the mountain. She would hike twice as fast as us, was jumping down snow piles, it was awesome. I wish I could be in an eighth of as good of shape at that age.

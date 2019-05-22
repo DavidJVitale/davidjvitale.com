@@ -11,6 +11,12 @@ blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-33748295888105130
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/06/mt-rainier-olympics.html
 ---
 
+{% include leaflet-map.html
+    geojson=page.location.geojson
+    esri_basemap="Topographic"
+    zoom=5
+%}
+
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/rainier-1.jpg" %}
 
 Look at the mountain range reflected in the marmot's eye!

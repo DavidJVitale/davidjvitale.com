@@ -11,6 +11,12 @@ blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-28656483590914000
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/06/finished-whole-alaskan-highway.html
 ---
 
+{% include leaflet-map.html
+    geojson=page.location.geojson
+    esri_basemap="Topographic"
+    zoom=5
+%}
+
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/signpost-1.jpg" %}
 
 Driving the Alaskan Highway was insane. Hundreds of miles of undeveloped nature stretches between tiny towns containing just a gas station, motel, and general store. We drove over 1500 miles in 3 days (with no showers!). In the stretches of nature, we saw Black Bears, Grizzly Bears, Moose, Bison, even a porcupine on the side of the road. Isaac got some cool pictures of them (my camera never seemed to be out at the right time).

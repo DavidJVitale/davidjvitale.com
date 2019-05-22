@@ -9,7 +9,7 @@ modified_time: '2017-05-24T09:29:16.372-07:00'
 thumbnail: https://3.bp.blogspot.com/-WPaiAqB0qTI/WSWuzDX_9-I/AAAAAAAAAow/2u5GvX0x8749-aNV0_RdIKVf3_kZuF6sgCLcB/s72-c/IMG_4200.JPG
 blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-4512829441051761837
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/05/today-is-travel-day-to-glacier.html
-leaflet_map:
+location:
     geojson: '{
         "type": "FeatureCollection",
         "features": [
@@ -31,9 +31,13 @@ leaflet_map:
 		}
 	    }]
         }'
-    zoom: 6
-    esri_basemap: "Topographic"
 ---
+
+{% include leaflet-map.html
+    geojson=page.location.geojson
+    esri_basemap="Topographic"
+    zoom=6
+%}
 
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/before-robson-1.jpg" %}
 

@@ -11,6 +11,12 @@ blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-67040370751175508
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/06/jasper-onto-alaska.html
 ---
 
+{% include leaflet-map.html
+    geojson=page.location.geojson
+    esri_basemap="Topographic"
+    zoom=5
+%}
+
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/robson-1.jpg" %}
 
  We went to Jasper national park in AB, talked to a Ranger. He told us Jasper isn't that fun for backpacking, instead we should go to Mount Robson. Mount Robson is the tallest mountain in the Canadian Rockies, as tall as Mount Everest from base to peak.

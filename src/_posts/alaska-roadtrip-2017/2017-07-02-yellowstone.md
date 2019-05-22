@@ -7,7 +7,7 @@ categories: ["blog", "travel", "alaska-roadtrip"]
 tags: ["travel", "nature", "roadtrip"]
 modified_time: '2017-07-03T07:49:20.886-07:00'
 thumbnail: https://4.bp.blogspot.com/-wfeh1HaiNYM/WVpTOlwdUuI/AAAAAAAAAyQ/khiFi4ims0scLrG-pAFj0Ri4RRoSkZvHQCLcBGAs/s72-c/IMG_5441_800x533.JPG
-leaflet_map:
+location:
     geojson: '{
         "type": "Feature",
         "properties": {"popupContent": "Yellowstone National Park"},
@@ -17,11 +17,15 @@ leaflet_map:
                 [-110.723183, 44.412266]
         }
     }'
-    zoom: 4
-    esri_basemap: "Topographic"
 ---
 
 >_Note_: This post was written retroactively in 2019
+
+{% include leaflet-map.html
+    geojson=page.location.geojson
+    esri_basemap="Topographic"
+    zoom=5
+%}
 
 The final stop on our trip was the Tetons and Yellowstone national park in Wyoming. The trip was a mix of geysers, wildlife, and water falls. Above you see the valley near artist point.
 
