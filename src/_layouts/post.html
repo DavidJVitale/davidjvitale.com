@@ -16,6 +16,15 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
+
+    {%- if page.leaflet_map -%}
+	{% include leaflet-map.html 
+	    esri_basemap=page.leaflet_map.esri_basemap 
+	    geojson=page.leaflet_map.geojson
+	    zoom=page.leaflet_map.zoom
+	%}
+    {%- endif -%}
+
     {{ content }}
   </div>
 
