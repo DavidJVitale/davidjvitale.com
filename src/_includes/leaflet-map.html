@@ -3,6 +3,8 @@
 {%- assign center_coord_long = include.center_coord_long | default: 0 -%}
 {%- assign zoom = include.zoom | default: 0 -%}
 {%- assign basemap_provider = include.basemap_provider | default: "OpenStreetMap.Mapnik" -%}
+{%- assign esri_basemap = include.esri_basemap | default: "" -%}
+{%- assign geojson = include.geojson | default: {} -%}
 
 <div id="{{map_div_id}}" class="leaflet-map-default"></div>
 
@@ -10,5 +12,41 @@
     var map = L.map("{{map_div_id}}").setView(
         [{{center_coord_lat}}, {{center_coord_long}}],
         {{zoom}});
-    L.tileLayer.provider("{{basemap_provider}}").addTo(map);
+
+    // Infer basemap
+    if("{{esri_basemap}}" !== ""){
+        // Use esri_basemap from esri-leaflet if specified (cleaner attributes)
+        L.esri.basemapLayer("{{esri_basemap}}").addTo(map);
+    } else {
+        // else use the default basemap_provider in leaflet
+        L.tileLayer.provider("{{basemap_provider}}").addTo(map);
+    }
+
+    // Infer geojson & properties with it (popup, external hyperlinks, etc.)
+    var geojson = {{geojson}};
+    if(Object.keys(geojson).length !== 0){
+        var onEachFeature = (feature, layer) => {
+            if(feature.properties && feature.properties.popupContent){
+                var popupContent = feature.properties.popupContent;
+                if(feature.properties.href){
+                    popupContent += '<a href=' + 
+                        feature.properties.href + 
+                        '><img src="/assets/logos/new-window-24.png"></img></a>';
+                }
+                layer.bindPopup(popupContent);
+            }
+            if(({{center_coord_lat}} === 0) && 
+               ({{center_coord_long}} === 0) && 
+                feature.geometry.type === "Point"){
+                //If the blog author didn't specify center, infer from feature
+                var lat = feature.geometry.coordinates[1];
+                var long = feature.geometry.coordinates[0];
+                map.panTo(new L.LatLng(lat, long));
+            }
+        };
+        L.geoJSON(geojson, { 
+            onEachFeature: onEachFeature 
+        }).addTo(map);
+
+    }
 </script>

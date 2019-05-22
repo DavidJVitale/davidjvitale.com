@@ -6,9 +6,25 @@ author: David Vitale
 tags: 
 modified_time: '2017-07-03T07:49:20.886-07:00'
 thumbnail: https://4.bp.blogspot.com/-wfeh1HaiNYM/WVpTOlwdUuI/AAAAAAAAAyQ/khiFi4ims0scLrG-pAFj0Ri4RRoSkZvHQCLcBGAs/s72-c/IMG_5441_800x533.JPG
+leaflet_map:
+    geojson: '{
+        "type": "Feature",
+        "properties": {"popupContent": "Yellowstone National Park"},
+        "geometry": {
+            "type": "Point",
+            "coordinates":
+                [-110.723183, 44.412266]
+        }
+    }'
+    zoom: 4
+    esri_basemap: "Topographic"
 ---
 
-{% include leaflet-map.html basemap_provider="Esri.WorldTopoMap" %}
+{% include leaflet-map.html 
+    esri_basemap=page.leaflet_map.esri_basemap 
+    geojson=page.leaflet_map.geojson
+    zoom=page.leaflet_map.zoom
+ %}
 
 >_Note_: This post was written retroactively in 2019
 a

@@ -1,10 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-21T12:28:56-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Yellowstone, WY</title><link href="http://localhost:4000/yellowstone.html" rel="alternate" type="text/html" title="Yellowstone, WY" /><published>2017-07-02T07:49:00-07:00</published><updated>2017-07-02T07:49:00-07:00</updated><id>http://localhost:4000/yellowstone</id><content type="html" xml:base="http://localhost:4000/yellowstone.html">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-21T17:21:02-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Yellowstone, WY</title><link href="http://localhost:4000/yellowstone.html" rel="alternate" type="text/html" title="Yellowstone, WY" /><published>2017-07-02T07:49:00-07:00</published><updated>2017-07-02T07:49:00-07:00</updated><id>http://localhost:4000/yellowstone</id><content type="html" xml:base="http://localhost:4000/yellowstone.html">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
     var map = L.map(&quot;leaflet-map-default&quot;).setView(
         [0, 0],
-        0);
-    L.tileLayer.provider(&quot;Esri.WorldTopoMap&quot;).addTo(map);
+        4);
+
+    // Infer basemap
+    if(&quot;Topographic&quot; !== &quot;&quot;){
+        // Use esri_basemap from esri-leaflet if specified (cleaner attributes)
+        L.esri.basemapLayer(&quot;Topographic&quot;).addTo(map);
+    } else {
+        // else use the default basemap_provider in leaflet
+        L.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
+    }
+
+    // Infer geojson &amp; properties with it (popup, external hyperlinks, etc.)
+    var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Yellowstone National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-110.723183, 44.412266] } };
+    if(Object.keys(geojson).length !== 0){
+        var onEachFeature = (feature, layer) =&gt; {
+            if(feature.properties &amp;&amp; feature.properties.popupContent){
+                var popupContent = feature.properties.popupContent;
+                if(feature.properties.href){
+                    popupContent += '&lt;a href=' + 
+                        feature.properties.href + 
+                        '&gt;&lt;img src=&quot;/assets/logos/new-window-24.png&quot;&gt;&lt;/img&gt;&lt;/a&gt;';
+                }
+                layer.bindPopup(popupContent);
+            }
+            if((0 === 0) &amp;&amp; 
+               (0 === 0) &amp;&amp; 
+                feature.geometry.type === &quot;Point&quot;){
+                //If the blog author didn't specify center, infer from feature
+                var lat = feature.geometry.coordinates[1];
+                var long = feature.geometry.coordinates[0];
+                map.panTo(new L.LatLng(lat, long));
+            }
+        };
+        L.geoJSON(geojson, { 
+            onEachFeature: onEachFeature 
+        }).addTo(map);
+
+    }
 &lt;/script&gt;
 
 &lt;blockquote&gt;
