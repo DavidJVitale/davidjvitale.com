@@ -8,15 +8,15 @@
 <meta property="og:title" content="Retrospective" />
 <meta name="author" content="David Vitale" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Retrospective" />
-<meta property="og:description" content="Retrospective" />
+<meta name="description" content="Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey." />
+<meta property="og:description" content="Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey." />
 <link rel="canonical" href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" />
 <meta property="og:url" content="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" />
 <meta property="og:site_name" content="DavidJVitale.com" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-05-22T01:00:00-07:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/travel/alaska-roadtrip/retrospective"},"datePublished":"2019-05-22T01:00:00-07:00","url":"http://localhost:4000/blog/travel/alaska-roadtrip/retrospective","author":{"@type":"Person","name":"David Vitale"},"description":"Retrospective","headline":"Retrospective","dateModified":"2019-05-22T01:00:00-07:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/travel/alaska-roadtrip/retrospective"},"url":"http://localhost:4000/blog/travel/alaska-roadtrip/retrospective","author":{"@type":"Person","name":"David Vitale"},"description":"Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey.","headline":"Retrospective","dateModified":"2019-05-22T01:00:00-07:00","datePublished":"2019-05-22T01:00:00-07:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DavidJVitale.com" /><!-- (I sell my soul to) Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136751914-1"></script>
@@ -70,7 +70,105 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Retrospective</p>
+    <p>Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey.</p>
+
+<div id="leaflet-map-default" class="leaflet-map-default"></div>
+
+<script>
+    var map = L.map("leaflet-map-default").setView(
+        [0, 0],
+        7);
+
+    // Infer basemap
+    if("Topographic" !== ""){
+        // Use esri_basemap from esri-leaflet if specified (cleaner attributes)
+        L.esri.basemapLayer("Topographic").addTo(map);
+    } else {
+        // else use the default basemap_provider in leaflet
+        L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
+    }
+
+    // Infer geojson & properties with it (popup, external hyperlinks, etc.)
+    var addGeoJSONToMap = (geojson) => {
+	    if(Object.keys(geojson).length !== 0){
+	        var onEachFeature = (feature, layer) => {
+	            if(feature.properties && feature.properties.popupContent){
+		            var popupContent = feature.properties.popupContent;
+            	if(feature.properties.href){
+	                    popupContent += '<a href=' + 
+	                        feature.properties.href + 
+	                        '><img src="/assets/logos/new-window-24.png"></img></a>';
+	                }
+	                layer.bindPopup(popupContent);
+        	    }
+	            if((0 === 0) && 
+	               (0 === 0) && 
+        	        feature.geometry.type === "Point"){
+	                //If the blog author didn't specify center, infer from feature
+	                var lat = feature.geometry.coordinates[1];
+	                var long = feature.geometry.coordinates[0];
+	                map.panTo(new L.LatLng(lat, long));
+        	    }
+	        };
+	        L.geoJSON(geojson, { 
+	            onEachFeature: onEachFeature 
+	        }).addTo(map);
+	     }
+    };
+    var geojson =  {"type": "FeatureCollection",
+      "features": [
+	{ "type": "Feature", "properties": {"popupContent": "Yellowstone National Park"}, "geometry": { "type": "Point", "coordinates": [-110.723183, 44.412266] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Eagle Creek"}, "geometry": { "type": "Point", "coordinates": [-121.894672, 45.621595] } }, 
+
+	{ "type": "Feature", "properties": {"popupContent": "Multnomah Falls"}, "geometry": { "type": "Point", "coordinates": [-122.115801, 45.576045] } }, 
+
+	{ "type": "Feature", "properties": {"popupContent": "Ape Caves"}, "geometry": { "type": "Point", "coordinates": [-122.211360, 46.109579] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Flapjack Lakes, Olympic National Park"}, "geometry": { "type": "Point", "coordinates": [-123.341150, 47.560991] } }, 
+
+	{ "type": "Feature", "properties": {"popupContent": "Mount Rainier National Park"}, "geometry": { "type": "Point", "coordinates": [-121.727100, 46.877833] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Strathcona Provincial Park"}, "geometry": { "type": "Point", "coordinates": [-125.598810, 49.814399] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Wrangell-St. Elias National Park"}, "geometry": { "type": "Point", "coordinates": [-142.921965, 61.448960] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Exit Glacier"}, "geometry": { "type": "Point", "coordinates": [-149.649859, 60.177945] } }, 
+
+	{ "type": "Feature", "properties": {"popupContent": "Homer, AK"}, "geometry": { "type": "Point", "coordinates": [-151.548355, 59.642815] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Denali National Park"}, "geometry": { "type": "Point", "coordinates": [-151.192224, 63.113509] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Sign Post Forest, Alaskan Highway"}, "geometry": { "type": "Point", "coordinates": [-128.714362, 60.063366] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Mount Robson Provincial Park"}, "geometry": { "type": "Point", "coordinates": [-119.229462, 53.035430] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Banff National Park"}, "geometry": { "type": "Point", "coordinates": [-115.928160, 51.495437] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Waterton-Glacier International Peace Park"}, "geometry": { "type": "Point", "coordinates": [-113.659403, 48.995485] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Glacier National Park"}, "geometry": { "type": "Point", "coordinates": [-113.492293, 48.695363] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Saint Mary Lake"}, "geometry": { "type": "Point", "coordinates": [-113.492291, 48.695373] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Black Hills National Forest"}, "geometry": { "type": "Point", "coordinates": [-103.742415, 43.997541] } }, 
+
+	{ "type": "Feature", "properties": {"popupContent": "Custer State Park"}, "geometry": { "type": "Point", "coordinates": [-103.454882, 43.757049] } },
+
+	{ "type": "Feature", "properties": {"popupContent": "Badlands National Park"}, "geometry": { "type": "Point", "coordinates": [-102.339920, 43.854480] } }
+       ]}
+;
+    if(Array.isArray(geojson)){
+	for(var i=0; i<geojson.length; i++){
+		addGeoJSONToMap(geojson[i]);
+	}
+    } else {
+	addGeoJSONToMap(geojson);
+    }
+
+
+</script>
+
 
   </div>
 
