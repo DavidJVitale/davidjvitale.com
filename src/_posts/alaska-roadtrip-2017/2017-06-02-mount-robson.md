@@ -9,12 +9,22 @@ modified_time: '2017-06-02T22:53:16.694-07:00'
 thumbnail: https://3.bp.blogspot.com/-mSh8Mpn6ecQ/WTJF2rY5lYI/AAAAAAAAAsU/13fBj1ElJvMLC-Zho8tmg1tdDVRRnG3pwCLcB/s72-c/IMG_4813_800x533.JPG
 blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-6704037075117550826
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/06/jasper-onto-alaska.html
+location:
+    geojson: '{
+        "type": "Feature",
+        "properties": {"popupContent": "Mount Robson Provincial Park"},
+        "geometry": {
+            "type": "Point",
+            "coordinates":
+		[-119.229462, 53.035430]
+        }
+    }'
 ---
 
 {% include leaflet-map.html
     geojson=page.location.geojson
     esri_basemap="Topographic"
-    zoom=5
+    zoom=6
 %}
 
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/robson-1.jpg" %}

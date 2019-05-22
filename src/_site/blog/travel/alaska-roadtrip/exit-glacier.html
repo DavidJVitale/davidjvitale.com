@@ -85,7 +85,7 @@
     }
 
     // Infer geojson & properties with it (popup, external hyperlinks, etc.)
-    var geojson = ;
+    var geojson = { "type": "FeatureCollection", "features": [{ "type": "Feature", "properties": {"popupContent": "Exit Glacier"}, "geometry": { "type": "Point", "coordinates": [-149.649859, 60.177945] } }, { "type": "Feature", "properties": {"popupContent": "Homer, AK"}, "geometry": { "type": "Point", "coordinates": [-151.548355, 59.642815] } }] };
     if(Object.keys(geojson).length !== 0){
         var onEachFeature = (feature, layer) => {
             if(feature.properties && feature.properties.popupContent){

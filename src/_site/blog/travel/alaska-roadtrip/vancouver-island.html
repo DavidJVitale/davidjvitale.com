@@ -73,7 +73,7 @@
 <script>
     var map = L.map("leaflet-map-default").setView(
         [0, 0],
-        5);
+        7);
 
     // Infer basemap
     if("Topographic" !== ""){
@@ -85,7 +85,7 @@
     }
 
     // Infer geojson & properties with it (popup, external hyperlinks, etc.)
-    var geojson = ;
+    var geojson = { "type": "Feature", "properties": {"popupContent": "Strathcona Provincial Park"}, "geometry": { "type": "Point", "coordinates": [-125.598810, 49.814399] } };
     if(Object.keys(geojson).length !== 0){
         var onEachFeature = (feature, layer) => {
             if(feature.properties && feature.properties.popupContent){

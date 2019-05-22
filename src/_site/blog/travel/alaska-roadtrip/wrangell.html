@@ -85,7 +85,7 @@
     }
 
     // Infer geojson & properties with it (popup, external hyperlinks, etc.)
-    var geojson = ;
+    var geojson = { "type": "Feature", "properties": {"popupContent": "Wrangell-St. Elias National Park"}, "geometry": { "type": "Point", "coordinates": [-142.921965, 61.448960] } };
     if(Object.keys(geojson).length !== 0){
         var onEachFeature = (feature, layer) => {
             if(feature.properties && feature.properties.popupContent){

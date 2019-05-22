@@ -9,12 +9,22 @@ modified_time: '2017-06-05T16:38:56.945-07:00'
 thumbnail: https://1.bp.blogspot.com/-2pKz7dJl94I/WTXQ4jx0BFI/AAAAAAAAAtQ/UvmvKMHpzGAJGKj5LzN8RKn7Vwuc_hrywCEw/s72-c/IMG_20170604_194754.jpg
 blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-2865648359091400022
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/06/finished-whole-alaskan-highway.html
+location:
+    geojson: '{
+        "type": "Feature",
+        "properties": {"popupContent": "Sign Post Forest, Alaskan Highway"},
+        "geometry": {
+            "type": "Point",
+            "coordinates":
+		[-128.714362, 60.063366]
+        }
+    }'
 ---
 
 {% include leaflet-map.html
     geojson=page.location.geojson
     esri_basemap="Topographic"
-    zoom=5
+    zoom=3
 %}
 
 {% include travel-img.html src="/assets/personal/alaska-trip-2017/signpost-1.jpg" %}

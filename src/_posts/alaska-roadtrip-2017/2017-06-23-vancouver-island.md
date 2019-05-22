@@ -9,12 +9,22 @@ modified_time: '2017-06-23T12:19:13.061-07:00'
 thumbnail: https://3.bp.blogspot.com/-mmtiL7lweyY/WU1pkNM032I/AAAAAAAAAw4/cK0b9hjjO4E-Mwq1n_7ck4IPUBCYJLk-wCLcBGAs/s72-c/IMG_5316_800x533.JPG
 blogger_id: tag:blogger.com,1999:blog-4593654183182061758.post-5552845098583342813
 blogger_orig_url: https://davidjvitale.blogspot.com/2017/06/vancouver-island.html
+location:
+    geojson: '{
+        "type": "Feature",
+        "properties": {"popupContent": "Strathcona Provincial Park"},
+        "geometry": {
+            "type": "Point",
+            "coordinates":
+		[-125.598810, 49.814399]
+        }
+    }'
 ---
 
 {% include leaflet-map.html
     geojson=page.location.geojson
     esri_basemap="Topographic"
-    zoom=5
+    zoom=7
 %}
 
 We spent 2 days in Vancouver Island. One day we spent completely on the beach, where we fell asleep and got a lot of sand in our hair.
