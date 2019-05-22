@@ -6,7 +6,7 @@ author: David Vitale
 categories: ["blog", "travel", "alaska-roadtrip"]
 tags: ["travel", "nature", "roadtrip"] 
 modified_time: '2019-05-22 01:00:00 -07:00'
-thumbnail: https://4.bp.blogspot.com/-wfeh1HaiNYM/WVpTOlwdUuI/AAAAAAAAAyQ/khiFi4ims0scLrG-pAFj0Ri4RRoSkZvHQCLcBGAs/s72-c/IMG_5441_800x533.JPG
+featured: true
 ---
 
 Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts [in a blog](/blog/travel/alaska-roadtrip/) along the way, but never wrote a proper retrospective for my trip.
@@ -103,4 +103,4 @@ We made our way down to Vancouver Island, some locations in the Pacific Northwes
 
 ## Reflection
 
-As I reflect on this trip from 2 years ago, I feel very blessed at all I was able to experience with such amazing friends. Kevin, Isaac, and Joey -- thanks so much for sharing in this with me. Here's to the next trip!
+As I reflect on this trip from 2 years ago, I feel very blessed for all I was able to experience with such amazing friends. Kevin, Isaac, and Joey -- thanks so much for sharing this experience with me. Here's to the next trip!

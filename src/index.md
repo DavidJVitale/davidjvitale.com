@@ -2,6 +2,4 @@
 layout: home
 ---
 
-## Lorem Ipsum
-
-Blah blah
+This website is under construction... Come back soon!
