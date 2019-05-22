@@ -30,8 +30,9 @@
 		            var popupContent = feature.properties.popupContent;
             	if(feature.properties.href){
 	                    popupContent += '<a href=' + 
-	                        feature.properties.href + 
-	                        '><img src="/assets/logos/new-window-24.png"></img></a>';
+	                        '"' + feature.properties.href + '"' +
+	                        ' target="_blank"' +
+				'><img src="/assets/logos/new-window-24.png"></img></a>';
 	                }
 	                layer.bindPopup(popupContent);
         	    }
