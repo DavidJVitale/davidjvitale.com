@@ -1,6 +1,6 @@
 defaults: &defaults
   working_directory: ~/repo/src
-version: 2
+version: 2.1
 jobs:
   build:
     <<: *defaults
@@ -17,10 +17,6 @@ jobs:
       - run:
           name: Bundle Install
           command: bundle check || bundle install
-      - save_cache:
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
