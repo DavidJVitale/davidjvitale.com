@@ -1,5 +1,5 @@
 defaults: &defaults
-  working_directory: ~/repo/src
+  working_directory: ~/repo/
 version: 2
 jobs:
   build:
