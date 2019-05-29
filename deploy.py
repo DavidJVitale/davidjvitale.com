@@ -67,7 +67,7 @@ def deploy_to_s3_without_html_extensions(bucket_name):
             f'aws s3 sync --delete {DEPLOY_DIR} s3://{bucket_name}')
         output_code += run_shell_command(
             f'aws s3 cp "{os.path.join(DEPLOY_DIR, "blog")}" '\
-            f's3://{bucket_name}/blogi--recursive --content-type "text/html"')
+            f's3://{bucket_name}/blog --recursive --content-type "text/html"')
         return output_code
 
 def invalidate_cloudfront(dist_id):
