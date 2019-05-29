@@ -19,7 +19,7 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
-            - *
+            - **/*
   deploy:
     <<: *defaults
     docker:
@@ -30,6 +30,9 @@ jobs:
       - run:
           name: Install AWS CLI
           command: pip install awscli --upgrade --user
+      - run:
+          name: Sanity print current directory
+          command: ls -la ./
       - run:
           name: Run deploy script
           command: python ./deploy.py
