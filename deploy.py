@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Builds Jekyll site, syncs to aws s3 bucket without extensions, invalidates
+Syncs already built jekyll site to s3 bucket without extensions, invalidates
 Cloudfront. Can be run both interactively and through a CircleCI CI/CD system
 """
 
@@ -15,12 +15,6 @@ SITE_DIR = os.path.join(ROOT_DIR, "_site")
 DEPLOY_DIR = os.path.join(ROOT_DIR, "_deploy")
 
 def main():
-    # Initialize and build jekyll
-    output_code = 0
-    output_code += build_jekyll()
-    if output_code != 0:
-        return output_code
-
     # Sync s3 bucket from jekyll build
     if 's3_bucket' in os.environ:
         bucket_name = os.environ['s3_bucket']
@@ -52,9 +46,6 @@ def main():
         shutil.rmtree(DEPLOY_DIR)
     
     return output_code
-
-def build_jekyll():
-    return run_shell_command(f"cd {ROOT_DIR} && jekyll build")
 
 def deploy_to_s3_without_html_extensions(bucket_name):
         output_code = 0
