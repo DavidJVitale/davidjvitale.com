@@ -19,7 +19,7 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
-            - _site
+            - *
   deploy:
     <<: *defaults
     docker:
@@ -32,7 +32,7 @@ jobs:
           command: pip install awscli --upgrade --user
       - run:
           name: Run deploy script
-          command: python deploy.py
+          command: python ./deploy.py
 workflows:
   version: 2
   test-deploy:
