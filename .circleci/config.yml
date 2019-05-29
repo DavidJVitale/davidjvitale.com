@@ -30,7 +30,7 @@ jobs:
           at: ./
       - run:
           name: Install AWS CLI
-          command: pip install awscli --upgrade --user
+          command: sudo pip install awscli --upgrade
       - run:
           name: Sanity print current directory
           command: ls -la ./
