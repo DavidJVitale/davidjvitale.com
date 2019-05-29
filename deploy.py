@@ -15,6 +15,7 @@ SITE_DIR = os.path.join(ROOT_DIR, "_site")
 DEPLOY_DIR = os.path.join(ROOT_DIR, "_deploy")
 
 def main():
+    output_code = 0
     # Sync s3 bucket from jekyll build
     if 's3_bucket' in os.environ:
         bucket_name = os.environ['s3_bucket']
