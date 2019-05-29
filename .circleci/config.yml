@@ -32,7 +32,7 @@ jobs:
           command: pip install awscli --upgrade --user
       - run:
           name: Run deploy script
-          command: python ~/repo/deploy.py
+          command: python deploy.py
 workflows:
   version: 2
   test-deploy:
