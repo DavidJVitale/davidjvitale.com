@@ -9,7 +9,7 @@ modified_time: '2019-05-22 01:00:00 -07:00'
 featured: true
 ---
 
-Two years ago on this day, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts [in a blog](/blog/travel/alaska-roadtrip/) along the way, but never wrote a proper retrospective for my trip.
+Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts [in a blog](/blog/travel/alaska-roadtrip/) along the way, but never wrote a proper retrospective for my trip.
 
 {% include leaflet-map.html 
     geojson='
