@@ -37,6 +37,8 @@ exclude:
    - README.md
    - LICENSE.md
    - NOTES.md
+   - transfer_script_from_old_site.rb
+   - deploy.py
    - vendor/bundle/
    - vendor/cache/
    - vendor/gems/
