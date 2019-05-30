@@ -1,0 +1,12 @@
+{%- assign geojson = include.geojson | default: {} -%}
+{%- assign href = include.href | default: "" -%}
+
+    var geojson = {{geojson}};
+    if(Array.isArray(geojson)){
+        for(var i=0; i<geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], {{href}});
+        }
+    } else {
+    addGeoJSONToMap(geojson, {{href}});
+    }

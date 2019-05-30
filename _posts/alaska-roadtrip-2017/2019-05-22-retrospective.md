@@ -61,6 +61,8 @@ Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with grea
     zoom=3
 %}
 
+{% include end-leaflet-map.html %}
+
 >Each point on the map above represents a stop on our trip and contains a link to the original blog post. 
 
 ## South Dakota, Montana

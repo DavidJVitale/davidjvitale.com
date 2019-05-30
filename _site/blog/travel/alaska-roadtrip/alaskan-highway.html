@@ -14,18 +14,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-06-05T16:27:00-07:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"http://localhost:4000/blog/travel/alaska-roadtrip/alaskan-highway","headline":"Alaskan Highway","dateModified":"2017-06-05T16:27:00-07:00","datePublished":"2017-06-05T16:27:00-07:00","author":{"@type":"Person","name":"David Vitale"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/travel/alaska-roadtrip/alaskan-highway"},"@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/travel/alaska-roadtrip/alaskan-highway"},"url":"http://localhost:4000/blog/travel/alaska-roadtrip/alaskan-highway","author":{"@type":"Person","name":"David Vitale"},"headline":"Alaskan Highway","dateModified":"2017-06-05T16:27:00-07:00","datePublished":"2017-06-05T16:27:00-07:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DavidJVitale.com" /><!-- (I sell my soul to) Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136751914-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-136751914-1');
-    </script>
-
-  <!-- Leaflet.js required imports -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DavidJVitale.com" /><!-- Leaflet.js required imports -->
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
        crossorigin=""/>
@@ -85,73 +76,82 @@
     }
 
     // Infer geojson & properties with it (popup, external hyperlinks, etc.)
-    var addGeoJSONToMap = (geojson) => {
-	    if(Object.keys(geojson).length !== 0){
-	        var onEachFeature = (feature, layer) => {
-	            if(feature.properties && feature.properties.popupContent){
-		            var popupContent = feature.properties.popupContent;
-            	if(feature.properties.href){
-	                    popupContent += '<a href=' + 
-	                        '"' + feature.properties.href + '"' +
-	                        ' target="_blank"' +
-				'><img src="/assets/logos/new-window-24.png"></img></a>';
-	                }
-	                layer.bindPopup(popupContent);
-        	    }
-	            if((0 === 0) && 
-	               (0 === 0) && 
-        	        feature.geometry.type === "Point"){
-	                //If the blog author didn't specify center, infer from feature
-	                var lat = feature.geometry.coordinates[1];
-	                var long = feature.geometry.coordinates[0];
-	                map.panTo(new L.LatLng(lat, long));
-        	    }
-	        };
-	        L.geoJSON(geojson, { 
-	            onEachFeature: onEachFeature 
-	        }).addTo(map);
-	     }
+    var addGeoJSONToMap = (geojson, href) => {
+            if(Object.keys(geojson).length !== 0){
+                var onEachFeature = (feature, layer) => {
+                    if(feature.properties && feature.properties.popupContent){
+                            var popupContent = feature.properties.popupContent;
+                var href_ = ""
+                if(feature.properties.href){
+                    href_ = feature.properties.href; }
+                if(href !== ""){
+                    href_ = href; }
+                if(href_ !== ""){
+                            popupContent += '<a href=' + 
+                                '"' + href_ + '"' +
+                                ' target="_blank"' +
+                                '><img src="/assets/logos/new-window-24.png"></img></a>';
+                        }
+                        layer.bindPopup(popupContent);
+                    }
+                    if((0 === 0) && 
+                       (0 === 0) && 
+                        feature.geometry.type === "Point"){
+                        //If the blog author didn't specify center, infer from feature
+                        var lat = feature.geometry.coordinates[1];
+                        var long = feature.geometry.coordinates[0];
+                map.panTo(new L.LatLng(lat, long));
+                    }
+                };
+                L.geoJSON(geojson, { 
+                    onEachFeature: onEachFeature 
+          }).addTo(map);
+       }
     };
     var geojson = { "type": "Feature", "properties": {"popupContent": "Sign Post Forest, Alaskan Highway"}, "geometry": { "type": "Point", "coordinates": [-128.714362, 60.063366] } };
     if(Array.isArray(geojson)){
-	for(var i=0; i<geojson.length; i++){
-		addGeoJSONToMap(geojson[i]);
-	}
+        for(var i=0; i<geojson.length; i++){
+            addGeoJSONToMap(geojson[i]);
+        }
     } else {
-	addGeoJSONToMap(geojson);
+        addGeoJSONToMap(geojson);
     }
 
 
+<a href="/assets/personal/alaska-trip-2017/signpost-1.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-1.jpg"></a>
+
+
+Driving the Alaskan Highway was insane. Hundreds of miles of undeveloped nature stretches between tiny towns containing just a gas station, motel, and general store. We drove over 1500 miles in 3 days (with no showers!). In the stretches of nature, we saw Black Bears, Grizzly Bears, Moose, Bison, even a porcupine on the side of the road. Isaac got some cool pictures of them (my camera never seemed to be out at the right time).
+
+The highlight of the small towns was the Sign Post Forest in Watson Lake, Yukon Canada. There are hundreds of 15 foot posts covered in thousands of license plates, state/county/town/college signs, and to other memorabilia of Alaskan Highway drivers. It goes on forever!
+
+We didn't know this existed beforehand, or else we would have brought along some old license plates or signs. What we did have, however, was the now bug covered Marquette license plate cover that was on the front of my car.
+
+We took it off my car, found an old screw lying around, and fixed it to a board! Kevin and Isaac each attached a hair tie to it. Hope I can come back to it in 20 years or so and see it still there.
+
+If ever any of you are on that highway at any time in your life, here's how you find my sign among the thousands:
+
+Go to the front entrance (or whatever entrance this is):
+
+<a href="/assets/personal/alaska-trip-2017/signpost-2.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-2.jpg"></a>
+
+
+Walk through the entrance, towards the first metal light post you see:
+
+<a href="/assets/personal/alaska-trip-2017/signpost-3.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-3.jpg"></a>
+
+
+It'll be the first wooden post to the right of the metal light post:
+
+<a href="/assets/personal/alaska-trip-2017/signpost-4.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-4.jpg"></a>
+
+
+Midway down that pole!
+
+<a href="/assets/personal/alaska-trip-2017/signpost-5.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-5.jpg"></a>
+
+
 </script>
-
-<p><a href="/assets/personal/alaska-trip-2017/signpost-1.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-1.jpg" /></a></p>
-
-<p>Driving the Alaskan Highway was insane. Hundreds of miles of undeveloped nature stretches between tiny towns containing just a gas station, motel, and general store. We drove over 1500 miles in 3 days (with no showers!). In the stretches of nature, we saw Black Bears, Grizzly Bears, Moose, Bison, even a porcupine on the side of the road. Isaac got some cool pictures of them (my camera never seemed to be out at the right time).</p>
-
-<p>The highlight of the small towns was the Sign Post Forest in Watson Lake, Yukon Canada. There are hundreds of 15 foot posts covered in thousands of license plates, state/county/town/college signs, and to other memorabilia of Alaskan Highway drivers. It goes on forever!</p>
-
-<p>We didn’t know this existed beforehand, or else we would have brought along some old license plates or signs. What we did have, however, was the now bug covered Marquette license plate cover that was on the front of my car.</p>
-
-<p>We took it off my car, found an old screw lying around, and fixed it to a board! Kevin and Isaac each attached a hair tie to it. Hope I can come back to it in 20 years or so and see it still there.</p>
-
-<p>If ever any of you are on that highway at any time in your life, here’s how you find my sign among the thousands:</p>
-
-<p>Go to the front entrance (or whatever entrance this is):</p>
-
-<p><a href="/assets/personal/alaska-trip-2017/signpost-2.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-2.jpg" /></a></p>
-
-<p>Walk through the entrance, towards the first metal light post you see:</p>
-
-<p><a href="/assets/personal/alaska-trip-2017/signpost-3.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-3.jpg" /></a></p>
-
-<p>It’ll be the first wooden post to the right of the metal light post:</p>
-
-<p><a href="/assets/personal/alaska-trip-2017/signpost-4.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-4.jpg" /></a></p>
-
-<p>Midway down that pole!</p>
-
-<p><a href="/assets/personal/alaska-trip-2017/signpost-5.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/signpost-5.jpg" /></a></p>
-
 
   </div>
 

@@ -14,18 +14,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-05-22T17:13:00-07:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"http://localhost:4000/blog/travel/alaska-roadtrip/the-trip-starts","headline":"The trip starts!","dateModified":"2017-05-22T17:13:00-07:00","datePublished":"2017-05-22T17:13:00-07:00","author":{"@type":"Person","name":"David Vitale"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/travel/alaska-roadtrip/the-trip-starts"},"@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/travel/alaska-roadtrip/the-trip-starts"},"url":"http://localhost:4000/blog/travel/alaska-roadtrip/the-trip-starts","author":{"@type":"Person","name":"David Vitale"},"headline":"The trip starts!","dateModified":"2017-05-22T17:13:00-07:00","datePublished":"2017-05-22T17:13:00-07:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DavidJVitale.com" /><!-- (I sell my soul to) Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136751914-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-136751914-1');
-    </script>
-
-  <!-- Leaflet.js required imports -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DavidJVitale.com" /><!-- Leaflet.js required imports -->
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
        crossorigin=""/>
@@ -85,32 +76,37 @@
     }
 
     // Infer geojson & properties with it (popup, external hyperlinks, etc.)
-    var addGeoJSONToMap = (geojson) => {
-	    if(Object.keys(geojson).length !== 0){
-	        var onEachFeature = (feature, layer) => {
-	            if(feature.properties && feature.properties.popupContent){
-		            var popupContent = feature.properties.popupContent;
-            	if(feature.properties.href){
-	                    popupContent += '<a href=' + 
-	                        '"' + feature.properties.href + '"' +
-	                        ' target="_blank"' +
-				'><img src="/assets/logos/new-window-24.png"></img></a>';
-	                }
-	                layer.bindPopup(popupContent);
-        	    }
-	            if((0 === 0) && 
-	               (0 === 0) && 
-        	        feature.geometry.type === "Point"){
-	                //If the blog author didn't specify center, infer from feature
-	                var lat = feature.geometry.coordinates[1];
-	                var long = feature.geometry.coordinates[0];
-	                map.panTo(new L.LatLng(lat, long));
-        	    }
-	        };
-	        L.geoJSON(geojson, { 
-	            onEachFeature: onEachFeature 
-	        }).addTo(map);
-	     }
+    var addGeoJSONToMap = (geojson, href) => {
+            if(Object.keys(geojson).length !== 0){
+                var onEachFeature = (feature, layer) => {
+                    if(feature.properties && feature.properties.popupContent){
+                            var popupContent = feature.properties.popupContent;
+                var href_ = ""
+                if(feature.properties.href){
+                    href_ = feature.properties.href; }
+                if(href !== ""){
+                    href_ = href; }
+                if(href_ !== ""){
+                            popupContent += '<a href=' + 
+                                '"' + href_ + '"' +
+                                ' target="_blank"' +
+                                '><img src="/assets/logos/new-window-24.png"></img></a>';
+                        }
+                        layer.bindPopup(popupContent);
+                    }
+                    if((0 === 0) && 
+                       (0 === 0) && 
+                        feature.geometry.type === "Point"){
+                        //If the blog author didn't specify center, infer from feature
+                        var lat = feature.geometry.coordinates[1];
+                        var long = feature.geometry.coordinates[0];
+                map.panTo(new L.LatLng(lat, long));
+                    }
+                };
+                L.geoJSON(geojson, { 
+                    onEachFeature: onEachFeature 
+          }).addTo(map);
+       }
     };
     var geojson = {
         "type": "FeatureCollection",
@@ -134,22 +130,21 @@
 	    }]
         };
     if(Array.isArray(geojson)){
-	for(var i=0; i<geojson.length; i++){
-		addGeoJSONToMap(geojson[i]);
-	}
+        for(var i=0; i<geojson.length; i++){
+            addGeoJSONToMap(geojson[i]);
+        }
     } else {
-	addGeoJSONToMap(geojson);
+        addGeoJSONToMap(geojson);
     }
 
 
+Leaving for the trip today, Kevin Isaac Joey and I are driving to Badlands, South Dakota. We'll spend the day there tomorrow, then make our way to Glacier, Montana.
+
+Today we picked everyone up from their respective homes, packed all of our stuff into my newly purchased Rav4. After racking up $100 food bill from Walmart, we're spending all of today driving. Really looking forward seeing South Dakota and Montana! 
+
+<a href="/assets/personal/alaska-trip-2017/the-trip-starts-1.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/the-trip-starts-1.jpg"></a>
+
 </script>
-
-<p>Leaving for the trip today, Kevin Isaac Joey and I are driving to Badlands, South Dakota. We’ll spend the day there tomorrow, then make our way to Glacier, Montana.</p>
-
-<p>Today we picked everyone up from their respective homes, packed all of our stuff into my newly purchased Rav4. After racking up $100 food bill from Walmart, we’re spending all of today driving. Really looking forward seeing South Dakota and Montana!</p>
-
-<p><a href="/assets/personal/alaska-trip-2017/the-trip-starts-1.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/the-trip-starts-1.jpg" /></a></p>
-
 
   </div>
 

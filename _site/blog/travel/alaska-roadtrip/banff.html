@@ -14,18 +14,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-05-29T13:36:00-07:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"http://localhost:4000/blog/travel/alaska-roadtrip/banff","headline":"Banff, AB","dateModified":"2017-05-29T13:36:00-07:00","datePublished":"2017-05-29T13:36:00-07:00","author":{"@type":"Person","name":"David Vitale"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/travel/alaska-roadtrip/banff"},"@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/travel/alaska-roadtrip/banff"},"url":"http://localhost:4000/blog/travel/alaska-roadtrip/banff","author":{"@type":"Person","name":"David Vitale"},"headline":"Banff, AB","dateModified":"2017-05-29T13:36:00-07:00","datePublished":"2017-05-29T13:36:00-07:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DavidJVitale.com" /><!-- (I sell my soul to) Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136751914-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-136751914-1');
-    </script>
-
-  <!-- Leaflet.js required imports -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DavidJVitale.com" /><!-- Leaflet.js required imports -->
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
        crossorigin=""/>
@@ -85,63 +76,71 @@
     }
 
     // Infer geojson & properties with it (popup, external hyperlinks, etc.)
-    var addGeoJSONToMap = (geojson) => {
-	    if(Object.keys(geojson).length !== 0){
-	        var onEachFeature = (feature, layer) => {
-	            if(feature.properties && feature.properties.popupContent){
-		            var popupContent = feature.properties.popupContent;
-            	if(feature.properties.href){
-	                    popupContent += '<a href=' + 
-	                        '"' + feature.properties.href + '"' +
-	                        ' target="_blank"' +
-				'><img src="/assets/logos/new-window-24.png"></img></a>';
-	                }
-	                layer.bindPopup(popupContent);
-        	    }
-	            if((0 === 0) && 
-	               (0 === 0) && 
-        	        feature.geometry.type === "Point"){
-	                //If the blog author didn't specify center, infer from feature
-	                var lat = feature.geometry.coordinates[1];
-	                var long = feature.geometry.coordinates[0];
-	                map.panTo(new L.LatLng(lat, long));
-        	    }
-	        };
-	        L.geoJSON(geojson, { 
-	            onEachFeature: onEachFeature 
-	        }).addTo(map);
-	     }
+    var addGeoJSONToMap = (geojson, href) => {
+            if(Object.keys(geojson).length !== 0){
+                var onEachFeature = (feature, layer) => {
+                    if(feature.properties && feature.properties.popupContent){
+                            var popupContent = feature.properties.popupContent;
+                var href_ = ""
+                if(feature.properties.href){
+                    href_ = feature.properties.href; }
+                if(href !== ""){
+                    href_ = href; }
+                if(href_ !== ""){
+                            popupContent += '<a href=' + 
+                                '"' + href_ + '"' +
+                                ' target="_blank"' +
+                                '><img src="/assets/logos/new-window-24.png"></img></a>';
+                        }
+                        layer.bindPopup(popupContent);
+                    }
+                    if((0 === 0) && 
+                       (0 === 0) && 
+                        feature.geometry.type === "Point"){
+                        //If the blog author didn't specify center, infer from feature
+                        var lat = feature.geometry.coordinates[1];
+                        var long = feature.geometry.coordinates[0];
+                map.panTo(new L.LatLng(lat, long));
+                    }
+                };
+                L.geoJSON(geojson, { 
+                    onEachFeature: onEachFeature 
+          }).addTo(map);
+       }
     };
     var geojson = { "type": "Feature", "properties": {"popupContent": "Banff National Park"}, "geometry": { "type": "Point", "coordinates": [-115.928160, 51.495437] } };
     if(Array.isArray(geojson)){
-	for(var i=0; i<geojson.length; i++){
-		addGeoJSONToMap(geojson[i]);
-	}
+        for(var i=0; i<geojson.length; i++){
+            addGeoJSONToMap(geojson[i]);
+        }
     } else {
-	addGeoJSONToMap(geojson);
+        addGeoJSONToMap(geojson);
     }
 
 
+<a href="/assets/personal/alaska-trip-2017/banff-1.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-1.jpg"></a>
+
+
+Spent the last 2 days in Banff! At first we were a bit upset at how commercialized it was, but we quickly learned to appreciate the awesome nature past the shops and tourists. There's some great back country too, this place is pretty great.
+
+We finally took the canoe off the roof rack and floated on a small lake! All four of us fit on the 14 foot three seater. It was great.
+
+It was also cool because there was still snow on some lakes and mountains even though it was 70-80 degrees out. We even did a mountain climb day hike where we were walking over 3-4 feet deep in snow! An interesting experience for sure.
+
+Enjoy all the pictures taken!
+
+<a href="/assets/personal/alaska-trip-2017/banff-2.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-2.jpg"></a>
+
+
+<a href="/assets/personal/alaska-trip-2017/banff-3.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-3.jpg"></a>
+
+
+<a href="/assets/personal/alaska-trip-2017/banff-4.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-4.jpg"></a>
+
+
+<a href="/assets/personal/alaska-trip-2017/banff-5.jpg" ><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-5.jpg"></a>
+
 </script>
-
-<p><a href="/assets/personal/alaska-trip-2017/banff-1.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-1.jpg" /></a></p>
-
-<p>Spent the last 2 days in Banff! At first we were a bit upset at how commercialized it was, but we quickly learned to appreciate the awesome nature past the shops and tourists. There’s some great back country too, this place is pretty great.</p>
-
-<p>We finally took the canoe off the roof rack and floated on a small lake! All four of us fit on the 14 foot three seater. It was great.</p>
-
-<p>It was also cool because there was still snow on some lakes and mountains even though it was 70-80 degrees out. We even did a mountain climb day hike where we were walking over 3-4 feet deep in snow! An interesting experience for sure.</p>
-
-<p>Enjoy all the pictures taken!</p>
-
-<p><a href="/assets/personal/alaska-trip-2017/banff-2.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-2.jpg" /></a></p>
-
-<p><a href="/assets/personal/alaska-trip-2017/banff-3.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-3.jpg" /></a></p>
-
-<p><a href="/assets/personal/alaska-trip-2017/banff-4.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-4.jpg" /></a></p>
-
-<p><a href="/assets/personal/alaska-trip-2017/banff-5.jpg"><img class="travel-image" src="/assets/personal/alaska-trip-2017/banff-5.jpg" /></a></p>
-
 
   </div>
 
