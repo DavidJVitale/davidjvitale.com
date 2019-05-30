@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-29T17:12:48-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-29T17:26:47-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
 
 &lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
@@ -49,49 +49,7 @@
           }).addTo(map);
        }
     };
-    var geojson = 
-{&quot;type&quot;: &quot;FeatureCollection&quot;,
-      &quot;features&quot;: [
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/yellowstone&quot;, &quot;popupContent&quot;: &quot;Yellowstone National Park&quot;,}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-110.723183, 44.412266] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/eagle-creek-ape-caves&quot;, &quot;popupContent&quot;: &quot;Eagle Creek&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.894672, 45.621595] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/eagle-creek-ape-caves&quot;, &quot;popupContent&quot;: &quot;Multnomah Falls&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.115801, 45.576045] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/eagle-creek-ape-caves&quot;, &quot;popupContent&quot;: &quot;Ape Caves&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.211360, 46.109579] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/mt-rainier-olympics&quot;, &quot;popupContent&quot;: &quot;Flapjack Lakes, Olympic National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-123.341150, 47.560991] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/mt-rainier-olympics&quot;, &quot;popupContent&quot;: &quot;Mount Rainier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.727100, 46.877833] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/vancouver-island&quot;, &quot;popupContent&quot;: &quot;Strathcona Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-125.598810, 49.814399] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/wrangell&quot;, &quot;popupContent&quot;: &quot;Wrangell-St. Elias National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-142.921965, 61.448960] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/exit-glacier&quot;, &quot;popupContent&quot;: &quot;Exit Glacier&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-149.649859, 60.177945] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/exit-glacier&quot;, &quot;popupContent&quot;: &quot;Homer, AK&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.548355, 59.642815] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/denali&quot;, &quot;popupContent&quot;: &quot;Denali National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.192224, 63.113509] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/alaskan-highway/&quot;, &quot;popupContent&quot;: &quot;Sign Post Forest, Alaskan Highway&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-128.714362, 60.063366] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/mount-robson&quot;, &quot;popupContent&quot;: &quot;Mount Robson Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-119.229462, 53.035430] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/banff&quot;, &quot;popupContent&quot;: &quot;Banff National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-115.928160, 51.495437] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/glacier-3&quot;, &quot;popupContent&quot;: &quot;Waterton-Glacier International Peace Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.659403, 48.995485] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/glacier-2&quot;, &quot;popupContent&quot;: &quot;Glacier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.492293, 48.695363] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/black-hills-sd&quot;, &quot;popupContent&quot;: &quot;Black Hills National Forest&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.742415, 43.997541] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/badlands-sd&quot;, &quot;popupContent&quot;: &quot;Custer State Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.454882, 43.757049] } },
-
-        { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;href&quot;:&quot;/blog/travel/alaska-roadtrip/badlands-sd&quot;, &quot;popupContent&quot;: &quot;Badlands National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-102.339920, 43.854480] } }
-       ]
-}
-;
+    var geojson = {};
     if(Array.isArray(geojson)){
         for(var i=0; i&lt;geojson.length; i++){
             addGeoJSONToMap(geojson[i]);
@@ -99,7 +57,141 @@
     } else {
         addGeoJSONToMap(geojson);
     }
-
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Yellowstone National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-110.723183, 44.412266] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Eagle Creek&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.894672, 45.621595] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Multnomah Falls&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.115801, 45.576045] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Ape Caves&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.211360, 46.109579] } }] };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Flapjack Lakes, Olympic National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-123.341150, 47.560991] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Mount Rainier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.727100, 46.877833] } }] };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Strathcona Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-125.598810, 49.814399] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Wrangell-St. Elias National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-142.921965, 61.448960] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Exit Glacier&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-149.649859, 60.177945] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Homer, AK&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.548355, 59.642815] } }] };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Denali National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.192224, 63.113509] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Sign Post Forest, Alaskan Highway&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-128.714362, 60.063366] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Mount Robson Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-119.229462, 53.035430] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Banff National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-115.928160, 51.495437] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Waterton-Glacier International Peace Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.659403, 48.995485] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Glacier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.492293, 48.695363] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Saint Mary Lake&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.492291, 48.695373] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [ { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Black Hills National Forest&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.742415, 43.997541] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Custer State Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.454882, 43.757049] } }] };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
+var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Badlands National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-102.339920, 43.854480] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            
+        addGeoJSONToMap(geojson[i], );
+        }
+    } else {
+    addGeoJSONToMap(geojson, );
+    }
 
 &lt;/script&gt;
 

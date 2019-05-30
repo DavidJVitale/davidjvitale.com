@@ -1,4 +1,4 @@
-{%- assign geojson = include.geojson | default: {} -%}
+{%- assign geojson = include.geojson | default: '{}' -%}
 {%- assign href = include.href | default: "" -%}
 
     var geojson = {{geojson}};

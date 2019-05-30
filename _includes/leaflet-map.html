@@ -4,7 +4,7 @@
 {%- assign zoom = include.zoom | default: 0 -%}
 {%- assign basemap_provider = include.basemap_provider | default: "OpenStreetMap.Mapnik" -%}
 {%- assign esri_basemap = include.esri_basemap | default: "" -%}
-{%- assign geojson = include.geojson | default: {} -%}
+{%- assign geojson = include.geojson | default: '{}' -%}
 
 <div id="{{map_div_id}}" class="leaflet-map-default"></div>
 
