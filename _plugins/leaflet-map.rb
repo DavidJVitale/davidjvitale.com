@@ -8,9 +8,15 @@ module Jekyll
 
     def render(context)
         text = super
-        preparsed_html_file_str = File.read("./_plugins/leaflet-map.html")
-        parsed_html = preparsed_html_file_str % {inside_block_text: text }
-        parsed_html
+        
+        leaflet_providers_js_content = File.read("./_plugins/leaflet-providers.js")
+        leaflet_loader_js_preparsed = File.read("./_plugins/leaflet-loader.js")
+        leaflet_loader_js_parsed = leaflet_loader_js_preparsed % {leaflet_providers_js_content: leaflet_providers_js_content}
+
+        map_preparsed_html = File.read("./_plugins/leaflet-map.html")
+        map_parsed_html = map_preparsed_html % {inside_block_text: text,
+                                                leaflet_loader_js_content: leaflet_loader_js_parsed}
+        map_parsed_html
     end
 
   end

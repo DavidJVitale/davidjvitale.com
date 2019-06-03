@@ -1,9 +1,19 @@
+<div id="leaflet-map" class="leaflet-map-default"></div>
 <script>
-    var leaflet_item_jsons = [%{inside_block_text}];
-    for(var i=0; i<leaflet_item_jsons.length; i++){
-        var leaflet_item = leaflet_item_jsons[i];
-        console.log("Leaflet item #" + i);
-        console.log(leaflet_item);
-    }
-
+    //Add all the scripts/links we need to load leaflet to the head
+    %{leaflet_loader_js_content}
+    //When page is ready, initialize map with the arguments passed into tag
+    (() => {
+        window.onload = () => {
+            var map = L.map("leaflet-map");
+            L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
+            //Parse the content of whatever was inbetween the jekyll tag blocks
+            var leaflet_item_jsons = [%{inside_block_text}];
+            for(var i=0; i<leaflet_item_jsons.length; i++){
+                var leaflet_item = leaflet_item_jsons[i];
+                console.log("Leaflet item #" + i);
+                console.log(leaflet_item);
+            }
+        };
+    })();
 </script>
