@@ -10,6 +10,6 @@ featured: true
 ---
 
 {% leaflet_map %}
-Outputting something..
+{"type": "LeafletFeature", "id": "1aa34bdc4", "value": {"foo" : "bar"}},
 {% endleaflet_map %}
 
