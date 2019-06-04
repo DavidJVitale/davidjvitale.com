@@ -1,28 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-03T17:51:59-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective2</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2" rel="alternate" type="text/html" title="Retrospective2" /><published>2019-05-23T01:00:00-07:00</published><updated>2019-05-23T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2">&lt;div id=&quot;leaflet-map&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-03T19:27:31-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective2</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2" rel="alternate" type="text/html" title="Retrospective2" /><published>2019-05-23T01:00:00-07:00</published><updated>2019-05-23T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2">&lt;div id=&quot;leaflet-map&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
-var jsEl = document.createElement(&quot;script&quot;);
-console.log(&quot;here I am&quot;);
-jsEl.onload = function() {
-    console.log(&quot;js loaded&quot;);
+var leafletCssEl = document.createElement(&quot;link&quot;);
+leafletCssEl.rel = &quot;stylesheet&quot;;
+leafletCssEl.href = &quot;https://unpkg.com/leaflet@1.5.1/dist/leaflet.css&quot;;
+document.head.appendChild(leafletCssEl);
+
+var leafletJsEl = document.createElement(&quot;script&quot;);
+leafletJsEl.onload = function() {
     provEl = document.createElement(&quot;script&quot;);
     provEl.onload = function() {
-        window.onload = function() {
             var esriEl = document.createElement(&quot;script&quot;);
             esriEl.onload = function() {
                 var map = L.map(&quot;leaflet-map&quot;).setView([0,0], 3);
-                //map.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
-                L.esri.basemapLayer(&quot;Oceans&quot;).addTo(map);
+                L.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
+                //L.esri.basemapLayer(&quot;Oceans&quot;).addTo(map);
                 console.log(&quot;Added stuff to map&quot;);
-            }
+                }
             esriEl.src = &quot;https://unpkg.com/esri-leaflet/dist/esri-leaflet.js&quot;
             document.head.appendChild(esriEl);
         };
-    };
     provEl.src = &quot;/assets/js/leaflet-providers.js&quot;;
     document.head.appendChild(provEl);
 };
-jsEl.src = &quot;https://unpkg.com/leaflet@1.5.1/dist/leaflet.js&quot;;
-document.head.appendChild(jsEl);
+leafletJsEl.src = &quot;https://unpkg.com/leaflet@1.5.1/dist/leaflet.js&quot;;
+document.head.appendChild(leafletJsEl);
 &lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Retrospective</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
 
 &lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;

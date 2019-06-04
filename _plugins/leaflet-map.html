@@ -1,26 +1,27 @@
 <div id="leaflet-map" class="leaflet-map-default"></div>
 <script>
-var jsEl = document.createElement("script");
-console.log("here I am");
-jsEl.onload = function() {
-    console.log("js loaded");
+var leafletCssEl = document.createElement("link");
+leafletCssEl.rel = "stylesheet";
+leafletCssEl.href = "https://unpkg.com/leaflet@1.5.1/dist/leaflet.css";
+document.head.appendChild(leafletCssEl);
+
+var leafletJsEl = document.createElement("script");
+leafletJsEl.onload = function() {
     provEl = document.createElement("script");
     provEl.onload = function() {
-        window.onload = function() {
             var esriEl = document.createElement("script");
             esriEl.onload = function() {
                 var map = L.map("leaflet-map").setView([0,0], 3);
-                //map.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
-                L.esri.basemapLayer("Oceans").addTo(map);
+                L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
+                //L.esri.basemapLayer("Oceans").addTo(map);
                 console.log("Added stuff to map");
-            }
+                }
             esriEl.src = "https://unpkg.com/esri-leaflet/dist/esri-leaflet.js"
             document.head.appendChild(esriEl);
         };
-    };
     provEl.src = "/assets/js/leaflet-providers.js";
     document.head.appendChild(provEl);
 };
-jsEl.src = "https://unpkg.com/leaflet@1.5.1/dist/leaflet.js";
-document.head.appendChild(jsEl);
+leafletJsEl.src = "https://unpkg.com/leaflet@1.5.1/dist/leaflet.js";
+document.head.appendChild(leafletJsEl);
 </script>
