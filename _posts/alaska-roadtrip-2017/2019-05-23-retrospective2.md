@@ -9,7 +9,7 @@ modified_time: '2019-05-22 01:00:00 -07:00'
 featured: true
 ---
 
-{% leaflet_map {"foo": "bar"} %}
+{% leaflet_map {"div_id": "my-map-123"} %}
 {"type": "LeafletFeature", "id": "1aa34bdc4", "value": {"foo" : "bar"}},
 {% endleaflet_map %}
 

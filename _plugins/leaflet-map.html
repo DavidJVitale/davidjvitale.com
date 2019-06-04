@@ -1,4 +1,4 @@
-<div id="leaflet-map-%{id}" class="leaflet-map-default"></div>
+<div id="leaflet-map-%{id}" class="leaflet-map"></div>
 <script>
 (() => {
     //Config section
@@ -10,23 +10,27 @@
     var esriLeafletJsId = "esri-leaflet-js-head";
     var leafletProvidersJsId = "leaflet-providers-js-head";
 
-    var id = "%{id}";
-    var defaultMapDivId = "leaflet-map-%{id}";
-
-    console.log("This block called with these args:");
-    console.log(%{tag_input_arg_json});
+    var tagInputArg = %{tag_input_arg_json};
+    var defaultMapElId = "leaflet-map-%{id}";
+    var defaultMapElStyle = "height:300px; margin:25px";
+    var mapEl = document.getElementById(defaultMapElId);
+    if('div_id' in tagInputArg){
+        mapEl.id = tagInputArg['div_id'];
+    }
+    var mapCssEl = document.createElement("style");
+    mapCssEl.innerHTML = "#" + defaultMapElId + "{" + defaultMapElStyle + "}";
+    document.head.appendChild(mapCssEl);
 
     function _createMap(){
-            console.log("Creating map %{id}..");
-            var map = L.map(defaultMapDivId).setView([0,0], 3);
-            L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
-            var leaflet_item_jsons = [%{inside_block_leaflet_objects}];
-            for(var i=0; i<leaflet_item_jsons.length; i++){
-                var leaflet_item = leaflet_item_jsons[i];
-                console.log("Leaflet item #" + i);
-                console.log(leaflet_item);
-            }
-
+        console.log("Creating map %{id}..");
+        var map = L.map(mapEl.id).setView([0,0], 3);
+        L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
+        var leaflet_item_jsons = [%{inside_block_leaflet_objects}];
+        for(var i=0; i<leaflet_item_jsons.length; i++){
+            var leaflet_item = leaflet_item_jsons[i];
+            console.log("Leaflet item #" + i);
+            console.log(leaflet_item);
+        }
     }
 
     function createMap(){
@@ -66,11 +70,11 @@
     // Load the main leaflet.js code, wait for it to load
     var leafletJsEl = document.createElement("script");
     leafletJsEl.id = leafletJsId;
-    leafletJsEl.onload = function() {
+    leafletJsEl.onload = () => {
         //After loaded, load the esri-leaflet.js code, wait for it to load
         var esriEl = document.createElement("script");
         esriEl.id = esriLeafletJsId;
-        esriEl.onload = function() {
+        esriEl.onload = () => {
             //After loaded, add the leaflet-providers <script>, don't wait to load
             provEl = document.createElement("script");
             provEl.id = leafletProvidersJsId;

@@ -583,7 +583,7 @@ p.mission-statement {
     margin-right: 1em;
     margin-left: 1em; } }
 /*leaflet section*/
-div.leaflet-map-default {
+div.leaflet-map {
   height: 33vh;
   min-height: 300px;
   z-index: 0;

@@ -48,7 +48,7 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <div id="leaflet-map-d3146948121b5e4dfd9d52811ef73dcb" class="leaflet-map-default"></div>
+    <div id="leaflet-map-42922d2e8966497725313fd48bb48b2b" class="leaflet-map"></div>
 <script>
 (() => {
     //Config section
@@ -60,25 +60,29 @@
     var esriLeafletJsId = "esri-leaflet-js-head";
     var leafletProvidersJsId = "leaflet-providers-js-head";
 
-    var id = "d3146948121b5e4dfd9d52811ef73dcb";
-    var defaultMapDivId = "leaflet-map-d3146948121b5e4dfd9d52811ef73dcb";
-
-    console.log("This block called with these args:");
-    console.log({"foo": "bar"} );
+    var tagInputArg = {"div_id": "my-map-123"} ;
+    var defaultMapElId = "leaflet-map-42922d2e8966497725313fd48bb48b2b";
+    var defaultMapElStyle = "height:300px; margin:25px";
+    var mapEl = document.getElementById(defaultMapElId);
+    if('div_id' in tagInputArg){
+        mapEl.id = tagInputArg['div_id'];
+    }
+    var mapCssEl = document.createElement("style");
+    mapCssEl.innerHTML = "#" + defaultMapElId + "{" + defaultMapElStyle + "}";
+    document.head.appendChild(mapCssEl);
 
     function _createMap(){
-            console.log("Creating map d3146948121b5e4dfd9d52811ef73dcb..");
-            var map = L.map(defaultMapDivId).setView([0,0], 3);
-            L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
-            var leaflet_item_jsons = [
+        console.log("Creating map 42922d2e8966497725313fd48bb48b2b..");
+        var map = L.map(mapEl.id).setView([0,0], 3);
+        L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
+        var leaflet_item_jsons = [
 {"type": "LeafletFeature", "id": "1aa34bdc4", "value": {"foo" : "bar"}},
 ];
-            for(var i=0; i<leaflet_item_jsons.length; i++){
-                var leaflet_item = leaflet_item_jsons[i];
-                console.log("Leaflet item #" + i);
-                console.log(leaflet_item);
-            }
-
+        for(var i=0; i<leaflet_item_jsons.length; i++){
+            var leaflet_item = leaflet_item_jsons[i];
+            console.log("Leaflet item #" + i);
+            console.log(leaflet_item);
+        }
     }
 
     function createMap(){
@@ -118,11 +122,11 @@
     // Load the main leaflet.js code, wait for it to load
     var leafletJsEl = document.createElement("script");
     leafletJsEl.id = leafletJsId;
-    leafletJsEl.onload = function() {
+    leafletJsEl.onload = () => {
         //After loaded, load the esri-leaflet.js code, wait for it to load
         var esriEl = document.createElement("script");
         esriEl.id = esriLeafletJsId;
-        esriEl.onload = function() {
+        esriEl.onload = () => {
             //After loaded, add the leaflet-providers <script>, don't wait to load
             provEl = document.createElement("script");
             provEl.id = leafletProvidersJsId;
@@ -955,7 +959,7 @@
 })();
 </script>
 
-<div id="leaflet-map-f27ae59e86ab97ce1ce3724ec6d54678" class="leaflet-map-default"></div>
+<div id="leaflet-map-d8436bca0b04e6572b41c8885133b2fc" class="leaflet-map"></div>
 <script>
 (() => {
     //Config section
@@ -967,25 +971,29 @@
     var esriLeafletJsId = "esri-leaflet-js-head";
     var leafletProvidersJsId = "leaflet-providers-js-head";
 
-    var id = "f27ae59e86ab97ce1ce3724ec6d54678";
-    var defaultMapDivId = "leaflet-map-f27ae59e86ab97ce1ce3724ec6d54678";
-
-    console.log("This block called with these args:");
-    console.log({"spam": "eggs"} );
+    var tagInputArg = {"spam": "eggs"} ;
+    var defaultMapElId = "leaflet-map-d8436bca0b04e6572b41c8885133b2fc";
+    var defaultMapElStyle = "height:300px; margin:25px";
+    var mapEl = document.getElementById(defaultMapElId);
+    if('div_id' in tagInputArg){
+        mapEl.id = tagInputArg['div_id'];
+    }
+    var mapCssEl = document.createElement("style");
+    mapCssEl.innerHTML = "#" + defaultMapElId + "{" + defaultMapElStyle + "}";
+    document.head.appendChild(mapCssEl);
 
     function _createMap(){
-            console.log("Creating map f27ae59e86ab97ce1ce3724ec6d54678..");
-            var map = L.map(defaultMapDivId).setView([0,0], 3);
-            L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
-            var leaflet_item_jsons = [
+        console.log("Creating map d8436bca0b04e6572b41c8885133b2fc..");
+        var map = L.map(mapEl.id).setView([0,0], 3);
+        L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
+        var leaflet_item_jsons = [
 {"type": "LeafletFeature", "id": "bba34bdc4", "value": {"foo" : "bar"}},
 ];
-            for(var i=0; i<leaflet_item_jsons.length; i++){
-                var leaflet_item = leaflet_item_jsons[i];
-                console.log("Leaflet item #" + i);
-                console.log(leaflet_item);
-            }
-
+        for(var i=0; i<leaflet_item_jsons.length; i++){
+            var leaflet_item = leaflet_item_jsons[i];
+            console.log("Leaflet item #" + i);
+            console.log(leaflet_item);
+        }
     }
 
     function createMap(){
@@ -1025,11 +1033,11 @@
     // Load the main leaflet.js code, wait for it to load
     var leafletJsEl = document.createElement("script");
     leafletJsEl.id = leafletJsId;
-    leafletJsEl.onload = function() {
+    leafletJsEl.onload = () => {
         //After loaded, load the esri-leaflet.js code, wait for it to load
         var esriEl = document.createElement("script");
         esriEl.id = esriLeafletJsId;
-        esriEl.onload = function() {
+        esriEl.onload = () => {
             //After loaded, add the leaflet-providers <script>, don't wait to load
             provEl = document.createElement("script");
             provEl.id = leafletProvidersJsId;
