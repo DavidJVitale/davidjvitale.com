@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-03T21:50:44-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective2</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2" rel="alternate" type="text/html" title="Retrospective2" /><published>2019-05-23T01:00:00-07:00</published><updated>2019-05-23T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2">&lt;div id=&quot;leaflet-map-42922d2e8966497725313fd48bb48b2b&quot; class=&quot;leaflet-map&quot;&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-03T21:56:26-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective2</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2" rel="alternate" type="text/html" title="Retrospective2" /><published>2019-05-23T01:00:00-07:00</published><updated>2019-05-23T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2">&lt;div id=&quot;leaflet-map-623a5d35261d4f921dd6cb6096dd17dd&quot; class=&quot;leaflet-map&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
 (() =&gt; {
     //Config section
@@ -11,8 +11,8 @@
     var leafletProvidersJsId = &quot;leaflet-providers-js-head&quot;;
 
     var tagInputArg = {&quot;div_id&quot;: &quot;my-map-123&quot;} ;
-    var defaultMapElId = &quot;leaflet-map-42922d2e8966497725313fd48bb48b2b&quot;;
-    var defaultMapElStyle = &quot;height:300px; margin:25px&quot;;
+    var defaultMapElId = &quot;leaflet-map-623a5d35261d4f921dd6cb6096dd17dd&quot;;
+    var defaultMapElStyle = &quot;height:300px; margin:15px&quot;;
     var mapEl = document.getElementById(defaultMapElId);
     if('div_id' in tagInputArg){
         mapEl.id = tagInputArg['div_id'];
@@ -22,7 +22,7 @@
     document.head.appendChild(mapCssEl);
 
     function _createMap(){
-        console.log(&quot;Creating map 42922d2e8966497725313fd48bb48b2b..&quot;);
+        console.log(&quot;Creating map 623a5d35261d4f921dd6cb6096dd17dd..&quot;);
         var map = L.map(mapEl.id).setView([0,0], 3);
         L.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
         var leaflet_item_jsons = [
@@ -909,7 +909,7 @@
 })();
 &lt;/script&gt;
 
-&lt;div id=&quot;leaflet-map-d8436bca0b04e6572b41c8885133b2fc&quot; class=&quot;leaflet-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;leaflet-map-115dd77eab450a57e47dc76ab206b281&quot; class=&quot;leaflet-map&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
 (() =&gt; {
     //Config section
@@ -922,8 +922,8 @@
     var leafletProvidersJsId = &quot;leaflet-providers-js-head&quot;;
 
     var tagInputArg = {&quot;spam&quot;: &quot;eggs&quot;} ;
-    var defaultMapElId = &quot;leaflet-map-d8436bca0b04e6572b41c8885133b2fc&quot;;
-    var defaultMapElStyle = &quot;height:300px; margin:25px&quot;;
+    var defaultMapElId = &quot;leaflet-map-115dd77eab450a57e47dc76ab206b281&quot;;
+    var defaultMapElStyle = &quot;height:300px; margin:15px&quot;;
     var mapEl = document.getElementById(defaultMapElId);
     if('div_id' in tagInputArg){
         mapEl.id = tagInputArg['div_id'];
@@ -933,7 +933,7 @@
     document.head.appendChild(mapCssEl);
 
     function _createMap(){
-        console.log(&quot;Creating map d8436bca0b04e6572b41c8885133b2fc..&quot;);
+        console.log(&quot;Creating map 115dd77eab450a57e47dc76ab206b281..&quot;);
         var map = L.map(mapEl.id).setView([0,0], 3);
         L.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
         var leaflet_item_jsons = [
