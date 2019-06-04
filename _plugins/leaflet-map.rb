@@ -15,7 +15,7 @@ module Jekyll
 
         map_preparsed_html = File.read("./_plugins/leaflet-map.html")
         map_parsed_html = map_preparsed_html % {inside_block_text: text,
-                                                leaflet_loader_js_content: leaflet_loader_js_parsed}
+                                                leaflet_providers_js_content: leaflet_providers_js_content}
         map_parsed_html
     end
 
