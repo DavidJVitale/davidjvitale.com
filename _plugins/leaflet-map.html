@@ -9,17 +9,21 @@ var leafletJsId = "leaflet-js-head";
 var esriLeafletJsId = "esri-leaflet-js-head";
 var leafletProvidersJsId = "leaflet-providers-js-head";
 
+console.log("This block called with these args:");
+console.log(%{tag_input_arg_json});
+
 function createMap(){
     window.onload = () => {
         console.log("Creating map..");
         var map = L.map("leaflet-map").setView([0,0], 3);
         L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
-        var leaflet_item_jsons = [%{inside_block_text}];
+        var leaflet_item_jsons = [%{inside_block_leaflet_objects}];
         for(var i=0; i<leaflet_item_jsons.length; i++){
             var leaflet_item = leaflet_item_jsons[i];
             console.log("Leaflet item #" + i);
             console.log(leaflet_item);
         }
+
     }
 }
 

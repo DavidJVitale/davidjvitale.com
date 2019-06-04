@@ -59,6 +59,9 @@ var leafletJsId = "leaflet-js-head";
 var esriLeafletJsId = "esri-leaflet-js-head";
 var leafletProvidersJsId = "leaflet-providers-js-head";
 
+console.log("This block called with these args:");
+console.log({"foo": "bar"} );
+
 function createMap(){
     window.onload = () => {
         console.log("Creating map..");
@@ -72,6 +75,7 @@ function createMap(){
             console.log("Leaflet item #" + i);
             console.log(leaflet_item);
         }
+
     }
 }
 
@@ -946,6 +950,9 @@ var leafletJsId = "leaflet-js-head";
 var esriLeafletJsId = "esri-leaflet-js-head";
 var leafletProvidersJsId = "leaflet-providers-js-head";
 
+console.log("This block called with these args:");
+console.log({"spam": "eggs"} );
+
 function createMap(){
     window.onload = () => {
         console.log("Creating map..");
@@ -959,6 +966,7 @@ function createMap(){
             console.log("Leaflet item #" + i);
             console.log(leaflet_item);
         }
+
     }
 }
 

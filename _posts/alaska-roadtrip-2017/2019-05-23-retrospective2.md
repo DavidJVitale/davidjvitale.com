@@ -9,10 +9,10 @@ modified_time: '2019-05-22 01:00:00 -07:00'
 featured: true
 ---
 
-{% leaflet_map %}
+{% leaflet_map {"foo": "bar"} %}
 {"type": "LeafletFeature", "id": "1aa34bdc4", "value": {"foo" : "bar"}},
 {% endleaflet_map %}
 
-{% leaflet_map %}
+{% leaflet_map {"spam": "eggs"} %}
 {"type": "LeafletFeature", "id": "bba34bdc4", "value": {"foo" : "bar"}},
 {% endleaflet_map %}

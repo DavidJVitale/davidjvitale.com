@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-03T20:32:04-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective2</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2" rel="alternate" type="text/html" title="Retrospective2" /><published>2019-05-23T01:00:00-07:00</published><updated>2019-05-23T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2">&lt;div id=&quot;leaflet-map&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-03T20:40:15-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective2</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2" rel="alternate" type="text/html" title="Retrospective2" /><published>2019-05-23T01:00:00-07:00</published><updated>2019-05-23T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2">&lt;div id=&quot;leaflet-map&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
 //Config section
 var leafletCdn = &quot;https://unpkg.com/leaflet@1.5.1/dist/&quot;;
@@ -8,6 +8,9 @@ var leafletCssId = &quot;leaflet-css-head&quot;;
 var leafletJsId = &quot;leaflet-js-head&quot;;
 var esriLeafletJsId = &quot;esri-leaflet-js-head&quot;;
 var leafletProvidersJsId = &quot;leaflet-providers-js-head&quot;;
+
+console.log(&quot;This block called with these args:&quot;);
+console.log({&quot;foo&quot;: &quot;bar&quot;} );
 
 function createMap(){
     window.onload = () =&gt; {
@@ -22,6 +25,7 @@ function createMap(){
             console.log(&quot;Leaflet item #&quot; + i);
             console.log(leaflet_item);
         }
+
     }
 }
 
@@ -896,6 +900,9 @@ var leafletJsId = &quot;leaflet-js-head&quot;;
 var esriLeafletJsId = &quot;esri-leaflet-js-head&quot;;
 var leafletProvidersJsId = &quot;leaflet-providers-js-head&quot;;
 
+console.log(&quot;This block called with these args:&quot;);
+console.log({&quot;spam&quot;: &quot;eggs&quot;} );
+
 function createMap(){
     window.onload = () =&gt; {
         console.log(&quot;Creating map..&quot;);
@@ -909,6 +916,7 @@ function createMap(){
             console.log(&quot;Leaflet item #&quot; + i);
             console.log(leaflet_item);
         }
+
     }
 }
 

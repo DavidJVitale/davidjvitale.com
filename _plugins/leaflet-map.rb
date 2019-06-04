@@ -1,21 +1,19 @@
 module Jekyll
   class RenderTimeTagBlock < Liquid::Block
 
-    def initialize(tag_name, text, tokens)
+    def initialize(tag_name, input, tokens)
       super
-      @text = text
+      @input = input
     end
 
     def render(context)
-        text = super
-        
+        text = super        
         leaflet_providers_js_content = File.read("./_plugins/leaflet-providers.js")
-        leaflet_loader_js_preparsed = File.read("./_plugins/leaflet-loader.js")
-        leaflet_loader_js_parsed = leaflet_loader_js_preparsed % {leaflet_providers_js_content: leaflet_providers_js_content}
 
         map_preparsed_html = File.read("./_plugins/leaflet-map.html")
-        map_parsed_html = map_preparsed_html % {inside_block_text: text,
-                                                leaflet_providers_js_content: leaflet_providers_js_content}
+        map_parsed_html = map_preparsed_html % {leaflet_providers_js_content: leaflet_providers_js_content,
+                                                tag_input_arg_json: @input,
+                                                inside_block_leaflet_objects: text}
         map_parsed_html
     end
 
