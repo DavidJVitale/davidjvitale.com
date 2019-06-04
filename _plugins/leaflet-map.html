@@ -10,8 +10,17 @@ var esriLeafletJsId = "esri-leaflet-js-head";
 var leafletProvidersJsId = "leaflet-providers-js-head";
 
 function createMap(){
-    var map = L.map("leaflet-map").setView([0,0], 3);
-    L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
+    window.onload = () => {
+        console.log("Creating map..");
+        var map = L.map("leaflet-map").setView([0,0], 3);
+        L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
+        var leaflet_item_jsons = [%{inside_block_text}];
+        for(var i=0; i<leaflet_item_jsons.length; i++){
+            var leaflet_item = leaflet_item_jsons[i];
+            console.log("Leaflet item #" + i);
+            console.log(leaflet_item);
+        }
+    }
 }
 
 //Load the correct elements by adding to head: when ready, call createMap()

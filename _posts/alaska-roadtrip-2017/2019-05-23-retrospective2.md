@@ -13,6 +13,6 @@ featured: true
 {"type": "LeafletFeature", "id": "1aa34bdc4", "value": {"foo" : "bar"}},
 {% endleaflet_map %}
 
-% leaflet_map %}
-{"type": "LeafletFeature", "id": "1aa34bdc4", "value": {"foo" : "bar"}},
+{% leaflet_map %}
+{"type": "LeafletFeature", "id": "bba34bdc4", "value": {"foo" : "bar"}},
 {% endleaflet_map %}
