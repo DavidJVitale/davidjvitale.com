@@ -1,25 +1,60 @@
 <div id="leaflet-map" class="leaflet-map-default"></div>
 <script>
-var leafletCssEl = document.createElement("link");
-leafletCssEl.rel = "stylesheet";
-leafletCssEl.href = "https://unpkg.com/leaflet@1.5.1/dist/leaflet.css";
-document.head.appendChild(leafletCssEl);
+//Config section
+var leafletCdn = "https://unpkg.com/leaflet@1.5.1/dist/";
+var esriLeafletCdn = "https://unpkg.com/esri-leaflet/dist/";
 
+var leafletCssId = "leaflet-css-head";
+var leafletJsId = "leaflet-js-head";
+var esriLeafletJsId = "esri-leaflet-js-head";
+var leafletProvidersJsId = "leaflet-providers-js-head";
+
+function createMap(){
+    var map = L.map("leaflet-map").setView([0,0], 3);
+    L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
+}
+
+//Load the correct elements by adding to head: when ready, call createMap()
+
+// Add the CSS first, don't worry about when it loads
+var leafletCssEl = document.createElement("link");
+leafletCssEl.id = leafletCssId;
+leafletCssEl.rel = "stylesheet";
+leafletCssEl.href = leafletCdn + "leaflet.css";
+if(!document.getElementById(leafletCssEl.id)){
+    document.head.appendChild(leafletCssEl);
+}
+
+function addToHeadIfNotLoaded(el) {
+    //Add the el to the head if it doesn't exist already. If it does, every
+    //thing we need is already loaded, so draw the map
+    if(!document.getElementById(el.id)){
+        document.head.appendChild(el);
+    } else {
+        createMap();
+    }
+}
+
+// Load the main leaflet.js code, wait for it to load
 var leafletJsEl = document.createElement("script");
+leafletJsEl.id = leafletJsId;
 leafletJsEl.onload = function() {
+    //After loaded, load the esri-leaflet.js code, wait for it to load
     var esriEl = document.createElement("script");
+    esriEl.id = esriLeafletJsId;
     esriEl.onload = function() {
+        //After loaded, add the leaflet-providers <script>, don't wait to load
         provEl = document.createElement("script");
+        provEl.id = leafletProvidersJsId;
         provEl.innerHTML = `%{leaflet_providers_js_content}`;
-        document.head.appendChild(provEl); 
-        var map = L.map("leaflet-map").setView([0,0], 3);
-        L.tileLayer.provider("OpenStreetMap.Mapnik").addTo(map);
-        //L.esri.basemapLayer("Oceans").addTo(map);
-        console.log("Added stuff to map");
+        if(!document.getElementById(provEl.id)){
+             document.head.appendChild(provEl);        
         }
-    esriEl.src = "https://unpkg.com/esri-leaflet/dist/esri-leaflet.js"
-    document.head.appendChild(esriEl);
+        createMap();
+        }
+    esriEl.src = esriLeafletCdn + "esri-leaflet.js";
+    addToHeadIfNotLoaded(esriEl);
     };
-leafletJsEl.src = "https://unpkg.com/leaflet@1.5.1/dist/leaflet.js";
-document.head.appendChild(leafletJsEl);
+leafletJsEl.src = leafletCdn + "leaflet.js";
+addToHeadIfNotLoaded(leafletJsEl);
 </script>
