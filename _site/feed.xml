@@ -1,67 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-03T20:40:15-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective2</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2" rel="alternate" type="text/html" title="Retrospective2" /><published>2019-05-23T01:00:00-07:00</published><updated>2019-05-23T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2">&lt;div id=&quot;leaflet-map&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-03T21:12:55-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective2</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2" rel="alternate" type="text/html" title="Retrospective2" /><published>2019-05-23T01:00:00-07:00</published><updated>2019-05-23T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2">&lt;div id=&quot;leaflet-map-d3146948121b5e4dfd9d52811ef73dcb&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
-//Config section
-var leafletCdn = &quot;https://unpkg.com/leaflet@1.5.1/dist/&quot;;
-var esriLeafletCdn = &quot;https://unpkg.com/esri-leaflet/dist/&quot;;
+(() =&gt; {
+    //Config section
+    var leafletCdn = &quot;https://unpkg.com/leaflet@1.5.1/dist/&quot;;
+    var esriLeafletCdn = &quot;https://unpkg.com/esri-leaflet/dist/&quot;;
 
-var leafletCssId = &quot;leaflet-css-head&quot;;
-var leafletJsId = &quot;leaflet-js-head&quot;;
-var esriLeafletJsId = &quot;esri-leaflet-js-head&quot;;
-var leafletProvidersJsId = &quot;leaflet-providers-js-head&quot;;
+    var leafletCssId = &quot;leaflet-css-head&quot;;
+    var leafletJsId = &quot;leaflet-js-head&quot;;
+    var esriLeafletJsId = &quot;esri-leaflet-js-head&quot;;
+    var leafletProvidersJsId = &quot;leaflet-providers-js-head&quot;;
 
-console.log(&quot;This block called with these args:&quot;);
-console.log({&quot;foo&quot;: &quot;bar&quot;} );
+    var id = &quot;d3146948121b5e4dfd9d52811ef73dcb&quot;;
+    var defaultMapDivId = &quot;leaflet-map-d3146948121b5e4dfd9d52811ef73dcb&quot;;
 
-function createMap(){
-    window.onload = () =&gt; {
-        console.log(&quot;Creating map..&quot;);
-        var map = L.map(&quot;leaflet-map&quot;).setView([0,0], 3);
-        L.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
-        var leaflet_item_jsons = [
+    console.log(&quot;This block called with these args:&quot;);
+    console.log({&quot;foo&quot;: &quot;bar&quot;} );
+
+    function _createMap(){
+            console.log(&quot;Creating map d3146948121b5e4dfd9d52811ef73dcb..&quot;);
+            var map = L.map(defaultMapDivId).setView([0,0], 3);
+            L.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
+            var leaflet_item_jsons = [
 {&quot;type&quot;: &quot;LeafletFeature&quot;, &quot;id&quot;: &quot;1aa34bdc4&quot;, &quot;value&quot;: {&quot;foo&quot; : &quot;bar&quot;}},
 ];
-        for(var i=0; i&lt;leaflet_item_jsons.length; i++){
-            var leaflet_item = leaflet_item_jsons[i];
-            console.log(&quot;Leaflet item #&quot; + i);
-            console.log(leaflet_item);
+            for(var i=0; i&lt;leaflet_item_jsons.length; i++){
+                var leaflet_item = leaflet_item_jsons[i];
+                console.log(&quot;Leaflet item #&quot; + i);
+                console.log(leaflet_item);
+            }
+
+    }
+
+    function createMap(){
+        var prevOnLoad;
+        if(window.onload){
+            prevOnLoad = window.onload;
         }
-
+        window.onload = () =&gt; {
+            _createMap();
+            if(prevOnLoad){
+                prevOnLoad();
+            }
+        }
     }
-}
 
-//Load the correct elements by adding to head: when ready, call createMap()
+    //Load the correct elements by adding to head: when ready, call createMap()
 
-// Add the CSS first, don't worry about when it loads
-var leafletCssEl = document.createElement(&quot;link&quot;);
-leafletCssEl.id = leafletCssId;
-leafletCssEl.rel = &quot;stylesheet&quot;;
-leafletCssEl.href = leafletCdn + &quot;leaflet.css&quot;;
-if(!document.getElementById(leafletCssEl.id)){
-    document.head.appendChild(leafletCssEl);
-}
-
-function addToHeadIfNotLoaded(el) {
-    //Add the el to the head if it doesn't exist already. If it does, every
-    //thing we need is already loaded, so draw the map
-    if(!document.getElementById(el.id)){
-        document.head.appendChild(el);
-    } else {
-        createMap();
+    // Add the CSS first, don't worry about when it loads
+    var leafletCssEl = document.createElement(&quot;link&quot;);
+    leafletCssEl.id = leafletCssId;
+    leafletCssEl.rel = &quot;stylesheet&quot;;
+    leafletCssEl.href = leafletCdn + &quot;leaflet.css&quot;;
+    if(!document.getElementById(leafletCssEl.id)){
+        document.head.appendChild(leafletCssEl);
     }
-}
 
-// Load the main leaflet.js code, wait for it to load
-var leafletJsEl = document.createElement(&quot;script&quot;);
-leafletJsEl.id = leafletJsId;
-leafletJsEl.onload = function() {
-    //After loaded, load the esri-leaflet.js code, wait for it to load
-    var esriEl = document.createElement(&quot;script&quot;);
-    esriEl.id = esriLeafletJsId;
-    esriEl.onload = function() {
-        //After loaded, add the leaflet-providers &lt;script&gt;, don't wait to load
-        provEl = document.createElement(&quot;script&quot;);
-        provEl.id = leafletProvidersJsId;
-        provEl.innerHTML = `//Taken from https://github.com/leaflet-extras/leaflet-providers
+    function addToHeadIfNotLoaded(el) {
+        //Add the el to the head if it doesn't exist already. If it does, every
+        //thing we need is already loaded, so draw the map
+        if(!document.getElementById(el.id)){
+            document.head.appendChild(el);
+        } else {
+            createMap();
+        }
+    }
+
+    // Load the main leaflet.js code, wait for it to load
+    var leafletJsEl = document.createElement(&quot;script&quot;);
+    leafletJsEl.id = leafletJsId;
+    leafletJsEl.onload = function() {
+        //After loaded, load the esri-leaflet.js code, wait for it to load
+        var esriEl = document.createElement(&quot;script&quot;);
+        esriEl.id = esriLeafletJsId;
+        esriEl.onload = function() {
+            //After loaded, add the leaflet-providers &lt;script&gt;, don't wait to load
+            provEl = document.createElement(&quot;script&quot;);
+            provEl.id = leafletProvidersJsId;
+            provEl.innerHTML = `//Taken from https://github.com/leaflet-extras/leaflet-providers
 (function (root, factory) {
 	if (typeof define === 'function' &amp;&amp; define.amd) {
 		// AMD. Register as an anonymous module.
@@ -877,82 +892,98 @@ leafletJsEl.onload = function() {
 	return L;
 }));
 `;
-        if(!document.getElementById(provEl.id)){
-             document.head.appendChild(provEl);        
-        }
-        createMap();
-        }
-    esriEl.src = esriLeafletCdn + &quot;esri-leaflet.js&quot;;
-    addToHeadIfNotLoaded(esriEl);
-    };
-leafletJsEl.src = leafletCdn + &quot;leaflet.js&quot;;
-addToHeadIfNotLoaded(leafletJsEl);
+            if(!document.getElementById(provEl.id)){
+                 document.head.appendChild(provEl);        
+            }
+            createMap();
+            }
+        esriEl.src = esriLeafletCdn + &quot;esri-leaflet.js&quot;;
+        addToHeadIfNotLoaded(esriEl);
+        };
+    leafletJsEl.src = leafletCdn + &quot;leaflet.js&quot;;
+    addToHeadIfNotLoaded(leafletJsEl);
+})();
 &lt;/script&gt;
 
-&lt;div id=&quot;leaflet-map&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;leaflet-map-f27ae59e86ab97ce1ce3724ec6d54678&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
-//Config section
-var leafletCdn = &quot;https://unpkg.com/leaflet@1.5.1/dist/&quot;;
-var esriLeafletCdn = &quot;https://unpkg.com/esri-leaflet/dist/&quot;;
+(() =&gt; {
+    //Config section
+    var leafletCdn = &quot;https://unpkg.com/leaflet@1.5.1/dist/&quot;;
+    var esriLeafletCdn = &quot;https://unpkg.com/esri-leaflet/dist/&quot;;
 
-var leafletCssId = &quot;leaflet-css-head&quot;;
-var leafletJsId = &quot;leaflet-js-head&quot;;
-var esriLeafletJsId = &quot;esri-leaflet-js-head&quot;;
-var leafletProvidersJsId = &quot;leaflet-providers-js-head&quot;;
+    var leafletCssId = &quot;leaflet-css-head&quot;;
+    var leafletJsId = &quot;leaflet-js-head&quot;;
+    var esriLeafletJsId = &quot;esri-leaflet-js-head&quot;;
+    var leafletProvidersJsId = &quot;leaflet-providers-js-head&quot;;
 
-console.log(&quot;This block called with these args:&quot;);
-console.log({&quot;spam&quot;: &quot;eggs&quot;} );
+    var id = &quot;f27ae59e86ab97ce1ce3724ec6d54678&quot;;
+    var defaultMapDivId = &quot;leaflet-map-f27ae59e86ab97ce1ce3724ec6d54678&quot;;
 
-function createMap(){
-    window.onload = () =&gt; {
-        console.log(&quot;Creating map..&quot;);
-        var map = L.map(&quot;leaflet-map&quot;).setView([0,0], 3);
-        L.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
-        var leaflet_item_jsons = [
+    console.log(&quot;This block called with these args:&quot;);
+    console.log({&quot;spam&quot;: &quot;eggs&quot;} );
+
+    function _createMap(){
+            console.log(&quot;Creating map f27ae59e86ab97ce1ce3724ec6d54678..&quot;);
+            var map = L.map(defaultMapDivId).setView([0,0], 3);
+            L.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
+            var leaflet_item_jsons = [
 {&quot;type&quot;: &quot;LeafletFeature&quot;, &quot;id&quot;: &quot;bba34bdc4&quot;, &quot;value&quot;: {&quot;foo&quot; : &quot;bar&quot;}},
 ];
-        for(var i=0; i&lt;leaflet_item_jsons.length; i++){
-            var leaflet_item = leaflet_item_jsons[i];
-            console.log(&quot;Leaflet item #&quot; + i);
-            console.log(leaflet_item);
+            for(var i=0; i&lt;leaflet_item_jsons.length; i++){
+                var leaflet_item = leaflet_item_jsons[i];
+                console.log(&quot;Leaflet item #&quot; + i);
+                console.log(leaflet_item);
+            }
+
+    }
+
+    function createMap(){
+        var prevOnLoad;
+        if(window.onload){
+            prevOnLoad = window.onload;
         }
-
+        window.onload = () =&gt; {
+            _createMap();
+            if(prevOnLoad){
+                prevOnLoad();
+            }
+        }
     }
-}
 
-//Load the correct elements by adding to head: when ready, call createMap()
+    //Load the correct elements by adding to head: when ready, call createMap()
 
-// Add the CSS first, don't worry about when it loads
-var leafletCssEl = document.createElement(&quot;link&quot;);
-leafletCssEl.id = leafletCssId;
-leafletCssEl.rel = &quot;stylesheet&quot;;
-leafletCssEl.href = leafletCdn + &quot;leaflet.css&quot;;
-if(!document.getElementById(leafletCssEl.id)){
-    document.head.appendChild(leafletCssEl);
-}
-
-function addToHeadIfNotLoaded(el) {
-    //Add the el to the head if it doesn't exist already. If it does, every
-    //thing we need is already loaded, so draw the map
-    if(!document.getElementById(el.id)){
-        document.head.appendChild(el);
-    } else {
-        createMap();
+    // Add the CSS first, don't worry about when it loads
+    var leafletCssEl = document.createElement(&quot;link&quot;);
+    leafletCssEl.id = leafletCssId;
+    leafletCssEl.rel = &quot;stylesheet&quot;;
+    leafletCssEl.href = leafletCdn + &quot;leaflet.css&quot;;
+    if(!document.getElementById(leafletCssEl.id)){
+        document.head.appendChild(leafletCssEl);
     }
-}
 
-// Load the main leaflet.js code, wait for it to load
-var leafletJsEl = document.createElement(&quot;script&quot;);
-leafletJsEl.id = leafletJsId;
-leafletJsEl.onload = function() {
-    //After loaded, load the esri-leaflet.js code, wait for it to load
-    var esriEl = document.createElement(&quot;script&quot;);
-    esriEl.id = esriLeafletJsId;
-    esriEl.onload = function() {
-        //After loaded, add the leaflet-providers &lt;script&gt;, don't wait to load
-        provEl = document.createElement(&quot;script&quot;);
-        provEl.id = leafletProvidersJsId;
-        provEl.innerHTML = `//Taken from https://github.com/leaflet-extras/leaflet-providers
+    function addToHeadIfNotLoaded(el) {
+        //Add the el to the head if it doesn't exist already. If it does, every
+        //thing we need is already loaded, so draw the map
+        if(!document.getElementById(el.id)){
+            document.head.appendChild(el);
+        } else {
+            createMap();
+        }
+    }
+
+    // Load the main leaflet.js code, wait for it to load
+    var leafletJsEl = document.createElement(&quot;script&quot;);
+    leafletJsEl.id = leafletJsId;
+    leafletJsEl.onload = function() {
+        //After loaded, load the esri-leaflet.js code, wait for it to load
+        var esriEl = document.createElement(&quot;script&quot;);
+        esriEl.id = esriLeafletJsId;
+        esriEl.onload = function() {
+            //After loaded, add the leaflet-providers &lt;script&gt;, don't wait to load
+            provEl = document.createElement(&quot;script&quot;);
+            provEl.id = leafletProvidersJsId;
+            provEl.innerHTML = `//Taken from https://github.com/leaflet-extras/leaflet-providers
 (function (root, factory) {
 	if (typeof define === 'function' &amp;&amp; define.amd) {
 		// AMD. Register as an anonymous module.
@@ -1768,16 +1799,17 @@ leafletJsEl.onload = function() {
 	return L;
 }));
 `;
-        if(!document.getElementById(provEl.id)){
-             document.head.appendChild(provEl);        
-        }
-        createMap();
-        }
-    esriEl.src = esriLeafletCdn + &quot;esri-leaflet.js&quot;;
-    addToHeadIfNotLoaded(esriEl);
-    };
-leafletJsEl.src = leafletCdn + &quot;leaflet.js&quot;;
-addToHeadIfNotLoaded(leafletJsEl);
+            if(!document.getElementById(provEl.id)){
+                 document.head.appendChild(provEl);        
+            }
+            createMap();
+            }
+        esriEl.src = esriLeafletCdn + &quot;esri-leaflet.js&quot;;
+        addToHeadIfNotLoaded(esriEl);
+        };
+    leafletJsEl.src = leafletCdn + &quot;leaflet.js&quot;;
+    addToHeadIfNotLoaded(leafletJsEl);
+})();
 &lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Retrospective</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
 
 &lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
