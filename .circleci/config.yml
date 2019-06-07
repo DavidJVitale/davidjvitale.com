@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Bundle Install
-          command: bundle check || bundle install
+          command: bundle install
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
