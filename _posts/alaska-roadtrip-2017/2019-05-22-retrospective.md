@@ -11,25 +11,17 @@ featured: true
 
 Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts [in a blog](/blog/travel/alaska-roadtrip/) along the way, but never wrote a proper retrospective for my trip.
 
-{% include leaflet-map.html 
-    esri_basemap="Topographic"
-    center_coord_lat=56
-    center_coord_long=-132
-    zoom=3
-%}
+{% leaflet_map {"zoom" : 3,
+                "center": [55, -130],
+                "esriBasemap" : "Topographic" } %}
+    {%- for post in site.posts -%}
+        {% if post.location.geojson %}
+            {% leaflet_geojson post.location.geojson %}
+        {% endif %}
+    {% endfor %}
+{% endleaflet_map %}
 
-{%- for post in site.posts -%}
-
-    {%- if post.location.geojson -%}
-        {% include add-feature-to-leaflet-map.html geojson=post.location.geojson %}
-    {%- endif -%}
-
-{%- endfor %-}
-
-{% include end-leaflet-map.html %}
-</script>
-
->Each point on the map above represents a stop on our trip and contains a link to the original blog post. 
+>Each point on the map above represents a stop on our trip 
 
 ## South Dakota, Montana
 
