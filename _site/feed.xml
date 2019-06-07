@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-07T09:14:30-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-07T09:27:25-07:00</updated><id>/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective</title><link href="/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
 
 &lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
@@ -57,143 +57,132 @@
     } else {
         addGeoJSONToMap(geojson);
     }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Yellowstone National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-110.723183, 44.412266] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Eagle Creek&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.894672, 45.621595] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Multnomah Falls&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.115801, 45.576045] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Ape Caves&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.211360, 46.109579] } }] };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Flapjack Lakes, Olympic National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-123.341150, 47.560991] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Mount Rainier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.727100, 46.877833] } }] };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Strathcona Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-125.598810, 49.814399] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Wrangell-St. Elias National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-142.921965, 61.448960] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Exit Glacier&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-149.649859, 60.177945] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Homer, AK&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.548355, 59.642815] } }] };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Denali National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.192224, 63.113509] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Sign Post Forest, Alaskan Highway&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-128.714362, 60.063366] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Mount Robson Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-119.229462, 53.035430] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Banff National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-115.928160, 51.495437] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Waterton-Glacier International Peace Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.659403, 48.995485] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Glacier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.492293, 48.695363] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Saint Mary Lake&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.492291, 48.695373] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [ { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Black Hills National Forest&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.742415, 43.997541] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Custer State Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.454882, 43.757049] } }] };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Badlands National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-102.339920, 43.854480] } };
-    if(Array.isArray(geojson)){
-        for(var i=0; i&lt;geojson.length; i++){
-            
-        addGeoJSONToMap(geojson[i], );
-        }
-    } else {
-    addGeoJSONToMap(geojson, );
-    }
-
 &lt;/script&gt;
+
+&lt;p&gt;var geojson = { “type”: “Feature”, “properties”: {“popupContent”: “Yellowstone National Park”}, “geometry”: { “type”: “Point”, “coordinates”: [-110.723183, 44.412266] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&amp;lt;geojson.length; i++){&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Eagle Creek&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.894672, 45.621595] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Multnomah Falls&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.115801, 45.576045] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Ape Caves&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.211360, 46.109579] } }] };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Flapjack Lakes, Olympic National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-123.341150, 47.560991] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Mount Rainier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.727100, 46.877833] } }] };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Strathcona Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-125.598810, 49.814399] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Wrangell-St. Elias National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-142.921965, 61.448960] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Exit Glacier&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-149.649859, 60.177945] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Homer, AK&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.548355, 59.642815] } }] };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Denali National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.192224, 63.113509] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Sign Post Forest, Alaskan Highway&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-128.714362, 60.063366] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Mount Robson Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-119.229462, 53.035430] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Banff National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-115.928160, 51.495437] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Waterton-Glacier International Peace Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.659403, 48.995485] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Glacier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.492293, 48.695363] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Saint Mary Lake&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.492291, 48.695373] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [ { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Black Hills National Forest&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.742415, 43.997541] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Custer State Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.454882, 43.757049] } }] };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+} var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Badlands National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-102.339920, 43.854480] } };
+if(Array.isArray(geojson)){
+    for(var i=0; i&amp;lt;geojson.length; i++){
+        
+    addGeoJSONToMap(geojson[i], );
+    }
+} else {
+addGeoJSONToMap(geojson, );
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;lt;/script&amp;gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Each point on the map above represents a stop on our trip and contains a link to the original blog post.&lt;/p&gt;
@@ -239,7 +228,7 @@ var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {
 
 &lt;h2 id=&quot;reflection&quot;&gt;Reflection&lt;/h2&gt;
 
-&lt;p&gt;As I reflect on this trip from 2 years ago, I feel very blessed for all I was able to experience with such amazing friends. Kevin, Isaac, and Joey – thanks so much for sharing this experience with me. Here’s to the next trip!&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html">Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts in a blog along the way, but never wrote a proper retrospective for my trip.</summary></entry><entry><title type="html">Yellowstone, WY</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/yellowstone" rel="alternate" type="text/html" title="Yellowstone, WY" /><published>2017-07-02T07:49:00-07:00</published><updated>2017-07-02T07:49:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/yellowstone</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/yellowstone">&lt;blockquote&gt;
+&lt;p&gt;As I reflect on this trip from 2 years ago, I feel very blessed for all I was able to experience with such amazing friends. Kevin, Isaac, and Joey – thanks so much for sharing this experience with me. Here’s to the next trip!&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html">Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts in a blog along the way, but never wrote a proper retrospective for my trip.</summary></entry><entry><title type="html">Yellowstone, WY</title><link href="/blog/travel/alaska-roadtrip/yellowstone" rel="alternate" type="text/html" title="Yellowstone, WY" /><published>2017-07-02T07:49:00-07:00</published><updated>2017-07-02T07:49:00-07:00</updated><id>/blog/travel/alaska-roadtrip/yellowstone</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/yellowstone">&lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: This post was written retroactively in 2019&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -300,29 +289,23 @@ var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {
     } else {
         addGeoJSONToMap(geojson);
     }
+&lt;/script&gt;
 
+&lt;p&gt;The final stop on our trip was the Tetons and Yellowstone national park in Wyoming. The trip was a mix of geysers, wildlife, and water falls. Above you see the valley near artist point.&lt;/p&gt;
 
-The final stop on our trip was the Tetons and Yellowstone national park in Wyoming. The trip was a mix of geysers, wildlife, and water falls. Above you see the valley near artist point.
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-1.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;We saw the Old Faithful Geyser go off a few times, and the Grand Geyser go off once (it was huge!).&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-2.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-2.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-We saw the Old Faithful Geyser go off a few times, and the Grand Geyser go off once (it was huge!).
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-3.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-3.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-2.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-4.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-4.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;We had potentially wanted to do a bit more on our trip, but after Yellowstone we decided to drive back to Maquoketa, IA to hang out with Isaac’s family at the Codfish Hollow Barnstormer. Yellowstone was our last stop, and I forgot to write my last blog post. This is the last group picture we took from our incredible trip.&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-3.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-3.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-4.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-4.jpg&quot;&gt;&lt;/a&gt;
-
-
-We had potentially wanted to do a bit more on our trip, but after Yellowstone we decided to drive back to Maquoketa, IA to hang out with Isaac's family at the Codfish Hollow Barnstormer. Yellowstone was our last stop, and I forgot to write my last blog post. This is the last group picture we took from our incredible trip.
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-5.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-5.jpg&quot;&gt;&lt;/a&gt;
-
-&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html">Note: This post was written retroactively in 2019</summary></entry><entry><title type="html">Eagle Creek, Ape Caves, OR</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/eagle-creek-ape-caves" rel="alternate" type="text/html" title="Eagle Creek, Ape Caves, OR" /><published>2017-06-30T07:49:00-07:00</published><updated>2017-06-30T07:49:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/eagle-creek-ape-caves</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/eagle-creek-ape-caves">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/yellowstone-5.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/yellowstone-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html">Note: This post was written retroactively in 2019</summary></entry><entry><title type="html">Eagle Creek, Ape Caves, OR</title><link href="/blog/travel/alaska-roadtrip/eagle-creek-ape-caves" rel="alternate" type="text/html" title="Eagle Creek, Ape Caves, OR" /><published>2017-06-30T07:49:00-07:00</published><updated>2017-06-30T07:49:00-07:00</updated><id>/blog/travel/alaska-roadtrip/eagle-creek-ape-caves</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/eagle-creek-ape-caves">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
     var map = L.map(&quot;leaflet-map-default&quot;).setView(
@@ -379,39 +362,31 @@ We had potentially wanted to do a bit more on our trip, but after Yellowstone we
     } else {
         addGeoJSONToMap(geojson);
     }
+&lt;/script&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-1.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Our Oregon plans got changed due to a recommendation of some trail buddies we met in Olympic: thanks Jeff and Peter! It was definitely some awesome recommendations.&lt;/p&gt;
 
+&lt;p&gt;We did a lot of waterfalls in Oregon: Eagle Creek has a lot, including Punch Bowl Falls. We swam in the freezing water, then went to a waterfall that you walk behind. We also briefly saw Multnomah Falls. All of it was super cool, Oregon has such a cool mixture of forests and elevation changes, I love it there.&lt;/p&gt;
 
-Our Oregon plans got changed due to a recommendation of some trail buddies we met in Olympic: thanks Jeff and Peter! It was definitely some awesome recommendations. 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-2.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-2.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-We did a lot of waterfalls in Oregon: Eagle Creek has a lot, including Punch Bowl Falls. We swam in the freezing water, then went to a waterfall that you walk behind. We also briefly saw Multnomah Falls. All of it was super cool, Oregon has such a cool mixture of forests and elevation changes, I love it there. 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-3.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-3.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-2.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-4.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-4.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;Next we did Ape Caves, just back over the Washington Oregon border near Mt St Helen’s. This was a cave formed by a week of lava flow a few thousand years ago.  Most caves form over millions of years of water erosion, so this was definitely an amazing experience.&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-3.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-3.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Next on the trip is Yellowstone and the Grand Tetons!&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-7.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-7.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-4.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-4.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-6.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-6.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-5.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-Next we did Ape Caves, just back over the Washington Oregon border near Mt St Helen's. This was a cave formed by a week of lava flow a few thousand years ago.  Most caves form over millions of years of water erosion, so this was definitely an amazing experience. 
-
-Next on the trip is Yellowstone and the Grand Tetons! 
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-7.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-7.jpg&quot;&gt;&lt;/a&gt;
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-6.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-6.jpg&quot;&gt;&lt;/a&gt;
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-5.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-5.jpg&quot;&gt;&lt;/a&gt;
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-8.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-8.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Mt. Rainier, Olympics, WA</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/mt-rainier-olympics" rel="alternate" type="text/html" title="Mt. Rainier, Olympics, WA" /><published>2017-06-28T16:07:00-07:00</published><updated>2017-06-28T16:07:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/mt-rainier-olympics</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/mt-rainier-olympics">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/oregon-8.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/oregon-8.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Mt. Rainier, Olympics, WA</title><link href="/blog/travel/alaska-roadtrip/mt-rainier-olympics" rel="alternate" type="text/html" title="Mt. Rainier, Olympics, WA" /><published>2017-06-28T16:07:00-07:00</published><updated>2017-06-28T16:07:00-07:00</updated><id>/blog/travel/alaska-roadtrip/mt-rainier-olympics</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/mt-rainier-olympics">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
     var map = L.map(&quot;leaflet-map-default&quot;).setView(
@@ -468,31 +443,25 @@ Next on the trip is Yellowstone and the Grand Tetons!
     } else {
         addGeoJSONToMap(geojson);
     }
+&lt;/script&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-1.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Look at the mountain range reflected in the marmot’s eye!&lt;/p&gt;
 
+&lt;p&gt;We spent a night in Olympic National Park at Flapjack lakes. The water was so clear, and the forest was awesome. I’d previously only been to the mountains of the Olympics before, so it was cool to see in person how diverse the giant park is.&lt;/p&gt;
 
-Look at the mountain range reflected in the marmot's eye!
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-2.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-2.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-We spent a night in Olympic National Park at Flapjack lakes. The water was so clear, and the forest was awesome. I'd previously only been to the mountains of the Olympics before, so it was cool to see in person how diverse the giant park is.
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-3.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-3.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-2.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;We also did Mt. Rainier National Park. It was like 70-80 but so snowy because of how high we were! We sled down on a big snowy Hill on our butts, which was a definite highlight. We got some awesome views and had a great time.&lt;/p&gt;
 
+&lt;p&gt;Next is a lot of things in Oregon! Then the Teton’s, Yellowstone, and some various stuff in South Dakota.&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-3.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-3.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-4.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-4.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-
-We also did Mt. Rainier National Park. It was like 70-80 but so snowy because of how high we were! We sled down on a big snowy Hill on our butts, which was a definite highlight. We got some awesome views and had a great time.
-
-Next is a lot of things in Oregon! Then the Teton's, Yellowstone, and some various stuff in South Dakota.
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-4.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-4.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-5.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-5.jpg&quot;&gt;&lt;/a&gt;
-
-&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Vancouver Island, BC</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/vancouver-island" rel="alternate" type="text/html" title="Vancouver Island, BC" /><published>2017-06-23T12:19:00-07:00</published><updated>2017-06-23T12:19:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/vancouver-island</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/vancouver-island">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/rainier-5.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/rainier-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Vancouver Island, BC</title><link href="/blog/travel/alaska-roadtrip/vancouver-island" rel="alternate" type="text/html" title="Vancouver Island, BC" /><published>2017-06-23T12:19:00-07:00</published><updated>2017-06-23T12:19:00-07:00</updated><id>/blog/travel/alaska-roadtrip/vancouver-island</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/vancouver-island">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
     var map = L.map(&quot;leaflet-map-default&quot;).setView(
@@ -549,23 +518,18 @@ Next is a lot of things in Oregon! Then the Teton's, Yellowstone, and some vario
     } else {
         addGeoJSONToMap(geojson);
     }
+&lt;/script&gt;
 
+&lt;p&gt;We spent 2 days in Vancouver Island. One day we spent completely on the beach, where we fell asleep and got a lot of sand in our hair.&lt;/p&gt;
 
-We spent 2 days in Vancouver Island. One day we spent completely on the beach, where we fell asleep and got a lot of sand in our hair.
+&lt;p&gt;The next day we did a day hike in Strathcona Provincial Park. There was so much snow on the top of the mountain that we got lost, until a 70 year old hiking woman found us and led us to the top of the mountain. She would hike twice as fast as us, was jumping down snow piles, it was awesome. I wish I could be in an eighth of as good of shape at that age.&lt;/p&gt;
 
-The next day we did a day hike in Strathcona Provincial Park. There was so much snow on the top of the mountain that we got lost, until a 70 year old hiking woman found us and led us to the top of the mountain. She would hike twice as fast as us, was jumping down snow piles, it was awesome. I wish I could be in an eighth of as good of shape at that age.
+&lt;p&gt;There was so much snow that we couldn’t see much, so I only got 2 good photos.
+We’re in the Seattle area for the next 4-5 days, doing Olympic National Park, Mount Rainier, and visiting some family and friends of Kevin and Isaac.&lt;/p&gt;
 
-There was so much snow that we couldn't see much, so I only got 2 good photos.
-We're in the Seattle area for the next 4-5 days, doing Olympic National Park, Mount Rainier, and visiting some family and friends of Kevin and Isaac.
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/vancouver-island-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/vancouver-island-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/vancouver-island-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/vancouver-island-1.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/vancouver-island-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/vancouver-island-2.jpg&quot;&gt;&lt;/a&gt;
-
-
-
-&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Wrangell, AK</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/wrangell" rel="alternate" type="text/html" title="Wrangell, AK" /><published>2017-06-17T16:07:00-07:00</published><updated>2017-06-17T16:07:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/wrangell</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/wrangell">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/vancouver-island-2.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/vancouver-island-2.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Wrangell, AK</title><link href="/blog/travel/alaska-roadtrip/wrangell" rel="alternate" type="text/html" title="Wrangell, AK" /><published>2017-06-17T16:07:00-07:00</published><updated>2017-06-17T16:07:00-07:00</updated><id>/blog/travel/alaska-roadtrip/wrangell</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/wrangell">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
     var map = L.map(&quot;leaflet-map-default&quot;).setView(
@@ -622,39 +586,31 @@ We're in the Seattle area for the next 4-5 days, doing Olympic National Park, Mo
     } else {
         addGeoJSONToMap(geojson);
     }
+&lt;/script&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-1.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Sorry about the previous blank post, weird Canadian gas station WiFi is not so reliable&lt;/p&gt;
 
+&lt;p&gt;We spent a few days in Wrangell St. Elias National Park, the largest national park in the US. There are only two roads that go into two very small selections of the park.&lt;/p&gt;
 
-Sorry about the previous blank post, weird Canadian gas station WiFi is not so reliable 
+&lt;p&gt;We spent the first part of our trip in McCarthy and Kenicott, an abandoned mining historic town. There are blue copper chunks scattered around, and a lot of the original buildings are still (somewhat) standing. We did the Bonanza Mining Trail, where we climbed from the sunny 80 degree base of the mountain to the snowy, cloudy, very freezing top. At the top was a crumbling abandoned mining house that we snuck into. It was so awesome to see the weird stuff abandoned on the inside, imagining the (probably horrible) life that miners lived in there in the 20s.&lt;/p&gt;
 
-We spent a few days in Wrangell St. Elias National Park, the largest national park in the US. There are only two roads that go into two very small selections of the park.
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-2.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-2.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-We spent the first part of our trip in McCarthy and Kenicott, an abandoned mining historic town. There are blue copper chunks scattered around, and a lot of the original buildings are still (somewhat) standing. We did the Bonanza Mining Trail, where we climbed from the sunny 80 degree base of the mountain to the snowy, cloudy, very freezing top. At the top was a crumbling abandoned mining house that we snuck into. It was so awesome to see the weird stuff abandoned on the inside, imagining the (probably horrible) life that miners lived in there in the 20s.
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-3.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-3.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-2.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-4.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-4.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-5.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-3.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-3.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Next we took northern Nabesna Road to its end, doing a complimentary audio tour that the NPS provided. This place has a different vibe than Denali: it’s much bigger and much more of a preserve, but with more day hikes instead backcountry backpacking options. Definitely a cool visit regardless, we did a short day hike to a previous homesteaded, now public use cabin.&lt;/p&gt;
 
+&lt;p&gt;We’re currently somewhere in the Yukon or British Columbia, driving to Vancouver Island where we’ll spend a few days before going to Seattle and Olympic National Park. It’s snowing in the Yukon! In June! Weather makes no sense up here, I’ve forgotten what the night feels like.&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-4.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-4.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-6.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-6.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-5.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-5.jpg&quot;&gt;&lt;/a&gt;
-
-
-Next we took northern Nabesna Road to its end, doing a complimentary audio tour that the NPS provided. This place has a different vibe than Denali: it's much bigger and much more of a preserve, but with more day hikes instead backcountry backpacking options. Definitely a cool visit regardless, we did a short day hike to a previous homesteaded, now public use cabin.
-
-We're currently somewhere in the Yukon or British Columbia, driving to Vancouver Island where we'll spend a few days before going to Seattle and Olympic National Park. It's snowing in the Yukon! In June! Weather makes no sense up here, I've forgotten what the night feels like.
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-6.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-6.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-7.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-7.jpg&quot;&gt;&lt;/a&gt;
-
-&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Exit Glacier, AK</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/exit-glacier" rel="alternate" type="text/html" title="Exit Glacier, AK" /><published>2017-06-13T11:49:00-07:00</published><updated>2017-06-13T11:49:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/exit-glacier</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/exit-glacier">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/wrangell-7.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/wrangell-7.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Exit Glacier, AK</title><link href="/blog/travel/alaska-roadtrip/exit-glacier" rel="alternate" type="text/html" title="Exit Glacier, AK" /><published>2017-06-13T11:49:00-07:00</published><updated>2017-06-13T11:49:00-07:00</updated><id>/blog/travel/alaska-roadtrip/exit-glacier</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/exit-glacier">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
     var map = L.map(&quot;leaflet-map-default&quot;).setView(
@@ -711,24 +667,19 @@ We're currently somewhere in the Yukon or British Columbia, driving to Vancouver
     } else {
         addGeoJSONToMap(geojson);
     }
+&lt;/script&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/exit-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/exit-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/exit-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/exit-1.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;After our intense Denali trip, we spent a few days with Isaac’s uncle Luke and his girlfriend Jonni who live a bit outside of Homer, AK. They fed us so much food (I was eating something besides Granola!!), let us crash in their living room, and took us fishing (no luck, sadly). It was a great refuel stop that we definitely needed, their hospitality was greatly appreciated!&lt;/p&gt;
 
+&lt;p&gt;Next we hit up the Exit Glacier in Kenai Fjords National Park. It was just a day hike, but we got some really cool views of the Exit Glacier. Enjoy the pictures!&lt;/p&gt;
 
-After our intense Denali trip, we spent a few days with Isaac's uncle Luke and his girlfriend Jonni who live a bit outside of Homer, AK. They fed us so much food (I was eating something besides Granola!!), let us crash in their living room, and took us fishing (no luck, sadly). It was a great refuel stop that we definitely needed, their hospitality was greatly appreciated!
+&lt;p&gt;Next, we’re driving to Wrangell National Park, near the AK/Canada border. That’s our last stop in Alaska (everything else cool you need an airplane), but then we have lots of plans in Vancouver, Washington state, Oregon, Idaho, and Wyoming! Stay tuned!&lt;/p&gt;
 
-Next we hit up the Exit Glacier in Kenai Fjords National Park. It was just a day hike, but we got some really cool views of the Exit Glacier. Enjoy the pictures!
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/exit-2.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/exit-2.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
- Next, we're driving to Wrangell National Park, near the AK/Canada border. That's our last stop in Alaska (everything else cool you need an airplane), but then we have lots of plans in Vancouver, Washington state, Oregon, Idaho, and Wyoming! Stay tuned!
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/exit-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/exit-2.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/exit-3.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/exit-3.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Denali, AK</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/denali" rel="alternate" type="text/html" title="Denali, AK" /><published>2017-06-09T20:29:00-07:00</published><updated>2017-06-09T20:29:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/denali</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/denali">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/exit-3.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/exit-3.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Denali, AK</title><link href="/blog/travel/alaska-roadtrip/denali" rel="alternate" type="text/html" title="Denali, AK" /><published>2017-06-09T20:29:00-07:00</published><updated>2017-06-09T20:29:00-07:00</updated><id>/blog/travel/alaska-roadtrip/denali</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/denali">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
     var map = L.map(&quot;leaflet-map-default&quot;).setView(
@@ -785,51 +736,37 @@ Next we hit up the Exit Glacier in Kenai Fjords National Park. It was just a day
     } else {
         addGeoJSONToMap(geojson);
     }
+&lt;/script&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-1.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;We just got back from a 3 day 2 night backpacking adventure through Denali National Park, AK. It might be my most favorite backpacking adventure yet.&lt;/p&gt;
 
+&lt;p&gt;Denali is set up very differently. Instead of having trails and designated campgrounds, they just have 1 road that goes through the park. No trail development, the backcountry is 100% raw undeveloped nature. You pick squares of like 20 square miles to stay in each night (only 4 people allowed in each huge section!), plan your trip, then a bus drops you off on the side of the road with whatever you packed, a topographic map, and a compass.&lt;/p&gt;
 
-We just got back from a 3 day 2 night backpacking adventure through Denali National Park, AK. It might be my most favorite backpacking adventure yet.
+&lt;p&gt;We were lost and confused for much of the trip, as we aren’t as good at route finding as we’d like to be. But we corrected our navigation errors, stuck with our schedule, found clearings in dense trees/brush, climbed mountains, forded through rivers, avoided wildlife, and  ultimately persevered for all 25-ish miles of the trip.&lt;/p&gt;
 
-Denali is set up very differently. Instead of having trails and designated campgrounds, they just have 1 road that goes through the park. No trail development, the backcountry is 100% raw undeveloped nature. You pick squares of like 20 square miles to stay in each night (only 4 people allowed in each huge section!), plan your trip, then a bus drops you off on the side of the road with whatever you packed, a topographic map, and a compass.
+&lt;p&gt;It was like nothing I’ve ever done before, and was honestly one of the most humbling things I’ve ever experienced. You can’t really understand the humongous scale and awe-inspiring beauty of Alaska even when you’re inside of the park: but enough of my second-rate poetic word choice. Enjoy some pictures!&lt;/p&gt;
 
-We were lost and confused for much of the trip, as we aren't as good at route finding as we'd like to be. But we corrected our navigation errors, stuck with our schedule, found clearings in dense trees/brush, climbed mountains, forded through rivers, avoided wildlife, and  ultimately persevered for all 25-ish miles of the trip.
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-2.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-2.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-It was like nothing I've ever done before, and was honestly one of the most humbling things I've ever experienced. You can't really understand the humongous scale and awe-inspiring beauty of Alaska even when you're inside of the park: but enough of my second-rate poetic word choice. Enjoy some pictures! 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-3.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-3.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-2.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-4.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-4.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-5.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;Moose shed their antlers each year. There are many weird things to find in the backcountry: caribou antlers and skulls, unidentified animal bones, teeth, caribou carcasses, etc.&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-3.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-3.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;We also took a driving tour through the park (yes, I was that close to a moose inside of a car: no danger)&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-6.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-6.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-7.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-7.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-4.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-4.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Finally, here’s a close of up of the hair flip picture because it’s hilarious:&lt;/p&gt;
 
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-5.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-5.jpg&quot;&gt;&lt;/a&gt;
-
-
-Moose shed their antlers each year. There are many weird things to find in the backcountry: caribou antlers and skulls, unidentified animal bones, teeth, caribou carcasses, etc.
-
-We also took a driving tour through the park (yes, I was that close to a moose inside of a car: no danger)
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-6.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-6.jpg&quot;&gt;&lt;/a&gt;
-
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-7.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-7.jpg&quot;&gt;&lt;/a&gt;
-
-
-Finally, here's a close of up of the hair flip picture because it's hilarious:
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-8.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-8.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Alaskan Highway</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/alaskan-highway" rel="alternate" type="text/html" title="Alaskan Highway" /><published>2017-06-05T16:27:00-07:00</published><updated>2017-06-05T16:27:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/alaskan-highway</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/alaskan-highway">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/denali-8.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/denali-8.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Alaskan Highway</title><link href="/blog/travel/alaska-roadtrip/alaskan-highway" rel="alternate" type="text/html" title="Alaskan Highway" /><published>2017-06-05T16:27:00-07:00</published><updated>2017-06-05T16:27:00-07:00</updated><id>/blog/travel/alaska-roadtrip/alaskan-highway</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/alaskan-highway">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
     var map = L.map(&quot;leaflet-map-default&quot;).setView(
@@ -886,42 +823,35 @@ Finally, here's a close of up of the hair flip picture because it's hilarious:
     } else {
         addGeoJSONToMap(geojson);
     }
+&lt;/script&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-1.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Driving the Alaskan Highway was insane. Hundreds of miles of undeveloped nature stretches between tiny towns containing just a gas station, motel, and general store. We drove over 1500 miles in 3 days (with no showers!). In the stretches of nature, we saw Black Bears, Grizzly Bears, Moose, Bison, even a porcupine on the side of the road. Isaac got some cool pictures of them (my camera never seemed to be out at the right time).&lt;/p&gt;
 
+&lt;p&gt;The highlight of the small towns was the Sign Post Forest in Watson Lake, Yukon Canada. There are hundreds of 15 foot posts covered in thousands of license plates, state/county/town/college signs, and to other memorabilia of Alaskan Highway drivers. It goes on forever!&lt;/p&gt;
 
-Driving the Alaskan Highway was insane. Hundreds of miles of undeveloped nature stretches between tiny towns containing just a gas station, motel, and general store. We drove over 1500 miles in 3 days (with no showers!). In the stretches of nature, we saw Black Bears, Grizzly Bears, Moose, Bison, even a porcupine on the side of the road. Isaac got some cool pictures of them (my camera never seemed to be out at the right time).
+&lt;p&gt;We didn’t know this existed beforehand, or else we would have brought along some old license plates or signs. What we did have, however, was the now bug covered Marquette license plate cover that was on the front of my car.&lt;/p&gt;
 
-The highlight of the small towns was the Sign Post Forest in Watson Lake, Yukon Canada. There are hundreds of 15 foot posts covered in thousands of license plates, state/county/town/college signs, and to other memorabilia of Alaskan Highway drivers. It goes on forever!
+&lt;p&gt;We took it off my car, found an old screw lying around, and fixed it to a board! Kevin and Isaac each attached a hair tie to it. Hope I can come back to it in 20 years or so and see it still there.&lt;/p&gt;
 
-We didn't know this existed beforehand, or else we would have brought along some old license plates or signs. What we did have, however, was the now bug covered Marquette license plate cover that was on the front of my car.
+&lt;p&gt;If ever any of you are on that highway at any time in your life, here’s how you find my sign among the thousands:&lt;/p&gt;
 
-We took it off my car, found an old screw lying around, and fixed it to a board! Kevin and Isaac each attached a hair tie to it. Hope I can come back to it in 20 years or so and see it still there.
+&lt;p&gt;Go to the front entrance (or whatever entrance this is):&lt;/p&gt;
 
-If ever any of you are on that highway at any time in your life, here's how you find my sign among the thousands:
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-2.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-2.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-Go to the front entrance (or whatever entrance this is):
+&lt;p&gt;Walk through the entrance, towards the first metal light post you see:&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-2.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-3.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-3.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;It’ll be the first wooden post to the right of the metal light post:&lt;/p&gt;
 
-Walk through the entrance, towards the first metal light post you see:
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-4.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-4.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-3.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-3.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Midway down that pole!&lt;/p&gt;
 
-
-It'll be the first wooden post to the right of the metal light post:
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-4.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-4.jpg&quot;&gt;&lt;/a&gt;
-
-
-Midway down that pole!
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-5.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-5.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Mount Robson, BC</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/mount-robson" rel="alternate" type="text/html" title="Mount Robson, BC" /><published>2017-06-02T22:53:00-07:00</published><updated>2017-06-02T22:53:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/mount-robson</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/mount-robson">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-5.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Mount Robson, BC</title><link href="/blog/travel/alaska-roadtrip/mount-robson" rel="alternate" type="text/html" title="Mount Robson, BC" /><published>2017-06-02T22:53:00-07:00</published><updated>2017-06-02T22:53:00-07:00</updated><id>/blog/travel/alaska-roadtrip/mount-robson</id><content type="html" xml:base="/blog/travel/alaska-roadtrip/mount-robson">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
     var map = L.map(&quot;leaflet-map-default&quot;).setView(
@@ -978,36 +908,28 @@ Midway down that pole!
     } else {
         addGeoJSONToMap(geojson);
     }
+&lt;/script&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-1.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-1.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;We went to Jasper national park in AB, talked to a Ranger. He told us Jasper isn’t that fun for backpacking, instead we should go to Mount Robson. Mount Robson is the tallest mountain in the Canadian Rockies, as tall as Mount Everest from base to peak.&lt;/p&gt;
 
+&lt;p&gt;Our 2 day overnight got rained on (gear held up well), which meant the peak was covered by low hanging moisture clouds that made cool pics. We saw Emporer Falls and Berg Lake,  definite highlight of the  trip.  Water is a like Gatorade blue, it’s crazy.&lt;/p&gt;
 
- We went to Jasper national park in AB, talked to a Ranger. He told us Jasper isn't that fun for backpacking, instead we should go to Mount Robson. Mount Robson is the tallest mountain in the Canadian Rockies, as tall as Mount Everest from base to peak.
+&lt;p&gt;The next leg of our trip is the most boring: 40 hours of driving to Alaska from Calgary AB. Nothing eventful to stop at, 3 days of driving through northern BC/AB and the Yukon with no WiFi. Don’t expect to hear from me for a while.&lt;/p&gt;
 
-Our 2 day overnight got rained on (gear held up well), which meant the peak was covered by low hanging moisture clouds that made cool pics. We saw Emporer Falls and Berg Lake,  definite highlight of the  trip.  Water is a like Gatorade blue, it's crazy.
+&lt;p&gt;I’ve talked too much, here are the pics:&lt;/p&gt;
 
-The next leg of our trip is the most boring: 40 hours of driving to Alaska from Calgary AB. Nothing eventful to stop at, 3 days of driving through northern BC/AB and the Yukon with no WiFi. Don't expect to hear from me for a while. 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-2.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-2.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-I've talked too much, here are the pics:
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-3.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-3.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-2.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-4.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-4.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-5.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-3.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-3.jpg&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-6.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-6.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-7.jpg&quot;&gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-7.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-4.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-4.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-5.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-5.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-6.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-6.jpg&quot;&gt;&lt;/a&gt;
-
-
-&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-7.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-7.jpg&quot;&gt;&lt;/a&gt;
-
-
-See you in Alaska!! :)
-&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;See you in Alaska!! :)&lt;/p&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry></feed>
