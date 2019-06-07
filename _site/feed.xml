@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-07T09:58:01-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-07T10:54:47-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
 
-&lt;div id=&quot;leaflet-map-7a0748ab4a764406099d7c8c63c9f273&quot; class=&quot;leaflet-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;leaflet-map-9b1f8e33d2bbc94edfe05ac2e4cefa44&quot; class=&quot;leaflet-map&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
 (() =&gt; {
 // Specify configuration variables, setup any elements and styling
@@ -13,77 +13,77 @@
                 &quot;esriBasemap&quot; : &quot;Topographic&quot; } ;
     var blockLeafletItems = [
     
-            {id: &quot;a7eb7f5bcf1f76b548b8940da9b5ec2c&quot;,
+            {id: &quot;8edaf9ae12df80cc7ab248108053270d&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Yellowstone National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-110.723183, 44.412266] } }},
         
     
-            {id: &quot;0ff2584c3add92c9ef665452d5b2c2cc&quot;,
+            {id: &quot;33c208a60632671d7c31ddeb7b484a25&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Eagle Creek&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.894672, 45.621595] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Multnomah Falls&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.115801, 45.576045] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Ape Caves&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-122.211360, 46.109579] } }] }},
         
     
-            {id: &quot;40483dad38fbbeb580e032d19c348ef2&quot;,
+            {id: &quot;460cfda1c0b51dbaef32e9627f861fdd&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Flapjack Lakes, Olympic National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-123.341150, 47.560991] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Mount Rainier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-121.727100, 46.877833] } }] }},
         
     
-            {id: &quot;8b1e55e74c7f658957c0f9f0f57b1649&quot;,
+            {id: &quot;86d5c784cd6bd5e2ee3a5844c3612de1&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Strathcona Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-125.598810, 49.814399] } }},
         
     
-            {id: &quot;18f31b39f1d95ae4602cf9e574b5784d&quot;,
+            {id: &quot;08c2c4534e4a408928e30d3ffea710d7&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Wrangell-St. Elias National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-142.921965, 61.448960] } }},
         
     
-            {id: &quot;673fa28771b03654867cdd6dfc4749b6&quot;,
+            {id: &quot;292f45e4b0800f3e441f1be58f1edc8f&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [{ &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Exit Glacier&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-149.649859, 60.177945] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Homer, AK&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.548355, 59.642815] } }] }},
         
     
-            {id: &quot;edcc31933a1e4e24c26a6200cf3f3a8e&quot;,
+            {id: &quot;0ea9abe8ddd9bb26d1cb8ae52ec647ae&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Denali National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-151.192224, 63.113509] } }},
         
     
-            {id: &quot;5554dcff1eb3d6c8430f944996c8a63b&quot;,
+            {id: &quot;0d300596080c9a7226f673dc4bdb621e&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Sign Post Forest, Alaskan Highway&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-128.714362, 60.063366] } }},
         
     
-            {id: &quot;3bc3882f291616c840013c63b68ad2c1&quot;,
+            {id: &quot;1317d3ad2b5dcc51c987cc56da43e06c&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Mount Robson Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-119.229462, 53.035430] } }},
         
     
-            {id: &quot;e2f4b38a2073c605fcd36e9073a6f001&quot;,
+            {id: &quot;d31c4ae98da7d603e025cc72216fffbf&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Banff National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-115.928160, 51.495437] } }},
         
     
-            {id: &quot;3a52267b9a70c39640f3a0d1d17b96e6&quot;,
+            {id: &quot;666f3b29ae54fb4e0abbeaf591ad3564&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Waterton-Glacier International Peace Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.659403, 48.995485] } }},
         
     
-            {id: &quot;f7e3907ce896a5da87ecadddaa43a04e&quot;,
+            {id: &quot;10b871de6d32b065d5a5a05b6bc549e2&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Glacier National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.492293, 48.695363] } }},
         
     
-            {id: &quot;26af108efd98d991bd978d69840956c1&quot;,
+            {id: &quot;7e0449b36a6c86eea7942c3582b1109a&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Saint Mary Lake&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-113.492291, 48.695373] } }},
         
     
-            {id: &quot;6933e2a9eaffa2b73022bc91b7effc65&quot;,
+            {id: &quot;22979f0d004368889a24b953bd494de4&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;FeatureCollection&quot;, &quot;features&quot;: [ { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Black Hills National Forest&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.742415, 43.997541] } }, { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Custer State Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-103.454882, 43.757049] } }] }},
         
     
-            {id: &quot;a71b9b74e88e612e67578d12a70e1ef8&quot;,
+            {id: &quot;454e0f2e0b62d47ff7925519236eb3ef&quot;,
               type: &quot;LeafletGeoJSON&quot;,
               value: { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Badlands National Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-102.339920, 43.854480] } }},
         
@@ -92,7 +92,7 @@
 ];
 
     // Override the map div id if specified, apply default CSS
-    var defaultMapElId = &quot;leaflet-map-7a0748ab4a764406099d7c8c63c9f273&quot;;
+    var defaultMapElId = &quot;leaflet-map-9b1f8e33d2bbc94edfe05ac2e4cefa44&quot;;
    var defaultMapElStyle = &quot;height:300px; margin-top:15px; margin-bottom:15px&quot;;
     var mapEl = document.getElementById(defaultMapElId);
     if('divId' in tagInputArg){
@@ -191,7 +191,7 @@
 
 //The actual section that is called that creates a map
     function createMap(){
-        console.log(&quot;Creating map 7a0748ab4a764406099d7c8c63c9f273 with these args:&quot;);
+        console.log(&quot;Creating map 9b1f8e33d2bbc94edfe05ac2e4cefa44 with these args:&quot;);
         console.log(tagInputArg);
 
         //Initialize Map with the correct input arguments

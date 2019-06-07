@@ -11,9 +11,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Make bundle aware of local jekyll-leaflet
-          command: bundle config local.jekyll-leaflet ./.circleci/
-      - run:
           name: Bundle Install
           command: bundle check || bundle install
       - run:
