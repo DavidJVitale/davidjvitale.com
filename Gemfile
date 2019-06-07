@@ -30,4 +30,4 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 gem "rake"
 
-gem "jekyll-leaflet", git: "https://github.com/DavidJVitale/jekyll-leaflet"
+gem "jekyll-leaflet", git: "https://github.com/DavidJVitale/jekyll-leaflet", ref: "c9100ad"
