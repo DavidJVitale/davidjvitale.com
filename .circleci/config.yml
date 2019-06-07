@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Make bundle aware of local jekyll-leaflet
-          command: bundle config local.jekyll-leaflet ./.circleci/jekyll-leaflet-0.1.0.gem
+          command: bundle config local.jekyll-leaflet ./.circleci/
       - run:
           name: Bundle Install
           command: bundle check || bundle install
