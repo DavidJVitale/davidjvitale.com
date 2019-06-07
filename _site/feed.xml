@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-30T20:17:14-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective2</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2" rel="alternate" type="text/html" title="Retrospective2" /><published>2019-05-23T01:00:00-07:00</published><updated>2019-05-23T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective2">&lt;script&gt;console.log(`
-Outputting something..
-`);&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Retrospective</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-07T04:42:53-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DavidJVitale.com</title><subtitle></subtitle><entry><title type="html">Retrospective</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective" rel="alternate" type="text/html" title="Retrospective" /><published>2019-05-22T01:00:00-07:00</published><updated>2019-05-22T01:00:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/retrospective</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/retrospective">&lt;p&gt;Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts &lt;a href=&quot;/blog/travel/alaska-roadtrip/&quot;&gt;in a blog&lt;/a&gt; along the way, but never wrote a proper retrospective for my trip.&lt;/p&gt;
 
 &lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
 
@@ -923,4 +921,93 @@ Midway down that pole!
 &lt;a href=&quot;/assets/personal/alaska-trip-2017/signpost-5.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/signpost-5.jpg&quot;&gt;&lt;/a&gt;
 
 
+&lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry><entry><title type="html">Mount Robson, BC</title><link href="http://localhost:4000/blog/travel/alaska-roadtrip/mount-robson" rel="alternate" type="text/html" title="Mount Robson, BC" /><published>2017-06-02T22:53:00-07:00</published><updated>2017-06-02T22:53:00-07:00</updated><id>http://localhost:4000/blog/travel/alaska-roadtrip/mount-robson</id><content type="html" xml:base="http://localhost:4000/blog/travel/alaska-roadtrip/mount-robson">&lt;div id=&quot;leaflet-map-default&quot; class=&quot;leaflet-map-default&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    var map = L.map(&quot;leaflet-map-default&quot;).setView(
+        [0, 0],
+        6);
+
+    // Infer basemap
+    if(&quot;Topographic&quot; !== &quot;&quot;){
+        // Use esri_basemap from esri-leaflet if specified (cleaner attributes)
+        L.esri.basemapLayer(&quot;Topographic&quot;).addTo(map);
+    } else {
+        // else use the default basemap_provider in leaflet
+        L.tileLayer.provider(&quot;OpenStreetMap.Mapnik&quot;).addTo(map);
+    }
+
+    // Infer geojson &amp; properties with it (popup, external hyperlinks, etc.)
+    var addGeoJSONToMap = (geojson, href) =&gt; {
+            if(Object.keys(geojson).length !== 0){
+                var onEachFeature = (feature, layer) =&gt; {
+                    if(feature.properties &amp;&amp; feature.properties.popupContent){
+                            var popupContent = feature.properties.popupContent;
+                var href_ = &quot;&quot;
+                if(feature.properties.href){
+                    href_ = feature.properties.href; }
+                if(href !== &quot;&quot;){
+                    href_ = href; }
+                if(href_ !== &quot;&quot;){
+                            popupContent += '&lt;a href=' + 
+                                '&quot;' + href_ + '&quot;' +
+                                ' target=&quot;_blank&quot;' +
+                                '&gt;&lt;img src=&quot;/assets/logos/new-window-24.png&quot;&gt;&lt;/img&gt;&lt;/a&gt;';
+                        }
+                        layer.bindPopup(popupContent);
+                    }
+                    if((0 === 0) &amp;&amp; 
+                       (0 === 0) &amp;&amp; 
+                        feature.geometry.type === &quot;Point&quot;){
+                        //If the blog author didn't specify center, infer from feature
+                        var lat = feature.geometry.coordinates[1];
+                        var long = feature.geometry.coordinates[0];
+                map.panTo(new L.LatLng(lat, long));
+                    }
+                };
+                L.geoJSON(geojson, { 
+                    onEachFeature: onEachFeature 
+          }).addTo(map);
+       }
+    };
+    var geojson = { &quot;type&quot;: &quot;Feature&quot;, &quot;properties&quot;: {&quot;popupContent&quot;: &quot;Mount Robson Provincial Park&quot;}, &quot;geometry&quot;: { &quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [-119.229462, 53.035430] } };
+    if(Array.isArray(geojson)){
+        for(var i=0; i&lt;geojson.length; i++){
+            addGeoJSONToMap(geojson[i]);
+        }
+    } else {
+        addGeoJSONToMap(geojson);
+    }
+
+
+&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-1.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-1.jpg&quot;&gt;&lt;/a&gt;
+
+
+ We went to Jasper national park in AB, talked to a Ranger. He told us Jasper isn't that fun for backpacking, instead we should go to Mount Robson. Mount Robson is the tallest mountain in the Canadian Rockies, as tall as Mount Everest from base to peak.
+
+Our 2 day overnight got rained on (gear held up well), which meant the peak was covered by low hanging moisture clouds that made cool pics. We saw Emporer Falls and Berg Lake,  definite highlight of the  trip.  Water is a like Gatorade blue, it's crazy.
+
+The next leg of our trip is the most boring: 40 hours of driving to Alaska from Calgary AB. Nothing eventful to stop at, 3 days of driving through northern BC/AB and the Yukon with no WiFi. Don't expect to hear from me for a while. 
+
+I've talked too much, here are the pics:
+
+&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-2.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-2.jpg&quot;&gt;&lt;/a&gt;
+
+
+&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-3.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-3.jpg&quot;&gt;&lt;/a&gt;
+
+
+&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-4.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-4.jpg&quot;&gt;&lt;/a&gt;
+
+
+&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-5.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-5.jpg&quot;&gt;&lt;/a&gt;
+
+
+&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-6.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-6.jpg&quot;&gt;&lt;/a&gt;
+
+
+&lt;a href=&quot;/assets/personal/alaska-trip-2017/robson-7.jpg&quot; &gt;&lt;img class=&quot;travel-image&quot; src=&quot;/assets/personal/alaska-trip-2017/robson-7.jpg&quot;&gt;&lt;/a&gt;
+
+
+See you in Alaska!! :)
 &lt;/script&gt;</content><author><name>David Vitale</name></author><category term="travel" /><category term="nature" /><category term="roadtrip" /><summary type="html"></summary></entry></feed>
