@@ -14,6 +14,9 @@ jobs:
           name: Bundle Install
           command: bundle check || bundle install
       - run:
+          name: Install local jekyll-leaflet
+          command: bundle exec gem install --local .circleci/jekyll-leaflet-0.1.0.gem
+      - run:
           name: Jekyll build
           command: bundle exec jekyll build
       - persist_to_workspace:
