@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrospective
+title: Alaska Road Trip Retrospective
 date: '2019-05-22 01:00:00 -07:00'
 author: David Vitale
 categories: ["blog", "travel", "alaska-roadtrip"]
@@ -8,8 +8,6 @@ tags: ["travel", "nature", "roadtrip"]
 modified_time: '2019-05-22 01:00:00 -07:00'
 featured: true
 ---
-
-Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts [in a blog](/blog/travel/alaska-roadtrip/) along the way, but never wrote a proper retrospective for my trip.
 
 {% leaflet_map {"zoom" : 3,
                 "center": [55, -130],
@@ -22,7 +20,9 @@ Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with grea
     {% endfor %}
 {% endleaflet_map %}
 
->Each point on the map above represents a stop on our trip 
+>Each point on the map above represents a stop on our trip with a link to the relevant blog post
+
+In the ripe summer of 2017, I left on a once-in-a-lifetime roadtrip to Alaska with great friends Kevin, Isaac, and Joey. We drove to from Chicago to Alaska and back, stopping at many amazing locations along the way. I took pictures and captured my thoughts [in a blog](/blog/travel/alaska-roadtrip/), 
 
 ## South Dakota, Montana
 

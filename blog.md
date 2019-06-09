@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Blog
-permalink: /blog/
+title: Travel Blog
+permalink: /blog/travel/
 ---
 

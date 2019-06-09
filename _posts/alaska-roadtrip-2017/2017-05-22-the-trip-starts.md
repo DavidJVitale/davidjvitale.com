@@ -9,8 +9,9 @@ modified_time: '2017-05-22T17:13:28.187-07:00'
 thumbnail: https://2.bp.blogspot.com/-7aYGdFfYF6I/WSN9CjyDe2I/AAAAAAAAAn8/u3XQ8aWkax0deuoDSqSP8HE-rn8d3B4uQCLcB/s72-c/IMG_20170522_190209.jpg
 ---
 
-{% include leaflet-map.html
-    geojson= '{
+{% leaflet_map  { "esriBasemap":"Topographic",
+                  "zoom":7 } %}
+    {% leaflet_geojson {
         "type": "FeatureCollection",
         "features": [
  	    {
@@ -30,10 +31,8 @@ thumbnail: https://2.bp.blogspot.com/-7aYGdFfYF6I/WSN9CjyDe2I/AAAAAAAAAn8/u3XQ8a
 			[-90.657395, 42.060264]
 		}
 	    }]
-        }'
-    esri_basemap="Topographic"
-    zoom=7
-%}
+        } %}
+{% endleaflet_map %}
 
 Leaving for the trip today, Kevin Isaac Joey and I are driving to Badlands, South Dakota. We'll spend the day there tomorrow, then make our way to Glacier, Montana.
 
