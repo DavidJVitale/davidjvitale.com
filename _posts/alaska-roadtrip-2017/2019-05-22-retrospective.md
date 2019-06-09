@@ -16,7 +16,8 @@ Two years ago today, I left on a once-in-a-lifetime roadtrip to Alaska with grea
                 "esriBasemap" : "Topographic" } %}
     {%- for post in site.posts -%}
         {% if post.location.geojson %}
-            {% leaflet_geojson post.location.geojson %}
+            {% assign geojson = post.location.geojson | override_hrefs: post.url %}
+            {% leaflet_geojson geojson %}
         {% endif %}
     {% endfor %}
 {% endleaflet_map %}

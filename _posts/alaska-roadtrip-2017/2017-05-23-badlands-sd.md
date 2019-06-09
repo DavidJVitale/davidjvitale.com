@@ -10,7 +10,8 @@ thumbnail: https://4.bp.blogspot.com/-wWxrlejaMLI/WSSAxyLWgTI/AAAAAAAAAoM/rfHds8
 location:       
     geojson: '{
         "type": "Feature",
-        "properties": {"popupContent": "Badlands National Park"},
+        "properties": {"popupContent": "Badlands National Park",
+                       "href": "{{post.url}}" },
         "geometry": {
             "type": "Point",
             "coordinates":
