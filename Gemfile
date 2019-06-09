@@ -28,9 +28,8 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
-
 # Excuse the bad practice
-if ENV['DAVIDJVITALECOM_RUBY_ENV'] != "production"
+if ENV['DAVIDJVITALECOM_RUBY_ENV'] == "dev"
     gem "jekyll-leaflet", path: "../jekyll-leaflet"
 else
     gem "jekyll-leaflet", git: "https://github.com/DavidJVitale/jekyll-leaflet", branch: "master"
