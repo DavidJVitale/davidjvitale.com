@@ -108,6 +108,15 @@ div.leaflet-map-default{
     margin-bottom: 3em;
 }
 
+div.leaflet-map{
+    height: 33vh;
+    min-height: 300px;
+    z-index:0;
+    margin-bottom: 3em;
+}
+
+
+
 /*Navigation section*/
 .PageNavigation {
   font-size: 1em;

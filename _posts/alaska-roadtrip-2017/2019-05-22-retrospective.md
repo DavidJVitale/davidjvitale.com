@@ -15,7 +15,7 @@ featured: true
     {%- for post in site.posts -%}
         {% if post.location.geojson %}
             {% assign geojson = post.location.geojson | override_hrefs: post.url %}
-            {% leaflet_geojson geojson %}
+            {% leaflet_geojson {{geojson}} %}
         {% endif %}
     {% endfor %}
 {% endleaflet_map %}

@@ -30,3 +30,4 @@ Some possible `esri_basemap` string values for the [esri-leaflet](https://esri.g
  - USATopo (added in 2.0.0)
  - Physical (added in 2.2.0)
 
+Remember that a `GeoJSON` point is `long, lat`, but in a marker you specify lat and long 
