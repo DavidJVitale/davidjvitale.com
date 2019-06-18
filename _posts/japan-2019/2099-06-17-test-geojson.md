@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Test GeoJSON Kyoto Post
-date: '2019-06-17'
+date: '2099-06-17'
 author: David Vitale
 categories: ["blog", "travel", "japan-2019"]
 tags: ["travel", "japan-2019"]
