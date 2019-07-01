@@ -19,11 +19,11 @@ location:
             }
         }, {
             "type": "Feature",
-            "properties": {"popupContent": "富士箱根伊豆国立公園 (Hakone National Park) "},
+            "properties": {"popupContent": "箱根町 (Hakone)"},
             "geometry": {
                 "type": "Point",
                 "coordinates":
-                    [139, 34.4] 
+                    [139.0132, 35.1214] 
             }
         }, {
             "type": "Feature",
@@ -40,7 +40,7 @@ location:
 
 ---
 
-{% leaflet_map { "zoom" : 7 } %}
+{% leaflet_map { "zoom" : 5 } %}
     {% if page.location.geojson %}
         {% assign geojson = page.location.geojson %}
         {% leaflet_geojson {{geojson}} %}
@@ -67,11 +67,9 @@ Nara is a very bizarre place, mainly because of the deer. They are very domestic
 
 {% include travel-img.html src="/assets/personal/japan-2019/deer-3.jpg" %}
 
-We also went to 東大寺 (Tōdai-ji), an ancient (8th century!) Buddhist temple in Nara. The bronze Buddha was humongous, it was crazy to think something that large could have been constructed that long ago. 
+We also went to 東大寺 (Tōdai-ji), an ancient (8th century!) Buddhist temple in Nara. The bronze Buddha was humongous, it was crazy to think something that large could have been constructed that long ago. Here is a picture of me for scale.
 
 {% include travel-img.html src="/assets/personal/japan-2019/temple-5.jpg" %}
-
-
 
 ## Osaka 
 
@@ -85,9 +83,9 @@ We only had half a day here but we got some more 蛸焼 (Takoyaki) and お好み
 
 Other foods tried: grilled octopus, grilled scallops, some red-bean rice cake with strawberry, crab sticks, other things. Everything is served on a stick or grilled and it is all delicious. 
 
-## Hakone National Park 
+## Hakone 
 
-We spent one day in Hakone, a beautiful national park outside of Tokyo. We weren't brave enough to embrace the full nudity onsens, instead opting for shopping and sight-seeing. The clouds blocked our view of Mt Fuji but it was still a great day! We went to the 箱根神社 (Hakone Shrine). 
+We spent one day in Hakone, a beautiful, quiet town outside of Tokyo. We weren't brave enough to embrace the full nudity onsens, instead opting for shopping and sight-seeing. The clouds blocked our view of Mt Fuji but it was still a great day! We went to the 箱根神社 (Hakone Shrine). 
 
 {% include travel-img.html src="/assets/personal/japan-2019/temple-6.jpg" %}
 
