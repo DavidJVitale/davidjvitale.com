@@ -1,7 +1,5 @@
-GIT
-  remote: https://github.com/DavidJVitale/jekyll-leaflet
-  revision: 94a93127386fa25efd6985a09976ea8038b84fcd
-  branch: master
+PATH
+  remote: ../jekyll-leaflet
   specs:
     jekyll-leaflet (0.1.0)
 
