@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>Evolution of Life</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/main.css">
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.14/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.14/"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+require(["esri/Map",
+         "esri/views/MapView",
+         "esri/layers/ImageryLayer",
+         "esri/layers/support/MosaicRule",
+         "esri/layers/GraphicsLayer",
+         "esri/Graphic",
+         "esri/geometry/Point"], 
+function(Map, 
+         MapView,
+         ImageryLayer,
+         MosaicRule,
+         GraphicsLayer,
+         Graphic,
+         Point) {
+
+/*START ALL USER CODE HERE*/
+    /* SHARED GLOBALS SECTION */
+
+    var gameStarted = true;
+    var realTimeElapsedS = 0;
+    var historicTimeElapsedMillBCE = -4000;
+    var currentLayerIndex = 41;
+    const tickMs = 50;
+
+    var map = new Map({
+          basemap: "null",
+        });
+
+    var view = new MapView({
+          container: "mapViewDiv",
+          map: map,
+          zoom: 3,
+          center: [0,0] // longitude, latitude
+        });    
+
+    view.when(disableZooming);
+
+    /**
+    * Disables all zoom gestures on the given view instance.
+    *
+    * @param {esri/views/MapView} view - The MapView instance on which to
+    *                                  disable zooming gestures.
+    */
+    function disableZooming(view) {
+    view.popup.dockEnabled = true;
+
+    // Removes the zoom action on the popup
+    view.popup.actions = [];
+
+    // stops propagation of default behavior when an event fires
+    function stopEvtPropagation(event) {
+        event.stopPropagation();
+    }
+
+    // exlude the zoom widget from the default UI
+    view.ui.components = ["attribution"];
+
+    // disable mouse wheel scroll zooming on the view
+    view.on("mouse-wheel", stopEvtPropagation);
+
+    // disable zooming via double-click on the view
+    view.on("double-click", stopEvtPropagation);
+
+    // disable zooming out via double-click + Control on the view
+    view.on("double-click", ["Control"], stopEvtPropagation);
+
+    // disables pinch-zoom and panning on the view
+    view.on("drag", stopEvtPropagation);
+
+    // disable the view's zoom box to prevent the Shift + drag
+    // and Shift + Control + drag zoom gestures.
+    view.on("drag", ["Shift"], stopEvtPropagation);
+    view.on("drag", ["Shift", "Control"], stopEvtPropagation);
+
+    // prevents zooming with the + and - keys
+    view.on("key-down", function(event) {
+        var prohibitedKeys = ["+", "-", "Shift", "_", "="];
+        var keyPressed = event.key;
+        if (prohibitedKeys.indexOf(keyPressed) !== -1) {
+        event.stopPropagation();
+        }
+    });
+
+    return view;
+    }
+
+
+    let graphicsLayer = new GraphicsLayer({"id":"land-graphics-layer"});
+    map.layers.add(graphicsLayer,30);
+    
+    var createdLandLife = [];
+    var createdOceanLife = [];
+    var lifeForms = [{ name: "Single Cell",
+                       isLand: false,
+                       isOcean: true,
+                       iconUrls: ["assets/icons/Bacteria_Symbol.png"],
+                       },
+                     { name: "Multi Cell",
+                       isLand: true,
+                       isOcean: false,
+                       iconUrls: ["assets/icons/Fungi_Symbol.png"],
+                       },
+                     { name: "Algae",
+                       isLand: false,
+                       isOcean: true,
+                       iconUrls: ["assets/icons/Algae_Symbol.png"],
+                       },
+                     { name: "Jelly Fish",
+                       isLand: false,
+                       isOcean: true,
+                       iconUrls: ["assets/icons/Jellyfish_Symbol.png"],
+                       },
+                     { name: "Insects",
+                       isLand: true,
+                       isOcean: false,
+                       iconUrls: ["assets/icons/Beetle_Symbol.png"],
+                       },
+                    { name: "Fish",
+                       isLand: false,
+                       isOcean: true,
+                       iconUrls: ["assets/icons/Shark_Symbol.png"],
+                       },
+                    { name: "Trees",
+                       isLand: true,
+                       isOcean: false,
+                       iconUrls: ["assets/icons/Fern_Symbol.png"],
+                       },
+                     { name: "Dinosaurs",
+                       isLand: true,
+                       isOcean: false,
+                       iconUrls: ["assets/icons/Stegosaurus_Symbol.png"],
+                       },
+                    { name: "Mammals",
+                       isLand: true,
+                       isOcean: false,
+                       iconUrls: ["assets/icons/Pig_Symbol.png"],
+                       },
+                    { name: "Birds",
+                       isLand: true,
+                       isOcean: false,
+                       iconUrls: ["assets/icons/Parrot_Symbol.png"],
+                       },
+                    { name: "Primates",
+                       isLand: true,
+                       isOcean: false,
+                       iconUrls: ["assets/icons/Primate_Symbol.png"],
+                    }
+                    ];
+    var extinctions = [{ name: "Cretaceous",
+                         value: -65,
+                         kill: 17,
+                         completed: false
+                       },
+                       { name: "Triassic",
+                         value: -200,
+                         kill: 20,
+                         completed: false
+                       },
+                       { name: "Permian",
+                         value: -250,
+                         kill: 83,
+                         completed: false
+                       },
+                       { name: "Devonian",
+                         value: -370,
+                         kill: 70,
+                         completed: false
+                       },
+                       { name: "Ordovician",
+                         value: -445,
+                         kill: 57,
+                         completed: false
+                       },
+                      ];
+
+    var selectedLifeForm = lifeForms[0];
+    var getSelectedLifeFormIconUrl = function(){
+        return selectedLifeForm.iconUrls[Math.floor(
+            Math.random() * selectedLifeForm.iconUrls.length)];
+    }
+
+    //Nuts-and-Bolts for Internal Processing
+    let internalcounter = 0;
+    let creaturesToRemove = [];
+    var latestPlateImgLyr = null;
+    var checkIsLand = function(mapPoint){
+        return new Promise((resolve, reject) => {
+            var params = {f: "json",
+                          geometryType: "esriGeometryPoint",
+                          mosaicRule: JSON.stringify(latestPlateImgLyr.mosaicRule.toJSON()),
+                          geometry:  JSON.stringify({spatialReference: {wkid: 4326},
+                                                     x: mapPoint.x, y: mapPoint.y}),
+                          returnGeometry: "false",
+                          returnCatalogItems: "false",
+                          returnPixelValues: "true",
+                          pixelSize: JSON.stringify({"spatialReference":{"wkid":4326},"x":0.5357142857142857,"y":0.5357142857142857}),
+                          maxItemCount: "1"};
+            var queryString = $.param(params);
+            var myURL = "https://apl.esri.com/apl3/rest/services/P_200_0/ImageServer/identify?"+queryString;
+            fetch(myURL).then((data) => {
+                     data.json().then((json_) => {
+                        var rgbStr = json_.value;
+                        var rgbArr = rgbStr.split(",");
+                        var r = Number(rgbArr[0]);
+                        var g = Number(rgbArr[1]);
+                        var b = Number(rgbArr[2]);
+                        if(b < 150){
+                            resolve(true);
+                        } else {
+                            resolve(false);
+                        }
+                    });
+                }).catch((err) => {
+                    reject(err);
+                });;
+            });
+    }
+ 
+    /* GAME OVER SECTION */
+
+    function GameOver(){
+        console.log("Game Over!");
+        $('#gameOverDiv').show();
+
+        //GAME OVER1 fade in and out
+        $("#gameOverScreen1Bg p").delay(0).animate({"opacity": "0.5"}, 2000);
+        $("#gameOverScreen1Text p").delay(0).animate({"opacity": "0.85"}, 2000).delay(2000).animate({"opacity": "0"}, 1000);
+
+        // (@5 seconds) Did you miss it?
+        $("#gameOverScreen2Text p").delay(5000).animate({"opacity": "0.85"}, 1000).delay(3000).animate({"opacity": "0"}, 1000);
+
+        //(@10 seconds) Homo Sapiens
+        $("#gameOverScreen31Text p").delay(10000).animate({"opacity": "0.85"}, 1000).delay(8000).animate({"opacity": "0"}, 1000);
+        $("#gameOverScreen32Text p").delay(10000).animate({"opacity": "0.85"}, 1000).delay(8000).animate({"opacity": "0"}, 1000);
+        $("#gameOverScreen33Text p").delay(10000).animate({"opacity": "0.85"}, 1000).delay(8000).animate({"opacity": "0"}, 1000);
+
+        //(@30 seconds) in that time
+        $("#gameOverScreen51Text p").delay(20000).animate({"opacity": "0.85"}, 1000).delay(8000).animate({"opacity": "0"}, 1000);
+        $("#gameOverScreen52Text p").delay(20000).animate({"opacity": "0.85"}, 1000).delay(8000).animate({"opacity": "0"}, 1000);
+
+        //(@40 seconds) in that time
+        $("#gameOverScreen6Text p").delay(30000).animate({"opacity": "0.85"}, 1000).delay(8000).animate({"opacity": "0"}, 1000);
+
+        //(@50 seconds) in that time
+        $("#gameOverScreen7Text p").delay(40000).animate({"opacity": "0.85"}, 1000)
+        $("#gameOverScreen72Text p").delay(40000).animate({"opacity": "0.85"}, 1000)
+    }
+    $('#gameOverDiv').hide();
+
+    /* END GAME OVER SECTION */
+
+
+    /* END SHARED GLOBALS SECTION*/
+
+    /*GAME STATS DIV SECTION*/
+
+    //some functions here
+
+    /* END GAME STATS DIV SECTION*/
+
+    /* ARCGIS JS API SECTION*/
+    /* PLATE TETONICS SECTION */
+    function setTimeSliderValue(val){
+        document.querySelector('input[type=range]').value = val;
+    }
+    function startSliderAndUpdatingLayer(){
+        if(gameStarted) {
+            var twelver = 0;
+            var globalTimerInterval = setInterval(function() {
+                if(historicTimeElapsedMillBCE >=0){
+                    clearInterval(globalTimerInterval);
+                    GameOver();                    
+                    return;
+                }
+
+                realTimeElapsedS += (tickMs / 1000);
+                if(historicTimeElapsedMillBCE < -500){ 
+                    // go from 4bil -> 500 mill in ~ 20 seconds
+                    var magicLogMultipl = 0.995;
+                    historicTimeElapsedMillBCE = historicTimeElapsedMillBCE *
+                        magicLogMultipl;}
+                else{
+                    // go from 500 mill -> 0 in 40 seconds
+                    historicTimeElapsedMillBCE += 0.63;
+                    twelver += 1
+                    if(twelver%19 == 0){
+                        twelver = 0;
+                        if(currentLayerIndex!=2){
+                            currentLayerIndex -= 1;
+                        }
+                        drawLayer();
+                    }
+                }
+                setTimeSliderValue(historicTimeElapsedMillBCE);
+                // console.log(historicTimeElapsedMillBCE);
+                CheckExtinctions(historicTimeElapsedMillBCE);
+                tileRotation();
+            }, tickMs);}
+    }
+
+function drawLayer(){
+   intervalUpdate200MilToPresent = setTimeout(function(){
+        var oldLayerHs = map.findLayerById("plate-tetonics-200-mil-hs-"+(currentLayerIndex+1));
+        var oldLayerP = map.findLayerById("plate-tetonics-200-mil-"+(currentLayerIndex+1));
+        //i -= 1;
+        var newLayerHs = new ImageryLayer({
+          id: "plate-tetonics-200-mil-hs-"+currentLayerIndex,
+          url:
+            "https://apl.esri.com/apl3/rest/services/Paleo_200_2_now_hs/ImageServer",
+          mosaicRule: new MosaicRule({
+              lockRasterIds: [currentLayerIndex,],
+              method: "lock-raster",
+              ascending: false}),
+         opacity:0.1
+        });
+        var newLayerP = new ImageryLayer({
+          id: "plate-tetonics-200-mil-"+currentLayerIndex,
+          url:
+            "https://apl.esri.com/apl3/rest/services/P_200_0/ImageServer",
+          mosaicRule: new MosaicRule({
+              lockRasterIds: [currentLayerIndex,],
+              method: "lock-raster",
+              ascending: false}),
+          opacity:1,
+        });
+        map.layers.add(newLayerP, 0);
+        latestPlateImgLyr = newLayerP;
+        map.layers.add(newLayerHs, 1);
+       
+       // Do the cleanup of the old layers after the new ones have loaded
+        newLayerHs.load().then((_) => {
+            setTimeout(function(){
+                map.remove(oldLayerHs);
+            }, 1000);
+        }).catch((err) => {
+            console.log("Error on loading newLayerHs");
+            console.log(err);
+        });
+        
+        newLayerP.load().then((_) => {
+            setTimeout(function(){
+                map.remove(oldLayerP);
+                
+            }, 1000);
+        }).catch((err) => {
+            console.log("Error on loading newLayerP");
+            console.log(err);
+        });
+    }, 1);
+}
+    /* END PLATE TETONICS SECTION*/
+
+    /* GAME ENGINE */
+    function startGame(){
+        gameStarted = true;
+        drawLayer()
+        $('#playButton2').hide();
+        $('#startTextBg1').show();
+        $('#startText2').hide();
+        $('#startText3').hide();
+        $('#startText4').hide();
+        var playButton1 = document.getElementById("playButton1");
+        playButton1.onclick = function() {
+            $('#playButton1').hide();
+            $('#playButton2').show();
+            $('#startTextBg1').hide();
+            $('#startTextBg2').show();
+            $('#startText1').hide();
+            $('#startText2').show();
+            $('#startText3').show();
+            $('#startText4').show();
+            var playButton2 = document.getElementById("playButton2");
+            playButton2.onclick = function() {
+                $('#playButton2').hide();
+                $('#startText2').hide();
+                $('#startText3').hide();
+                $('#startText4').hide();
+                $('#startTextBg2').hide();
+                startSliderAndUpdatingLayer();  
+          }       
+        }
+    }
+
+function CheckExtinctions(sliderTime) {
+    for(i = 0; i < extinctions.length; i++) {
+      if( sliderTime > extinctions[i].value && !extinctions[i].completed) {
+          TriggerExtinction(extinctions[i].kill);
+          extinctions[i].completed = true;
+
+          //Set announcements
+          AddAnnouncements(extinctions.length - i);
+          //Remove announcement after 10 seconds
+          setTimeout(function() {
+                        RemoveAnnouncements();          
+                  }, 4000);
+
+          // Trigger population explosion after extinction after 3 seconds
+          setTimeout(function() {
+                      PopulationExplosionAfterExtinctions();          
+                  }, 3000);
+
+          if(extinctions[i].name === "Cretaceous") {
+            DeleteDinos();
+          }
+          return;
+      } 
+    } 
+}
+
+function CreateNewPoint(x,y,imageurl) {
+    var topPoint = {
+                      type: "point", // autocasts as new Point()
+                      x: x,
+                      y: y,
+                   };
+
+    var pictureSymbol = {
+                          type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
+                          url: imageurl,
+                          width: "64px",
+                          height: "64px"
+                        };
+
+    var pointGraphic = new Graphic({
+          geometry: topPoint,
+          symbol: pictureSymbol
+        });
+
+    return pointGraphic;
+}
+
+    function makeAllAnimalDivs50Opacity(){
+        console.log("50% opacity");
+        document.getElementById("type1").setAttribute("style", "opacity: 0.5");
+        document.getElementById("type2").setAttribute("style", "opacity: 0.5");
+        document.getElementById("type3").setAttribute("style", "opacity: 0.5");
+        document.getElementById("type4").setAttribute("style", "opacity: 0.5");
+    }
+    makeAllAnimalDivs50Opacity();
+
+    function tileRotation(){
+        if(Math.floor(historicTimeElapsedMillBCE)===-3512 ){
+            console.log("Adding bacteria tile");
+            card = document.getElementById("type1")
+            card.setAttribute("src","assets/tiles/Bacteria.png")
+            card.className += "animalDiv animalCard"; 
+            document.getElementById("type1").addEventListener("click", function(){
+              document.getElementById("type1").setAttribute("border","solid");    
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[0];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type1").setAttribute("style", "opacity: 1");
+            });
+
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-1506){
+            console.log("Adding Multicell tile");
+            card = document.getElementById("type2")
+            card.setAttribute("src","assets/tiles/Fungi.png")
+            card.className = "animalDiv animalCard"; 
+            document.getElementById("type2").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[1];   
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type2").setAttribute("style", "opacity: 1");
+            });
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-805){
+            console.log("Adding Algae tile");
+            card = document.getElementById("type3")
+            card.setAttribute("src","assets/tiles/Algae.png")
+            card.className = "animalDiv animalCard"; 
+            document.getElementById("type3").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[2];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type3").setAttribute("style", "opacity: 1");             
+            });
+
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-500){
+            console.log("Adding JellyFish tile");
+            card = document.getElementById("type4")
+            card.setAttribute("src","assets/tiles/Jellyfish.png")
+            card.className = "animalDiv animalCard"; 
+            document.getElementById("type4").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[3];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type4").setAttribute("style", "opacity: 1");
+            });
+
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-400){
+            console.log("Adding Insect tile");
+            card = document.getElementById("type1")
+            card.setAttribute("src","assets/tiles/Beetle.png")
+            card.className = "animalDiv animalCard"; 
+            document.getElementById("type1").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[4];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type1").setAttribute("style", "opacity: 1");
+            });
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-350){
+            console.log("Adding Fish tile");
+            card = document.getElementById("type2")
+            card.setAttribute("src","assets/tiles/Shark.png")
+            card.className = "animalDiv animalCard"; 
+            document.getElementById("type2").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[5];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type2").setAttribute("style", "opacity: 1");
+            });
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-350){
+            console.log("Adding Trees tile");
+            card = document.getElementById("type3")
+            card.setAttribute("src","assets/tiles/Fern.png")
+            card.className = "animalDiv animalCard";  
+            document.getElementById("type3").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[6];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type3").setAttribute("style", "opacity: 1");
+            });
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-225){
+            console.log("Adding Dino tile");
+            card = document.getElementById("type4")
+            card.setAttribute("src","assets/tiles/Stegosaurus.png")
+            card.className = "animalDiv animalCard"; 
+            document.getElementById("type4").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[7];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type4").setAttribute("style", "opacity: 1");
+            });
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-225){
+            console.log("Adding Pig tile");
+            card = document.getElementById("type1")
+            card.setAttribute("src","assets/tiles/Pig.png")
+            card.className = "animalDiv animalCard"; 
+            document.getElementById("type1").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[8];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type1").setAttribute("style", "opacity: 1");
+            });
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-66){
+            console.log("Adding Birds tile");
+            card = document.getElementById("type2")
+            card.setAttribute("src","assets/tiles/Parrot.png")
+            card.className = "animalDiv animalCard"; 
+            document.getElementById("type2").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[9];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type2").setAttribute("style", "opacity: 1");
+            });
+        }
+        if(Math.floor(historicTimeElapsedMillBCE)===-55){
+            console.log("Adding Primates tile");
+            card = document.getElementById("type3")
+            card.setAttribute("src","assets/tiles/Primate.png")
+            card.className = "animalDiv animalCard"; 
+            document.getElementById("type3").addEventListener("click", function(){
+              var mapPoint = event.mapPoint;
+              selectedLifeForm = lifeForms[10];
+              makeAllAnimalDivs50Opacity();
+              document.getElementById("type3").setAttribute("style", "opacity: 1");
+            });
+        }
+    }
+
+function PopulationExplosionAfterExtinctions() {
+    console.log("Population Explosion After Extinctions")
+    var tempCreatures = [];
+    for( i=0; i <createdLandLife.length; i++) {
+        var tempCreature = createdLandLife[i];
+
+        var topCreature = CreateNewPoint(tempCreature.geometry.x,
+                                         tempCreature.geometry.y - 5,
+                                         tempCreature.symbol.url);
+
+        map.findLayerById("land-graphics-layer").add(topCreature);
+        /*map.findLayerById("land-graphics-layer").add(bottomCreature);*/
+        
+        tempCreatures.push(topCreature);
+        /*tempCreatures.push(bottomCreature);*/
+    } 
+
+    for(j=0;j < tempCreatures.length; j++) {
+      createdLandLife.push(tempCreatures[j]);
+    }
+}
+
+function DeleteDinos() {
+    console.log("Removing All Dinos");
+    
+    var numberOfDinos = 0;
+    var dinosToRemove = [];
+    //for(i = 0; i < createdLandLife.length; i++ ) {
+    var initialSize = createdLandLife.length;
+    for(i = 0; i < (initialSize - numberOfDinos); i++ ) {
+        var getDino = createdLandLife[i];
+
+        var url = getDino.symbol.url;
+        if(getDino.symbol.url === "assets/icons/Stegosaurus_Symbol.png") {
+            numberOfDinos = numberOfDinos + 1;
+
+            createdLandLife.splice(i,1);
+            dinosToRemove.push(getDino);
+            getDino.symbol.url = "assets/icons/skull.png";
+            map.findLayerById("land-graphics-layer").remove(getDino);
+            map.findLayerById("land-graphics-layer").add(getDino);
+            i = i -1;
+        }
+    }
+
+    //After 3 Seconds remove the creatures marked for deletion
+    var tempLength = dinosToRemove.length;
+    setTimeout(function() { 
+            for(k = 0; k < tempLength ; k++) {
+                  map.findLayerById("land-graphics-layer").remove(dinosToRemove.pop());
+            }
+            console.log("Deleting Dinos !!");
+    }, 3000);
+}
+
+function TriggerExtinction(threshold) {
+  
+    console.log("Removing " + threshold + "% of Creatures");
+    var creaturesToKill = Math.floor(createdLandLife.length) * threshold / 100;
+
+    // This next part marks the number of creature to be removed
+    // Initially the creatures icon is Set to Skull'n'Bones
+    for(internalcounter = 0; internalcounter < creaturesToKill; internalcounter++) {
+        var tempGraphic = createdLandLife.pop();
+        creaturesToRemove.push(tempGraphic);
+        tempGraphic.symbol.url = "assets/icons/skull.png";
+        map.findLayerById("land-graphics-layer").remove(tempGraphic);
+        map.findLayerById("land-graphics-layer").add(tempGraphic);
+    }
+
+    //After 3 Seconds remove the creatures marked for deletion
+    setTimeout(function() { 
+            for(; internalcounter >=0 ; internalcounter--) {
+                  map.findLayerById("land-graphics-layer").remove(creaturesToRemove.pop());
+            }
+            console.log("Deleting !!");
+    }, 3000);
+}
+
+function TriggerRandomExtinction(threshold) {
+  
+    console.log("Removing " + threshold + "% of Creatures");
+
+    var creaturesToKill = Math.round(Math.floor(createdLandLife.length) * threshold / 100);
+
+    // This next part marks the number of creature to be removed
+    // Initially the creatures icon is Set to Skull'n'Bones
+    internalcounter = 0;
+    var initialLength = createdLandLife.length;
+    for(i = 0 ;i < creaturesToKill; i++) {
+        var randomIndex = Math.round(Math.floor(Math.random() * (initialLength -i)));
+        var tempGraphic = createdLandLife[randomIndex];
+        createdLandLife.splice(randomIndex,1);
+        creaturesToRemove.push(tempGraphic);
+        tempGraphic.symbol.url = "assets/icons/skull.png";
+        map.findLayerById("land-graphics-layer").remove(tempGraphic);
+        map.findLayerById("land-graphics-layer").add(tempGraphic);
+        internalcounter = internalcounter + 1;
+    }
+
+    //After 3 Seconds remove the creatures marked for deletion
+    setTimeout(function() { 
+            for(; internalcounter >=0 ; internalcounter--) {
+                  map.findLayerById("land-graphics-layer").remove(creaturesToRemove.pop());
+            }
+            console.log("Deleting !!");
+    }, 3000);
+}
+
+    /* END GAME ENGINE */
+
+    /* LAND/SEA GRAPHICS LAYER SECTION*/      
+    // When the user clicks add the point on Map
+    view.on(["click"], function(event) {
+        var mapPoint = event.mapPoint;
+
+        console.log("Point clicked    " + mapPoint.x + "," + mapPoint.y);
+
+        var pointGraphic = CreateNewPoint(mapPoint.x,mapPoint.y,selectedLifeForm["iconUrls"][0]);
+
+        map.findLayerById("land-graphics-layer").add(pointGraphic);
+        
+        checkIsLand(mapPoint).then((isLand) => {
+            console.log(isLand);
+            console.log(selectedLifeForm);
+            var isOcean = !isLand;
+            if(selectedLifeForm.isLand !== isLand || selectedLifeForm.isOcean !== isOcean){
+                map.findLayerById("land-graphics-layer").remove(pointGraphic);
+            }
+            else{
+                createdLandLife.push(pointGraphic);
+            }
+        }) 
+    });
+    /* END LAND/SEA GRAPHICS LAYER SECTION*/
+
+    /* ANNOUNCEMENT SECTION */
+  function AddAnnouncements(index) {
+      playAudio();
+      var img = document.createElement('img');
+      img.setAttribute("id", "announcement");
+      img.src = "assets/announce/Announcement"+index+".png";
+      document.getElementById('announce').appendChild(img); 
+  }  
+
+  function RemoveAnnouncements(index) {
+      var img = document.getElementById('announcement');
+      img.parentNode.removeChild(img);       
+  }  
+    /* END ANNOUNCEMENT SECTION */ 
+    /* END ARCGIS JS API SECTION */
+
+  /* START THE GAME */
+    startGame();
+  /* END START THE GAME SECTION */
+  });
+/*END ALL USER CODE*/
+var i = 0;
+setInterval(function(){
+}, 1000);  
+        
+function playAudio() { 
+    var x = document.getElementById("myAudio"); 
+    x.play(); 
+} 
+</script>
+
+  </head>
+
+  <body>
+      <audio id="myAudio">
+        <source src="assets/warning.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+      </audio>
+      
+    <div id="container">    
+
+        <div id="gameStartDiv">
+            <div id="startTextBg1"><p></p></div>
+            <div id="startTextBg2"><p></p></div>
+            <div id="startText1"><p>Evolution Of Life</p></div>
+            <div id="startText2"><p>The goal of the game is to populate the Earth with life as we travel through its 4 billion year history. Click anywhere on the map to create new life. Some life can only be spawned in the ocean, and some only on land.</p></div>
+            <div id="startText3"><p>Select new life forms as they evolve here</p></div>
+            <div id="startText4"><p>This timer shows where you are in Earth's history, from 4 billion years ago to present. You have 60 seconds in this game.</p></div>
+            <button class="playButton" id="playButton1" type="button">Start</button> 
+            <button class="playButton" id="playButton2" type="button">Play</button> 
+        </div>
+        
+        <div id="gameStatsDiv">
+            <div class="logo"><img width="296px" height="149px" src="assets/Logo.png"/></div>
+            <img id="sliderImgOverlay" src="assets/Slider2.png"/>
+            <div class="sliderDiv">  <input type="range" min="-4000" max="0" value="-4000" class="myslider"></div>
+            <div id="mapViewDiv"></div>
+            <div id="examplePopup">
+                <div id="animalsTab">
+                    <input id="type1" class="ButtonState " type="image" src="" alt=""/>
+                    <input id="type2" class="" type="image" src="" alt="" />
+                    <input id="type3" class="" type="image" src="" alt="" />
+                    <input id="type4" class="" type="image" src="" alt="" />              
+                </div>
+            </div>
+            <div id="announce" class="center">
+            </div>
+			
+            <div id="gameOverDiv">
+                    <div id="gameOverScreen1Bg"><p></p></div>
+                    <div id="gameOverScreen1Text"><p>Game Over</p></div> 
+            
+                    <div id="gameOverScreen2Text"><p>Did you miss it?</p></div>
+            
+                    <div id="gameOverScreen31Text"><p>Homo Sapiens (humans) evolved in the last</p></div>
+                    <div id="gameOverScreen32Text"><p>0.005</p></div> 
+                    <div id="gameOverScreen33Text"><p>seconds of this game.</p></div>
+            
+                    <div id="gameOverScreen51Text"><p>In that very short time, humanity has been directly causing the ongoing</p></div>        
+                    <div id="gameOverScreen52Text"><p>Holocene Mass Extinction</p></div>  
+            
+                    <div id="gameOverScreen6Text"><p>In this sixth mass extinction, species are going extinct 100 to 1,000 times faster than normal.</p></div>
+            
+                    <div id="gameOverScreen7Text"><p>We can all help to preserve our planet. View these resources for more information.</p></div>
+                    <div id="gameOverScreen72Text"><p><a href="https://www.theguardian.com/environment/2017/jul/10/earths-sixth-mass-extinction-event-already-underway-scientists-warn">https://www.theguardian.com/environment/2017/jul/10/earths-sixth-mass-extinction-event-already-underway-scientists-warn</a>
+                        <br><br><a href="https://blog.nationalgeographic.org/2015/06/23/can-we-stop-the-sixth-mass-extinction/">https://blog.nationalgeographic.org/2015/06/23/can-we-stop-the-sixth-mass-extinction/</a></p></div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
