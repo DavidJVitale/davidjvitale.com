@@ -106,7 +106,7 @@ function(Map,
 
 
     let graphicsLayer = new GraphicsLayer({"id":"land-graphics-layer"});
-    map.layers.add(graphicsLayer,30);
+    map.layers.add(graphicsLayer,1);
     
     var createdLandLife = [];
     var createdOceanLife = [];
@@ -317,7 +317,7 @@ function(Map,
                 tileRotation();
             }, tickMs);}
     }
-
+var plateLayerI = 0;
 function drawLayer(){
    intervalUpdate200MilToPresent = setTimeout(function(){
         var oldLayerHs = map.findLayerById("plate-tetonics-200-mil-hs-"+(currentLayerIndex+1));
@@ -343,29 +343,11 @@ function drawLayer(){
               ascending: false}),
           opacity:1,
         });
-        map.layers.add(newLayerP, 0);
+        map.layers.add(newLayerP,plateLayerI);
+        plateLayerI++;
         latestPlateImgLyr = newLayerP;
-        map.layers.add(newLayerHs, 1);
-       
-       // Do the cleanup of the old layers after the new ones have loaded
-        newLayerHs.load().then((_) => {
-            setTimeout(function(){
-                map.remove(oldLayerHs);
-            }, 1000);
-        }).catch((err) => {
-            console.log("Error on loading newLayerHs");
-            console.log(err);
-        });
-        
-        newLayerP.load().then((_) => {
-            setTimeout(function(){
-                map.remove(oldLayerP);
-                
-            }, 1000);
-        }).catch((err) => {
-            console.log("Error on loading newLayerP");
-            console.log(err);
-        });
+        // Update the graphics layer index
+        newLayerP.load();
     }, 1);
 }
     /* END PLATE TETONICS SECTION*/
@@ -787,8 +769,11 @@ function playAudio() {
         
         <div id="gameStatsDiv">
             <div class="logo"><img width="296px" height="149px" src="assets/Logo.png"/></div>
-            <img id="sliderImgOverlay" src="assets/Slider2.png"/>
-            <div class="sliderDiv">  <input type="range" min="-4000" max="0" value="-4000" class="myslider"></div>
+
+            <div class="sliderDiv">               
+              <input type="range" min="-4000" max="0" value="-4000" class="myslider">
+              <img id="sliderImgOverlay" src="assets/Slider2.png"/>
+            </div>
             <div id="mapViewDiv"></div>
             <div id="examplePopup">
                 <div id="animalsTab">

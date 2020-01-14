@@ -58,6 +58,9 @@ html, body
 }
 
 .myslider {
+    position: absolute;
+    left: 0px;
+    top: 0px;
     -webkit-appearance: none;
     background: #FCF3CF  ;
     width: 1200px;
@@ -84,13 +87,14 @@ html, body
     float:left;
 }
 .sliderDiv {
+    position: relative;
     width: 1344px;
     height: 149px;
     float: right;
 }
 #sliderImgOverlay{
     position: absolute;
-    left: 337px;
+    left: 0px;
     top: 20px;
 }
 
