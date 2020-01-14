@@ -621,4 +621,11 @@ html, body
     z-index:29;
 }
 
+#github-logo{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: 29;
+}
+
 a { color: white; }

@@ -363,6 +363,7 @@ function drawLayer(){
         $('#startText4').hide();
         var playButton1 = document.getElementById("playButton1");
         playButton1.onclick = function() {
+            $("#github-logo").hide();
             $('#playButton1').hide();
             $('#playButton2').show();
             $('#startTextBg1').hide();
@@ -764,7 +765,8 @@ function playAudio() {
             <div id="startText3"><p>Select new life forms as they evolve here</p></div>
             <div id="startText4"><p>This timer shows where you are in Earth's history, from 4 billion years ago to present. You have 60 seconds in this game.</p></div>
             <button class="playButton" id="playButton1" type="button">Start</button> 
-            <button class="playButton" id="playButton2" type="button">Play</button> 
+            <button class="playButton" id="playButton2" type="button">Play</button>
+            <div id="github-logo"><a href="https://github.com/DavidJVitale/evolution_of_life/"><img src="assets/github-logo.png"></img></a></div>
         </div>
         
         <div id="gameStatsDiv">
