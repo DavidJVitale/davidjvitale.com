@@ -32,5 +32,5 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 if ENV['DAVIDJVITALECOM_RUBY_ENV'] == "dev"
     gem "jekyll-leaflet", path: "../jekyll-leaflet"
 else
-    gem "jekyll-leaflet", git: "https://github.com/DavidJVitale/jekyll-leaflet", branch: "master"
+    gem "jekyll-leaflet"
 end

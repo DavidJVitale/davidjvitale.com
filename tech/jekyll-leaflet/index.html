@@ -11,7 +11,7 @@
 <meta property="og:description" content="Create leaflet.js maps in Jekyll" />
 <meta property="og:site_name" content="jekyll-leaflet" />
 <script type="application/ld+json">
-{"url":"/tech/jekyll-leaflet/","name":"jekyll-leaflet","headline":"jekyll-leaflet","description":"Create leaflet.js maps in Jekyll","@type":"WebSite","@context":"https://schema.org"}</script>
+{"description":"Create leaflet.js maps in Jekyll","@type":"WebSite","url":"/tech/jekyll-leaflet/","name":"jekyll-leaflet","headline":"jekyll-leaflet","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/tech/jekyll-leaflet/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/tech/jekyll-leaflet/feed.xml" title="jekyll-leaflet" /></head>
 <body><header class="site-header" role="banner">
@@ -31,8 +31,6 @@
 
         <div class="trigger">
             <a class="page-link" href="/tech/jekyll-leaflet/getting-started/">Getting Started</a>
-            <a class="page-link" href="/tech/jekyll-leaflet/samples/">Samples</a>
-            <a class="page-link" href="/tech/jekyll-leaflet/api-ref/">API Ref</a>
             <a class="page-link" href="https://github.com/DavidJVitale/jekyll-leaflet" target="_blank"><img class="github-icon" src="/tech/jekyll-leaflet/assets/github-logo.png"></img></a>
         </div>
       </nav></div>
@@ -49,25 +47,24 @@
 <span class="p">{%</span><span class="w"> </span><span class="nt">endleaflet_map</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
-<div id="leaflet-map-ce18c8fbb8f7bf1cbdfd9bcd5e5786cb" class="leaflet-map"></div>
-<script>
-(() => {
+<div id="leaflet-map-fc60bed6cd472ff6f85474c5855ea749" class="leaflet-map"></div>
+<script>(() => {
 // Specify configuration variables, setup any elements and styling
     var leafletCdn = "https://unpkg.com/leaflet@1.5.1/dist/";
     var esriLeafletCdn = "https://unpkg.com/esri-leaflet/dist/";
 
     // Get tag input arguments & inside block object list
-    var tagInputArg = { "zoom": 9 } ;
+    var tagInputArg = {"zoom": 9 } ;
     var blockLeafletItems = [
-    {id: "f6aae457a92a2f4bcea1088dc6532ba2",
+    {id: "0c68db7ae77a68b09fdd29c3330ee3ba",
               type: "LeafletMarker",
               value: { "latitude" : 41.881832,
                         "longitude" : -87.623177,
-                        "popupContent" : "Hello World from Chicago!"} },
+                        "popupContent" : "Hello World from Chicago!" } },
 ];
 
     // Override the map div id if specified, apply default CSS
-    var defaultMapElId = "leaflet-map-ce18c8fbb8f7bf1cbdfd9bcd5e5786cb";
+    var defaultMapElId = "leaflet-map-fc60bed6cd472ff6f85474c5855ea749";
    var defaultMapElStyle = "height:300px; margin-top:15px; margin-bottom:15px";
     var mapEl = document.getElementById(defaultMapElId);
     if('divId' in tagInputArg){
@@ -112,6 +109,7 @@
         }
     }
 
+
     function _addMarkerToMap(leafletItem, map){
         var m = leafletItem.value;
         var result = L.marker([m.latitude, m.longitude]).addTo(map);
@@ -119,7 +117,7 @@
         if('popupContent' in m){
                 potentialPopup += m.popupContent;}
         if('href' in m){
-            potentialPopup += '<a href="' + m.href + '" target="_blank" >' + 
+            potentialPopup += '<a href="' + m.href + '">' + 
                 '<img src="' + newWindowImgSrcBase64 + '"></img></a>';}
         if(potentialPopup){
             result.bindPopup(potentialPopup);}
@@ -136,7 +134,7 @@
         }
         if(feature.properties && feature.properties.href){
             potentialPopup += 
-                '<a href="' + feature.properties.href + '" target="_blank">' + 
+                '<a href="' + feature.properties.href + '">' + 
                     '<img src="' + newWindowImgSrcBase64 + '"></img></a>';}
         if(potentialPopup){
             layer.bindPopup(potentialPopup);
@@ -144,19 +142,52 @@
     }
 
     function _addGeoJSONToMap(leafletItem, map){
-        var g = leafletItem.value;
-        L.geoJSON(g, { 
-            onEachFeature: _onEachFeature 
-        }).addTo(map);
+        if(typeof leafletItem.value === "string"){
+            fetch(leafletItem.value).then((resp) => {
+                return resp.json();
+            }).then((data) => {
+                leafletItem.value = data;
+                _addGeoJSONObjToMap(leafletItem, map);
+            }).catch((err) => {
+                console.log("Encountered err w/ geojson, attempting to fix..");
+                console.log(err);
+                _addGeoJSONObjToMap(leafletItem, map);
+            });
+        } else {
+            _addGeoJSONObjToMap(leafletItem, map);
+        }
      }
+
+    function _addGeoJSONObjToMap(leafletItem, map){
+         var geojson = L.geoJSON(leafletItem.value, { 
+            onEachFeature: _onEachFeature 
+        });
+        layers = geojson.getLayers();
+        for(var i=0; i<layers.length; i++){
+            try{
+                var geom = layers[i].feature.geometry;
+                if(!('center' in tagInputArg)){
+                    // If the user didn't specify a center, infer from geojson
+                    //console.log("panning to " + geom.coordinates);
+                    map.panTo(new L.LatLng(geom.coordinates[1],
+                                           geom.coordinates[0]));
+                }
+            } catch(e){}
+        }
+       
+        geojson.addTo(map);
+       
+    }
 
     function _processLeafletItem(leafletItem, map){
         switch(leafletItem.type){
             case "LeafletMarker":
                 _addMarkerToMap(leafletItem, map);
                 break;
-             case "LeafletGeoJSON":
+            case "LeafletGeoJSON":
                 _addGeoJSONToMap(leafletItem, map);
+                break;
+            case undefined:
                 break; 
             default:
                 console.log("Couldn't add item " + leafletItem.id);
@@ -166,11 +197,12 @@
 
 //The actual section that is called that creates a map
     function createMap(){
-        console.log("Creating map ce18c8fbb8f7bf1cbdfd9bcd5e5786cb with these args:");
+        console.log("Creating map fc60bed6cd472ff6f85474c5855ea749 with these args:");
         console.log(tagInputArg);
 
         //Initialize Map with the correct input arguments
-        var map = L.map(mapEl.id).setView(_getCenter(), _getZoom());
+        var map = L.map(mapEl.id, 
+            {worldCopyJump: true}).setView(_getCenter(), _getZoom());
         L.tileLayer.provider(_getProviderBasemap()).addTo(map);
         if("esriBasemap" in tagInputArg){
             L.esri.basemapLayer(tagInputArg.esriBasemap).addTo(map);
@@ -1067,17 +1099,8 @@
 })();
 </script>
 
-<div id="container" style="width:100%">
-    <div id="left" style="float:left; width: 25%;">
-        <h3 style="text-align:center"> <a href="/tech/jekyll-leaflet/getting-started/">Getting Started</a></h3>
-    </div>
-    <div id="middle" style="float:left; width: 50%;">
-        <h3 style="text-align:center"> <a href="/tech/jekyll-leaflet/samples/">Samples</a></h3>
-    </div>
-    <div id="right" style="float:left; width: 25%;">
-        <h3 style="text-align:center"> <a href="/tech/jekyll-leaflet/api-ref/">API Ref</a></h3>
-    </div>
-</div>
+<h2><a href="/tech/jekyll-leaflet/getting-started/">Getting Started</a></h2>
+
 
 
 </div>

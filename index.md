@@ -2,4 +2,4 @@
 layout: home
 ---
 
-<h2 style="text-align: center" >Excuse the dust while we're under construction...</h2>
+<h2 style="text-align: center" >Outdoors Enthusiast, Software Engineer, Human Being</h2>
