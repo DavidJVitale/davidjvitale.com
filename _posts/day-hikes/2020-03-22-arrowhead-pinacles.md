@@ -27,7 +27,7 @@ Like many in the world during March of 2020, I have been anxiously cooped up ind
 
 {% include travel-img.html src="/assets/personal/day-hikes/arrowhead-pinacles/nali.jpg" %}
 
-I have always loved hiking and camping since I joined the Boy Scouts in my childhood. Being outdoors has always helped me calm down and "see the big picture". Today, during the first major hike of the 2020 season, I am reminded of the outdoor's healing power. Hanging out outside with Nali and my great friends Matt and Zack has me feeling reguvenated and ready to take on another week. Thanks, guys. And thanks, Mother Nature.
+I have always loved hiking and camping since I joined the Boy Scouts in my childhood. Being outdoors has always helped me calm down and "see the big picture". Today, during the first major hike of the 2020 season, I am reminded of the outdoor's healing power. Hanging out outside with Nali and my great friends Matt and Zack has me feeling rejuvenated and ready to take on another week. Thanks, guys. And thanks, Mother Nature.
 
 {% include travel-img.html src="/assets/personal/day-hikes/arrowhead-pinacles/matt.jpg" %}
 
