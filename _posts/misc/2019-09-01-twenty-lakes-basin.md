@@ -5,7 +5,7 @@ date: '2019-09-01'
 author: David Vitale
 categories: ["blog", "travel", "misc", "backpacking"]
 tags: ["travel", "misc", "backpacking"]
-featured: true
+featured: false
 location:
     geojson: '{
         "type": "FeatureCollection",

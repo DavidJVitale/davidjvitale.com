@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The trip starts!
+title: Alaskan road trip starts!
 date: '2017-05-22T17:13:00.001-07:00'
 author: David Vitale
 categories: ["blog", "travel", "alaska-roadtrip"]
