@@ -12,8 +12,9 @@ featured: true
 {% leaflet_map {"zoom" : 3,
                 "center": [55, -130],
                 "esriBasemap" : "Topographic" } %}
+    {% leaflet_geojson "/assets/personal/geojson/road-trips/2017-04-05-alaska-roadtrip.geojson" %}
     {%- for post in site.posts -%}
-        {% if post.location.geojson %}
+        {% if post.location.geojson and post.categories contains "alaska-roadtrip" %}
             {% assign geojson = post.location.geojson | override_hrefs: post.url %}
             {% leaflet_geojson {{geojson}} %}
         {% endif %}

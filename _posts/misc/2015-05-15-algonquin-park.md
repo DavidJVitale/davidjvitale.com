@@ -11,7 +11,7 @@ location:
         "type": "FeatureCollection",
         "features": [{
             "type": "Feature",
-            "properties": {"popupContent": "Smoky Mountains National Park"}, 
+            "properties": {"popupContent": "Algonquin Provincial Park"}, 
             "geometry": {
                 "type": "Point",
                 "coordinates":
