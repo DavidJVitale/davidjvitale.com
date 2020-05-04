@@ -47,16 +47,16 @@
 <span class="p">{%</span><span class="w"> </span><span class="nt">endleaflet_map</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
-<div id="leaflet-map-fc60bed6cd472ff6f85474c5855ea749" class="leaflet-map"></div>
+<div id="leaflet-map-b1627498ed79095dcaf2ab62e7839fb0" class="leaflet-map"></div>
 <script>(() => {
 // Specify configuration variables, setup any elements and styling
-    var leafletCdn = "https://unpkg.com/leaflet@1.5.1/dist/";
+    var leafletCdn = "https://unpkg.com/leaflet@1.6.0/dist/";
     var esriLeafletCdn = "https://unpkg.com/esri-leaflet/dist/";
 
     // Get tag input arguments & inside block object list
     var tagInputArg = {"zoom": 9 } ;
     var blockLeafletItems = [
-    {id: "0c68db7ae77a68b09fdd29c3330ee3ba",
+    {id: "44dd3887dfea49c50247bc833bf56e26",
               type: "LeafletMarker",
               value: { "latitude" : 41.881832,
                         "longitude" : -87.623177,
@@ -64,7 +64,7 @@
 ];
 
     // Override the map div id if specified, apply default CSS
-    var defaultMapElId = "leaflet-map-fc60bed6cd472ff6f85474c5855ea749";
+    var defaultMapElId = "leaflet-map-b1627498ed79095dcaf2ab62e7839fb0";
    var defaultMapElStyle = "height:300px; margin-top:15px; margin-bottom:15px";
     var mapEl = document.getElementById(defaultMapElId);
     if('divId' in tagInputArg){
@@ -197,7 +197,7 @@
 
 //The actual section that is called that creates a map
     function createMap(){
-        console.log("Creating map fc60bed6cd472ff6f85474c5855ea749 with these args:");
+        console.log("Creating map b1627498ed79095dcaf2ab62e7839fb0 with these args:");
         console.log(tagInputArg);
 
         //Initialize Map with the correct input arguments

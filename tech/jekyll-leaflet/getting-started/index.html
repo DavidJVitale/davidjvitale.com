@@ -53,7 +53,7 @@
   <li>
     <p>Add the following to your site’s <code class="highlighter-rouge">_config.yml</code> file:</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> gems:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> plugins:
      - jekyll-leaflet
 </code></pre></div>    </div>
   </li>
@@ -66,10 +66,10 @@
 <span class="p">{%</span><span class="w"> </span><span class="nt">endleaflet_map</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
-<div id="leaflet-map-1c83791c7dd324307da82a38474dc226" class="leaflet-map"></div>
+<div id="leaflet-map-aea515c0926e5d79ba115d3425947230" class="leaflet-map"></div>
 <script>(() => {
 // Specify configuration variables, setup any elements and styling
-    var leafletCdn = "https://unpkg.com/leaflet@1.5.1/dist/";
+    var leafletCdn = "https://unpkg.com/leaflet@1.6.0/dist/";
     var esriLeafletCdn = "https://unpkg.com/esri-leaflet/dist/";
 
     // Get tag input arguments & inside block object list
@@ -79,7 +79,7 @@
 ];
 
     // Override the map div id if specified, apply default CSS
-    var defaultMapElId = "leaflet-map-1c83791c7dd324307da82a38474dc226";
+    var defaultMapElId = "leaflet-map-aea515c0926e5d79ba115d3425947230";
    var defaultMapElStyle = "height:300px; margin-top:15px; margin-bottom:15px";
     var mapEl = document.getElementById(defaultMapElId);
     if('divId' in tagInputArg){
@@ -212,7 +212,7 @@
 
 //The actual section that is called that creates a map
     function createMap(){
-        console.log("Creating map 1c83791c7dd324307da82a38474dc226 with these args:");
+        console.log("Creating map aea515c0926e5d79ba115d3425947230 with these args:");
         console.log(tagInputArg);
 
         //Initialize Map with the correct input arguments
@@ -1123,10 +1123,10 @@
 <span class="p">{%</span><span class="w"> </span><span class="nt">endleaflet_map</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
-<div id="leaflet-map-037c93b8293b458dab8492ef93467b72" class="leaflet-map"></div>
+<div id="leaflet-map-036f0dd679d9894995d1e343aa65c0da" class="leaflet-map"></div>
 <script>(() => {
 // Specify configuration variables, setup any elements and styling
-    var leafletCdn = "https://unpkg.com/leaflet@1.5.1/dist/";
+    var leafletCdn = "https://unpkg.com/leaflet@1.6.0/dist/";
     var esriLeafletCdn = "https://unpkg.com/esri-leaflet/dist/";
 
     // Get tag input arguments & inside block object list
@@ -1138,7 +1138,7 @@
 ];
 
     // Override the map div id if specified, apply default CSS
-    var defaultMapElId = "leaflet-map-037c93b8293b458dab8492ef93467b72";
+    var defaultMapElId = "leaflet-map-036f0dd679d9894995d1e343aa65c0da";
    var defaultMapElStyle = "height:300px; margin-top:15px; margin-bottom:15px";
     var mapEl = document.getElementById(defaultMapElId);
     if('divId' in tagInputArg){
@@ -1271,7 +1271,7 @@
 
 //The actual section that is called that creates a map
     function createMap(){
-        console.log("Creating map 037c93b8293b458dab8492ef93467b72 with these args:");
+        console.log("Creating map 036f0dd679d9894995d1e343aa65c0da with these args:");
         console.log(tagInputArg);
 
         //Initialize Map with the correct input arguments
@@ -2199,23 +2199,23 @@
 
 </code></pre></div></div>
 
-<div id="leaflet-map-f221ccfa7ec3523fe0f86b14704df7da" class="leaflet-map"></div>
+<div id="leaflet-map-8bcdceee62a4e542c7f637e32f559d2a" class="leaflet-map"></div>
 <script>(() => {
 // Specify configuration variables, setup any elements and styling
-    var leafletCdn = "https://unpkg.com/leaflet@1.5.1/dist/";
+    var leafletCdn = "https://unpkg.com/leaflet@1.6.0/dist/";
     var esriLeafletCdn = "https://unpkg.com/esri-leaflet/dist/";
 
     // Get tag input arguments & inside block object list
     var tagInputArg = {"zoom" : 4 } ;
     var blockLeafletItems = [
 
-    {id: "54b704d3ec5ca9b214b27d050ec11085",
+    {id: "35f35936e16edcc8ab4ddb55d8dbc1da",
               type: "LeafletMarker",
               value: { "latitude" : 48.7596,
                        "longitude" : -113.787,
                        "popupContent" : "Glacier National Park, Montana"} },
 
-    {id: "5510933f0d262cb9bea0d95102bc4cb4",
+    {id: "f672aa48fc6903a51736ae02828b9e98",
               type: "LeafletGeoJSON",
               value: {
         "type": "Feature",
@@ -2233,7 +2233,7 @@
 ];
 
     // Override the map div id if specified, apply default CSS
-    var defaultMapElId = "leaflet-map-f221ccfa7ec3523fe0f86b14704df7da";
+    var defaultMapElId = "leaflet-map-8bcdceee62a4e542c7f637e32f559d2a";
    var defaultMapElStyle = "height:300px; margin-top:15px; margin-bottom:15px";
     var mapEl = document.getElementById(defaultMapElId);
     if('divId' in tagInputArg){
@@ -2366,7 +2366,7 @@
 
 //The actual section that is called that creates a map
     function createMap(){
-        console.log("Creating map f221ccfa7ec3523fe0f86b14704df7da with these args:");
+        console.log("Creating map 8bcdceee62a4e542c7f637e32f559d2a with these args:");
         console.log(tagInputArg);
 
         //Initialize Map with the correct input arguments
@@ -3268,7 +3268,7 @@
 })();
 </script>
 
-<p>All above examples have shown you passing in a JSON object as the first positional argument of a <code class="highlighter-rouge">{id: "403509e4a42cb14fc5af617519ae8ef4",
+<p>All above examples have shown you passing in a JSON object as the first positional argument of a <code class="highlighter-rouge">{id: "e98e972af636ece11a8ab34e8f023f32",
               type: "LeafletGeoJSON",
               value: {}},</code> tag. When you specify a String as the first positional argument, the argument will be read as a URL, and the data will be fetched from that URL.</p>
 
@@ -3283,28 +3283,28 @@
 
 </code></pre></div></div>
 
-<div id="leaflet-map-77cdae02cf805e683e93e7469df04952" class="leaflet-map"></div>
+<div id="leaflet-map-2ba6de391a2d257418e9f7b28127322d" class="leaflet-map"></div>
 <script>(() => {
 // Specify configuration variables, setup any elements and styling
-    var leafletCdn = "https://unpkg.com/leaflet@1.5.1/dist/";
+    var leafletCdn = "https://unpkg.com/leaflet@1.6.0/dist/";
     var esriLeafletCdn = "https://unpkg.com/esri-leaflet/dist/";
 
     // Get tag input arguments & inside block object list
     var tagInputArg = {"zoom" : 13 } ;
     var blockLeafletItems = [
-    {id: "cdedcc50fb424ad17e49e494ca241e01",
+    {id: "fc3e67230e8b1d8cd0f7fd05e4dc70b1",
               type: "LeafletMarker",
               value: {"latitude" : 34.296184,
                        "longitude" : -117.211329,
                        "popupContent": "Arrowhead Pinacles Trail"} }, 
-    {id: "a42c5055d76a22a6532c6f6f213a984d",
+    {id: "c9f4a909c01f0e33c36b6763712c8f12",
               type: "LeafletGeoJSON",
               value: "/tech/jekyll-leaflet/assets/hike.geojson" },
 
 ];
 
     // Override the map div id if specified, apply default CSS
-    var defaultMapElId = "leaflet-map-77cdae02cf805e683e93e7469df04952";
+    var defaultMapElId = "leaflet-map-2ba6de391a2d257418e9f7b28127322d";
    var defaultMapElStyle = "height:300px; margin-top:15px; margin-bottom:15px";
     var mapEl = document.getElementById(defaultMapElId);
     if('divId' in tagInputArg){
@@ -3437,7 +3437,7 @@
 
 //The actual section that is called that creates a map
     function createMap(){
-        console.log("Creating map 77cdae02cf805e683e93e7469df04952 with these args:");
+        console.log("Creating map 2ba6de391a2d257418e9f7b28127322d with these args:");
         console.log(tagInputArg);
 
         //Initialize Map with the correct input arguments
@@ -4371,10 +4371,10 @@
 <span class="p">{%</span><span class="w"> </span><span class="nt">endleaflet_map</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
-<div id="leaflet-map-30507656788ed90b34c85f1dfd09094a" class="leaflet-map"></div>
+<div id="leaflet-map-3fe054f6ad4d4c1b3d2984a82006789d" class="leaflet-map"></div>
 <script>(() => {
 // Specify configuration variables, setup any elements and styling
-    var leafletCdn = "https://unpkg.com/leaflet@1.5.1/dist/";
+    var leafletCdn = "https://unpkg.com/leaflet@1.6.0/dist/";
     var esriLeafletCdn = "https://unpkg.com/esri-leaflet/dist/";
 
     // Get tag input arguments & inside block object list
@@ -4382,18 +4382,18 @@
                 "center" : [50, -114],
                 "providerBasemap": "OpenStreetMap.HOT"} ;
     var blockLeafletItems = [
-            {id: "bc4fe7fa4010bcb457284c497e42e2ce",
+            {id: "809fe0fa79d420fd66211383d9dfbec7",
               type: "LeafletMarker",
               value: { "latitude" : 49.814399,
                                 "longitude" : -125.59881 } },
         
     
-            {id: "231c9caaa2b424a576238bd48672a87f",
+            {id: "f269e7e32ac6db859c5d32520a4da129",
               type: "LeafletGeoJSON",
               value: { "type": "Feature", "properties": {"popupContent": "Yellowstone National Park", "href": "/tech/jekyll-leaflet/samples/sample-post-2/"}, "geometry": { "type": "Point", "coordinates": [-110.723183, 44.412266] } } },
         
     
-            {id: "e54c759612bdf970b5610ebad7a6e98b",
+            {id: "0ab33a5e526e5640401645aced5e1c42",
               type: "LeafletGeoJSON",
               value: { "type": "Feature", "properties": {"popupContent": "Banff National Park", "href":"/tech/jekyll-leaflet/samples/sample-post-1/"}, "geometry": { "type": "Point", "coordinates": [-115.928160, 51.495437] } } },
         
@@ -4401,7 +4401,7 @@
 ];
 
     // Override the map div id if specified, apply default CSS
-    var defaultMapElId = "leaflet-map-30507656788ed90b34c85f1dfd09094a";
+    var defaultMapElId = "leaflet-map-3fe054f6ad4d4c1b3d2984a82006789d";
    var defaultMapElStyle = "height:300px; margin-top:15px; margin-bottom:15px";
     var mapEl = document.getElementById(defaultMapElId);
     if('divId' in tagInputArg){
@@ -4534,7 +4534,7 @@
 
 //The actual section that is called that creates a map
     function createMap(){
-        console.log("Creating map 30507656788ed90b34c85f1dfd09094a with these args:");
+        console.log("Creating map 3fe054f6ad4d4c1b3d2984a82006789d with these args:");
         console.log(tagInputArg);
 
         //Initialize Map with the correct input arguments
