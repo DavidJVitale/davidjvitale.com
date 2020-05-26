@@ -5,7 +5,7 @@ date: '2020-04-25'
 author: David Vitale
 categories: ["blog", "travel", "day-hikes"]
 tags: ["travel", "misc", "day-hikes"]
-featured: true
+featured: false
 location:
     latitude: 34.08750467
     longitude: -116.91500166
