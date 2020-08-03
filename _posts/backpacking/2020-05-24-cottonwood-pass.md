@@ -5,7 +5,7 @@ date: '2020-05-24'
 author: David Vitale
 categories: ["blog", "travel", "misc", "backpacking"]
 tags: ["travel", "misc", "backpacking"]
-featured: true
+featured: false
 location:
     latitude: 36.448329 
     longitude: -118.170717
