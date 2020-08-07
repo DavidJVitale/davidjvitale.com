@@ -26,7 +26,7 @@ plugins:
   - jekyll-leaflet
 
 permalink: /:categories/:title
-header_pages: ['bears-on-atvs.md', 'blog.md', 'about.md']
+header_pages: ['portfolio/index.html', 'blog.md']
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
