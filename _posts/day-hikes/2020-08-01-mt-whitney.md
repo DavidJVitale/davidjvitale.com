@@ -11,15 +11,9 @@ location:
     longitude: -118.292370
     popupContent: "Mount Whitney"
 ---
-{% leaflet_map {"zoom" : 13 } %}
-    {% leaflet_marker {"latitude": 36.586842,
-                       "longitude": -118.240097,
-                       "popupContent": "Mount Whitney Trailhead"} %}
-    {% leaflet_marker {"latitude" : {{page.location.latitude}},
-                       "longitude" : {{page.location.longitude}},
-                       "popupContent": "{{page.location.popupContent}}" } %}
-
-    {% leaflet_geojson "/assets/personal/geojson/day-hikes/2020-08-01-mt-whitney.geojson" %}
+{% leaflet_map {"zoom" : 13,
+                "center": [{{page.location.latitude}}, {{page.location.longitude}}] } %}
+   {% leaflet_geojson "/assets/personal/geojson/day-hikes/2020-08-01-mt-whitney.geojson" %}
 
 {% endleaflet_map %}
 
